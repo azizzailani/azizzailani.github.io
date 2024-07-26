@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,143 +9,178 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
     }
+
     .container {
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 900px;
+      margin: 20px auto;
       padding: 20px;
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    .contact-info {
-      margin-bottom: 20px;
-    }
+
     header {
       text-align: center;
-    }
-    h1 {
-      color: #007bff;
       margin-bottom: 20px;
     }
+
+    h1 {
+      color: #007bff;
+      margin: 0;
+    }
+
     h2 {
       color: #333;
       border-bottom: 2px solid #007bff;
       padding-bottom: 5px;
-      margin-bottom: 15px;
+      margin: 20px 0 10px;
     }
-    p {
+
+    p,
+    ul {
       margin: 5px 0;
     }
+
     ul {
       list-style-type: none;
       padding: 0;
     }
+
     li::before {
       content: "▹";
       margin-right: 5px;
       color: #007bff;
     }
+
+    .contact-info {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+    }
+
+    .project {
+      margin-bottom: 20px;
+    }
+
+    .skills ul,
+    .certifications ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .skills li,
+    .certifications li {
+      margin-bottom: 5px;
+    }
+
     @media print {
       body {
         background-color: #fff;
       }
+
       .container {
         max-width: 100%;
         margin: 0;
         box-shadow: none;
         padding: 0;
       }
-      h1 {
-        margin-top: 0;
-      }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <header>
-      <h1>Resume Abdul Aziz Zailani</h1>
+      <h1>Abdul Aziz Zailani</h1>
     </header>
     <address class="contact-info">
-      <p>GREEN HOUSE</p>
-      <p>Jl. Lobak, Pd. Cabe Ilir, Kec. Pamulang,</p>
-      <p>Kota Tangerang Selatan</p>
-      <p>aazizzailani@gmail.com</p>
-      <p>0857-1616-9351</p>
+      <p>GREEN HOUSE, Jl. Lobak, Pd. Cabe Ilir, Kec. Pamulang, Kota Tangerang Selatan</p>
+      <p><a href="mailto:aazizzailani@gmail.com">aazizzailani@gmail.com</a> | <a
+          href="tel:+6285716169351">0857-1616-9351</a></p>
     </address>
     <section>
-      <h2>PENGALAMAN KERJA</h2>
+      <h2>Professional Summary</h2>
+      <p>Seasoned DevOps Engineer with 5+ years of experience in CI/CD pipeline development, cloud infrastructure
+        management, and deployment automation. Expertise in Docker, Kubernetes, and major cloud platforms like AWS and
+        Alibaba Cloud. Proven ability to collaborate with cross-functional teams to optimize processes and enhance
+        system performance.</p>
+    </section>
+    <section>
+      <h2>Work Experience</h2>
       <div>
-        <h3>Insinyur DevOps - PT Komunitas Anak Bangsa (Nov 2022 - Saat Ini)</h3>
+        <h3>DevOps Engineer - PT Komunitas Anak Bangsa (Nov 2022 - Present)</h3>
         <ul>
-          <li>Mengembangkan roadmap CI/CD dan mengimplementasikannya ke proyek</li>
-          <li>Mengelola Alibaba Cloud</li>
-          <li>Mengelola kontainerisasi menggunakan Kubernetes</li>
-          <li>Membuat pipeline CI/CD dan mengaktifkan penyebaran otomatis menggunakan Jenkins dan GitLab</li>
+          <li>Optimized scheduling with Rundeck and Apache Airflow.</li>
+          <li>Migrated testing environments to Docker Swarm for efficiency.</li>
+          <li>Implemented periodic on/off scheduling in staging environments for cost reduction.</li>
+          <li>Transitioned production environments to Alibaba Cloud Kubernetes Serverless.</li>
+          <li>Deployed Kong API Gateway and Keycloak SSO for enhanced security and access management.</li>
+          <li>Centralized monitoring with Prometheus, Alertmanager, Loki, and Grafana across all environments.</li>
         </ul>
       </div>
       <div>
-        <h3>Insinyur DevOps - Harmonix Teknologi Peentar (Okt 2019 - Nov 2022)</h3>
+        <h3>DevOps Engineer - Harmonix Teknologi Peentar (Oct 2019 - Nov 2022)</h3>
         <ul>
-          <li>Mengembangkan roadmap CI/CD dan mengimplementasikannya ke proyek</li>
-          <li>Mengelola Cloud VM Telkom Sigma</li>
-          <li>Mengelola AWS Cloud</li>
-          <li>Mengelola kontainerisasi menggunakan Docker Swarm dan Kubernetes</li>
-          <li>Mengelola dan memperbarui server fisik</li>
-          <li>Membuat pipeline CI/CD dan mengaktifkan penyebaran otomatis ke API produksi, web mobile, dan desktop, menggunakan Jenkins dan GitLab</li>
-          <li>Bekerja sama dengan tim di daerah lain untuk melakukan migrasi infrastruktur pengembangan digitalisasi Kimia Farma ke AWS, menggunakan Docker Swarm dan Jenkins pipeline untuk membangun CI/CD</li>
-          <li>Memantau semua platform aplikasi menggunakan New Relic, ELK Stack, Grafana, Loki, Promtail, Prometheus, dan Alert Manager sebagai respons insiden</li>
+          <li>Developed and implemented CI/CD strategies for multiple projects.</li>
+          <li>Managed cloud infrastructure on Telkom Sigma and AWS.</li>
+          <li>Oversaw containerization using Docker Swarm and Kubernetes.</li>
+          <li>Built and maintained CI/CD pipelines for various applications using Jenkins and GitLab.</li>
+          <li>Collaborated with remote teams for the AWS migration of Kimia Farma's infrastructure.</li>
+          <li>Monitored applications with New Relic, ELK Stack, Grafana, Loki, Promtail, Prometheus, and Alert Manager.
+          </li>
         </ul>
       </div>
       <div>
-        <h3>Administrator Sistem Linux - Harmonix Teknologi Peentar (Okt 2018 - Agustus 2021)</h3>
+        <h3>System Administrator - Harmonix Teknologi Peentar (Oct 2018 - Aug 2021)</h3>
         <ul>
-          <li>Instalasi, konfigurasi, dukungan, pemeliharaan, dan pemecahan masalah pada jaringan, server, dan layanan, lingkungan virtual di kantor cabang</li>
-          <li>Bekerja erat dengan insinyur di lokasi, PM, dan memberikan solusi yang solid kepada mereka</li>
-          <li>Memberikan dukungan teknis dan pelatihan kepada klien melalui email, telepon, atau media elektronik lainnya</li>
-          <li>Menulis dokumentasi teknis</li>
-          <li>Membuat laporan untuk memperbarui manajemen atas tentang kemajuan tim dukungan TI</li>
+          <li>Configured, supported, and maintained network and server infrastructure.</li>
+          <li>Provided technical support and training to clients through various communication channels.</li>
+          <li>Produced technical documentation and progress reports for management.</li>
         </ul>
-        <h3>Insinyur DevOps - buyback.ai (Agu 2021 - Agu 2022)</h3>
+        <h3>DevOps Engineer - buyback.ai (Aug 2021 - Aug 2022)</h3>
         <ul>
-            <li>Scaling Devixel Product : iTechShark</li>
-            <li>CI/CD and QA Automation</li>
-            <li>Migrate Digital Ocean to AWS</li>
-            <li>Using Laravel and MySQL</li>
+          <li>Enhanced the Devixel Product: iTechShark through CI/CD and QA automation.</li>
+          <li>Migrated infrastructure from Digital Ocean to AWS, utilizing Laravel and MySQL.</li>
         </ul>
       </div>
     </section>
     <section>
-      <h2>BAHASA</h2>
+      <h2>Languages</h2>
       <ul>
-        <li>Bahasa Inggris (moderate)</li>
-        <li>Bahasa Indonesia (advanced)</li>
+        <li>English (Intermediate)</li>
+        <li>Indonesian (Native)</li>
       </ul>
     </section>
     <section>
-      <h2>RINGKASAN KEMAMPUAN</h2>
-      <p>Linux Server, Docker Swarm, Ansible, Git, Amazon Web Service, PostgreSQL, Kubernetes</p>
-      <p>Kelebihan untuk Perusahaan Anda:</p>
+      <h2>Skills</h2>
+      <p>Linux Server, Docker Swarm, Ansible, Git, AWS, PostgreSQL, Kubernetes</p>
+      <p>Key Strengths:</p>
       <ul>
-        <li>Cepat Belajar</li>
-        <li>Kemampuan Bekerja dalam Tim atau Individu</li>
-        <li>Detail Oriented</li>
-        <li>Mudah Beradaptasi dengan Perubahan</li>
+        <li>Rapid Learner</li>
+        <li>Effective Team Player</li>
+        <li>Detail-Oriented</li>
+        <li>Adaptable to Change</li>
       </ul>
     </section>
     <section>
-      <h2>PROYEK</h2>
+      <h2>Key Projects</h2>
       <div class="project">
         <p>Seven Solution Digitalisasi Kimia Farma, Tbk.</p>
         <p>Kimia Farma Mobile, Vaksin Gotong Royong.</p>
       </div>
     </section>
     <section>
-      <h2>RIWAYAT PENDIDIKAN</h2>
-      <p>Universitas Indraprasta PGRI</p>
-      <p>S1 Informatika, FMIPA | 2010 - 2015</p>
+      <h2>Education</h2>
+      <p>Indraprasta PGRI University</p>
+      <p>Bachelor of Informatics, FMIPA | 2010 - 2015</p>
     </section>
   </div>
 </body>
+
 </html>
