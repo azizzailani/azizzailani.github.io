@@ -6,7 +6,7 @@ title: Home
 ---
 
 # Abdul Aziz Zailani
-Experienced DevOps Engineer with over 5 years of expertise in CI/CD pipeline development, cloud infrastructure management, and deployment automation. Proficient in Docker, Kubernetes, and major cloud platforms like AWS and Alibaba Cloud.
+Experienced DevOps Engineer with over 5 years of expertise in CI/CD pipeline development, cloud infrastructure management, and deployment automation.
 
 ![Profil](assets/images/profile.jpg)
 
