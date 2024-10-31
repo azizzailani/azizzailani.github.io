@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ '/' | relative_url }}">Home</a> |
+            <a href="{{ '/about' | relative_url }}">About</a> |
+            <a href="{{ '/skills' | relative_url }}">Skills</a> |
+            <a href="{{ '/experience' | relative_url }}">Experience</a> |
+            <a href="{{ '/contact' | relative_url }}">Contact</a>
+        </nav>
+    </header>
+    <main>
+        {{ content }}
+    </main>
+</body>
+</html>
