@@ -8,7 +8,7 @@ title: Home
 # Abdul Aziz Zailani
 Experienced DevOps Engineer with over 5 years of expertise in CI/CD pipeline development, cloud infrastructure management, and deployment automation.
 
-![Profil](assets/images/profile.jpg)
+<!-- ![Profil](assets/images/profile.jpg) -->
 
 **Email**: [aazizzailani@gmail.com](mailto:aazizzailani@gmail.com)  
 **Phone**: 0857-1616-9351  

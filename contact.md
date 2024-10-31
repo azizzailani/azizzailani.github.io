@@ -1,11 +1,5 @@
-# contact.md
-
----
-layout: default
-title: Contact
----
-
 # Contact
+
 Feel free to reach out to me for collaboration opportunities or any DevOps queries.
 
 - **Email**: [aazizzailani@gmail.com](mailto:aazizzailani@gmail.com)

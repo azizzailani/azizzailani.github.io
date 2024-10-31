@@ -22,6 +22,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap; /* Flex-wrap untuk responsif */
 }
 
 a {
@@ -68,6 +69,18 @@ section {
     margin-bottom: 15px;
     border-bottom: 2px solid #007acc;
     display: inline-block;
+}
+
+/* Gaya untuk tautan di dalam konten */
+main a {
+    color: #007acc;
+    font-weight: 500;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+main a:hover {
+    color: #005f99;
 }
 
 /* Gaya responsif */
