@@ -5,7 +5,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
-    line-height: 1.6;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
 }
@@ -13,13 +13,13 @@ body {
 header {
     background-color: #007acc;
     color: white;
-    padding: 15px;
+    padding: 15px 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
 }
@@ -28,16 +28,22 @@ a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
 a:hover {
-    text-decoration: underline;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 main {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 15px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Gaya Heading */
@@ -48,18 +54,26 @@ h1, h2, h3, h4, h5, h6 {
 
 p, li {
     font-weight: 400;
+    line-height: 1.8;
 }
 
-/* Gaya Responsif */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
+/* Styling khusus untuk konten utama */
+section {
+    margin-bottom: 25px;
+}
 
+.section-title {
+    font-size: 1.5em;
+    color: #007acc;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007acc;
+    display: inline-block;
+}
+
+/* Gaya responsif */
+@media (max-width: 768px) {
     main {
-        padding: 10px;
+        padding: 15px;
     }
 
     h1 {
@@ -80,8 +94,13 @@ p, li {
         font-size: 1rem;
     }
 
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
     main {
-        padding: 5px;
+        padding: 10px;
     }
 
     h1 {
