@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav>
-            <!-- Ganti 'Home' menjadi 'About Me' -->
+            <!-- Ganti "Home" dengan "About" atau tautan lain jika diinginkan -->
             <a href="{{ '/about' | relative_url }}" id="about-link">About Me</a>
             <a href="{{ '/skills' | relative_url }}" id="skills-link">Skills</a>
             <a href="{{ '/experience' | relative_url }}" id="experience-link">Experience</a>
@@ -18,7 +18,6 @@
     </header>
     <main>
         <section>
-            <!-- Mengarahkan pengguna langsung ke halaman About Me -->
             <h1 class="section-title">{{ page.title }}</h1>
             {{ content }}
         </section>

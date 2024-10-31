@@ -1,17 +1,7 @@
 # About Me
 
-I am Abdul Aziz Zailani, a DevOps Engineer with over 5 years of experience in CI/CD pipeline development, cloud infrastructure management, and deployment automation. Passionate about utilizing cloud technologies and infrastructure as code, I focus on delivering secure, scalable, and efficient solutions to streamline operations and drive productivity.
+I'm Abdul Aziz Zailani, a DevOps Engineer who discovered a passion for technology early on, leading me to specialize in cloud infrastructure, CI/CD pipelines, and deployment automation over the past five years. My journey in tech has been fueled by a desire to simplify and improve processes, whether it's by automating repetitive tasks or optimizing infrastructure to boost performance and scalability. Every project I undertake is an opportunity to refine my craft and deliver solutions that not only work but also empower teams to achieve their best.
 
-## Professional Summary
-Specializing in DevOps and cloud infrastructure, I have expertise in container orchestration, cloud platforms (AWS, Alibaba Cloud), and Infrastructure as Code (IaC) with tools such as Docker, Kubernetes, Jenkins, and Ansible. My approach enables seamless integration between development and operations, achieving reliable and efficient CI/CD pipelines and enhancing system performance.
+Working with cloud platforms like AWS and Alibaba Cloud, I have honed my skills in Infrastructure as Code (IaC) using tools like Ansible and Terraform, allowing me to deploy and manage complex environments with consistency and efficiency. This dedication to automating infrastructure has enabled development teams to focus more on innovation while I ensure that the systems are secure, resilient, and cost-effective. From deploying Docker containers to managing Kubernetes clusters, I enjoy building scalable solutions that can grow alongside the business needs.
 
-## Personal Attributes
-- **Problem Solver**: Detail-oriented with strong analytical skills in identifying and addressing technical challenges.
-- **Adaptable**: Quick to learn new tools and approaches in fast-paced environments.
-- **Collaborative**: Works effectively across teams to integrate solutions and drive productivity.
-
-## Education
-- **Bachelor’s Degree in Informatics**, Indraprasta PGRI University  
-  **Year**: 2010 - 2015  
-
-With a strong foundation in Informatics and practical experience in DevOps, I continuously seek to improve processes, enhance system security, and support reliable application development.
+Collaboration is at the core of my work, bridging gaps between development and operations to create seamless, integrated workflows. My focus is not just on technology but also on creating environments where teams can thrive and systems perform at their peak. Through each project, I strive to bring value by making infrastructure a solid backbone that supports the development lifecycle—reliable, efficient, and ready to scale for the future.
