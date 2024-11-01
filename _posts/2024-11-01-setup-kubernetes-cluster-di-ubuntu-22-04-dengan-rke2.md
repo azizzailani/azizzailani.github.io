@@ -1,6 +1,6 @@
 ---
 layout: post
-# title: "Setup Kubernetes Cluster Di Ubuntu 22-04 Dengan RKE2"
+title: "Setup Kubernetes Cluster Di Ubuntu 22-04 Dengan RKE2"
 date: 2024-11-01
 categories: [Kubernetes, DevOps]
 tags: [Kubernetes, RKE2, Ubuntu, Cluster, Setup]
