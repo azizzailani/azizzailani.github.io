@@ -4,8 +4,10 @@
 /* Gaya dasar untuk seluruh halaman */
 body {
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    color: #444;
+    /* Warna teks lebih gelap untuk kontras */
     background-color: #f4f4f4;
+    /* Warna latar belakang yang lebih terang dan ramah mata */
     margin: 0;
     padding: 0;
     display: flex;
@@ -19,7 +21,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    /* Susun elemen secara vertikal pada mobile */
+    /* Susun elemen secara vertikal */
     width: 100%;
     max-width: 1200px;
     /* Maksimal lebar untuk tata letak yang rapi */
@@ -29,13 +31,15 @@ body {
 /* Header */
 header {
     width: 100%;
-    /* Membuat lebar header 100% pada mobile */
-    background-color: #fff;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-    /* Menambahkan border bawah pada mobile */
-    border-radius: 8px;
+    /* Membuat lebar header 100% */
+    background-color: #ffffff;
+    /* Warna latar belakang header */
+    padding: 20px;
+    /* Padding yang lebih besar */
+    border-bottom: 2px solid #ddd;
+    /* Garis bawah untuk header */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Bayangan lebih lembut */
     position: sticky;
     top: 0;
     /* Agar header tetap di atas saat menggulir */
@@ -45,7 +49,7 @@ header {
 
 /* Efek hover pada header */
 header:hover {
-    background-color: #f9f9f9;
+    background-color: #f1f1f1;
     /* Warna latar belakang saat hover */
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     /* Bayangan lebih kuat saat hover */
@@ -54,21 +58,20 @@ header:hover {
 /* Navigasi */
 nav {
     display: flex;
-    flex-direction: row;
-    /* Navbar horizontal pada mobile */
     justify-content: center;
     /* Rata tengah */
-    gap: 15px;
-    margin-top: 20px;
+    gap: 20px;
+    /* Jarak antar tautan */
+    margin-top: 10px;
     /* Margin atas untuk spasi */
 }
 
 nav a {
-    color: #333;
-    /* Warna teks tautan yang gelap */
+    color: #007bff;
+    /* Warna teks tautan */
     text-decoration: none;
     font-weight: 500;
-    padding: 10px;
+    padding: 10px 15px;
     /* Padding yang lebih besar */
     border-radius: 5px;
     transition: background 0.3s, transform 0.3s;
@@ -76,9 +79,9 @@ nav a {
 }
 
 nav a:hover {
-    background: rgba(100, 100, 255, 0.1);
-    /* Efek latar belakang yang lebih lembut saat hover */
-    transform: scale(1.02);
+    background: rgba(0, 123, 255, 0.1);
+    /* Efek latar belakang saat hover */
+    transform: scale(1.05);
     /* Efek zoom saat hover */
 }
 
@@ -99,14 +102,14 @@ main {
 
 /* Judul Seksi */
 .section-title {
-    font-size: 1.8em;
+    font-size: 2em;
     /* Ukuran font untuk judul */
     color: #333;
     /* Warna teks judul */
     margin-bottom: 15px;
     /* Margin bawah untuk judul */
-    border-bottom: 2px solid #333;
-    /* Garis bawah yang lebih gelap */
+    border-bottom: 2px solid #007bff;
+    /* Garis bawah berwarna biru */
     padding-bottom: 5px;
 }
 
@@ -151,8 +154,6 @@ li {
     header {
         margin-bottom: 20px;
         /* Margin di bawah header */
-        border-right: none;
-        /* Menghilangkan border kanan pada mobile */
         border-bottom: none;
         /* Menghilangkan border bawah pada mobile */
     }
@@ -163,6 +164,15 @@ li {
         margin: 0;
         /* Menghilangkan margin pada mobile untuk keselarasan */
     }
+
+    nav {
+        flex-direction: column;
+        /* Navbar menjadi vertikal pada mobile */
+        margin-top: 0;
+        /* Menghilangkan margin atas */
+        gap: 10px;
+        /* Jarak antar tautan */
+    }
 }
 
 /* Menambahkan efek pada elemen saat mengarah pada */
@@ -172,7 +182,7 @@ h3:hover,
 h4:hover,
 h5:hover,
 h6:hover {
-    color: #007bff;
+    color: #0056b3;
     /* Ubah warna saat hover untuk lebih menarik */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     /* Efek bayangan pada teks */
@@ -181,7 +191,7 @@ h6:hover {
 /* Efek transisi halus */
 p:hover,
 li:hover {
-    color: #007bff;
+    color: #0056b3;
     /* Ubah warna saat hover pada teks paragraf dan list item */
     transition: color 0.3s;
     /* Transisi untuk perubahan warna */
