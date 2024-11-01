@@ -14,6 +14,9 @@
     --spacing-large: 30px;
     --max-width-content: 1100px;
     --min-height-content: 85vh;
+    --sidebar-width: 250px;
+    --content-width: 800px;
+    /* Lebar tetap untuk main-content */
 }
 
 /* Reset dasar */
@@ -40,16 +43,15 @@ body {
 .container {
     display: flex;
     flex-direction: row;
-    width: 100%;
     max-width: var(--max-width-content);
     gap: var(--spacing-large);
     margin: auto;
-    min-height: 85vh;
+    width: 100%;
 }
 
 /* Sidebar */
 .sidebar {
-    width: 250px;
+    width: var(--sidebar-width);
     background-color: var(--box-background);
     border: 1px solid var(--border-color);
     border-radius: 8px;
@@ -58,7 +60,6 @@ body {
     position: sticky;
     top: 20px;
     height: var(--min-height-content);
-    /* Tetapkan tinggi konsisten */
 }
 
 /* Navigasi */
@@ -85,13 +86,12 @@ nav a:hover {
 
 /* Konten Utama */
 .main-content {
-    flex: 1;
+    width: var(--content-width);
     background-color: var(--box-background);
     padding: var(--spacing-large);
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     height: var(--min-height-content);
-    /* Tetapkan tinggi konsisten */
     overflow: auto;
     /* Aktifkan scrolling jika konten melebihi batas */
 }
@@ -163,7 +163,6 @@ p:hover {
     .main-content {
         width: 100%;
         height: auto;
-        /* Sesuaikan tinggi untuk layar kecil */
         min-height: 75vh;
     }
 
