@@ -15,7 +15,7 @@
     --max-width-content: 1100px;
     --min-height-content: 85vh;
     --sidebar-width: 250px;
-    --content-width: 800px;
+    --content-width: calc(100% - 270px);
     /* Lebar tetap untuk main-content */
 }
 
@@ -34,31 +34,37 @@ body {
     color: var(--secondary-color);
     background-color: var(--background-color);
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     padding: var(--spacing-large);
     min-height: 100vh;
 }
 
-/* Header */
+/* Header vertikal */
 header {
-    width: 100%;
-    max-width: var(--max-width-content);
+    width: var(--sidebar-width);
     background-color: var(--box-background);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     padding: var(--spacing-medium);
-    margin-bottom: var(--spacing-large);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    position: sticky;
+    top: var(--spacing-large);
+    /* Agar tetap di bagian atas saat menggulir */
+    height: calc(100vh - 2 * var(--spacing-large));
+    /* Tinggi penuh dengan padding */
+    margin-right: var(--spacing-large);
 }
 
 /* Navigasi di Header */
 header nav {
     display: flex;
+    flex-direction: column;
     gap: var(--spacing-small);
+    width: 100%;
+    /* Lebar penuh untuk menyesuaikan konten */
 }
 
 header nav a {
@@ -75,28 +81,13 @@ header nav a:hover {
     transform: scale(1.05);
 }
 
-/* Kontainer utama untuk Sidebar dan Konten */
+/* Kontainer utama untuk Konten */
 .container {
     display: flex;
-    position: relative;
-    /* Gunakan posisi relatif untuk konsistensi */
+    flex-direction: column;
     max-width: var(--max-width-content);
-    gap: var(--spacing-large);
-    margin: auto;
     width: 100%;
-}
-
-/* Sidebar */
-.sidebar {
-    width: var(--sidebar-width);
-    background-color: var(--box-background);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    padding: var(--spacing-medium);
-    position: sticky;
-    top: 20px;
-    height: var(--min-height-content);
+    margin-left: var(--sidebar-width);
 }
 
 /* Konten Utama */
@@ -106,7 +97,7 @@ header nav a:hover {
     padding: var(--spacing-large);
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    height: var(--min-height-content);
+    min-height: var(--min-height-content);
     overflow: auto;
 }
 
@@ -167,22 +158,27 @@ p:hover {
 
 /* Responsif */
 @media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        width: 100%;
+        position: relative;
+        height: auto;
+        margin: 0 0 var(--spacing-large) 0;
+    }
+
     .container {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: var(--spacing-medium);
+        margin: 0;
     }
 
-    header {
-        padding: var(--spacing-small);
-    }
-
-    .sidebar,
     .main-content {
         width: 100%;
-        height: auto;
-        min-height: 75vh;
     }
 
     nav {
