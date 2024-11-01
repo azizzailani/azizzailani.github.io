@@ -16,6 +16,7 @@
     --min-height-content: 85vh;
     --sidebar-width: 250px;
     --content-width: 800px;
+    /* Lebar tetap untuk main-content */
 }
 
 /* Reset dasar */
@@ -33,24 +34,52 @@ body {
     color: var(--secondary-color);
     background-color: var(--background-color);
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     padding: var(--spacing-large);
     min-height: 100vh;
 }
 
-/* Kontainer utama */
+/* Header */
+header {
+    width: 100%;
+    max-width: var(--max-width-content);
+    background-color: var(--box-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: var(--spacing-medium);
+    margin-bottom: var(--spacing-large);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigasi di Header */
+header nav {
+    display: flex;
+    gap: var(--spacing-small);
+}
+
+header nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+header nav a:hover {
+    background: rgba(0, 123, 255, 0.1);
+    transform: scale(1.05);
+}
+
+/* Kontainer utama untuk Sidebar dan Konten */
 .container {
     display: flex;
-    position: absolute;
-    /* Posisi absolut untuk konsistensi */
-    top: 50px;
-    /* Tetapkan posisi atas tetap */
-    left: 50%;
-    /* Pusatkan secara horizontal */
-    transform: translateX(-50%);
-    /* Pusatkan di layar */
-    flex-direction: row;
+    position: relative;
+    /* Gunakan posisi relatif untuk konsistensi */
     max-width: var(--max-width-content);
     gap: var(--spacing-large);
     margin: auto;
@@ -68,28 +97,6 @@ body {
     position: sticky;
     top: 20px;
     height: var(--min-height-content);
-}
-
-/* Navigasi */
-nav {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-small);
-    margin-top: var(--spacing-medium);
-}
-
-nav a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    padding: var(--spacing-small) var(--spacing-medium);
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.3s;
-}
-
-nav a:hover {
-    background: rgba(0, 123, 255, 0.1);
-    transform: scale(1.05);
 }
 
 /* Konten Utama */
@@ -163,12 +170,12 @@ p:hover {
     .container {
         flex-direction: column;
         align-items: center;
-        top: 20px;
-        /* Sesuaikan posisi atas */
-        transform: none;
-        /* Pusatkan tanpa transform */
         width: 100%;
         padding: var(--spacing-medium);
+    }
+
+    header {
+        padding: var(--spacing-small);
     }
 
     .sidebar,
