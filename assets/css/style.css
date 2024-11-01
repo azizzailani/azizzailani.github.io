@@ -21,7 +21,8 @@ body {
     width: 100%;
     max-width: 1200px;
     /* Maksimal lebar untuk tata letak yang rapi */
-    padding: 20px;
+    padding: 0;
+    /* Padding dihapus untuk menyamakan posisi header dan konten */
 }
 
 /* Header Mengambang */
@@ -37,10 +38,11 @@ header {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     /* Bayangan lebih kuat */
-    position: relative;
-    /* Ubah posisi menjadi relative */
-    margin-right: 20px;
-    /* Jarak kanan untuk memberi ruang */
+    position: sticky;
+    top: 0;
+    /* Ubah posisi sticky ke atas agar sejajar dengan konten */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    /* Efek transisi */
 }
 
 /* Efek hover pada header */
@@ -139,8 +141,8 @@ li {
     .container {
         flex-direction: column;
         /* Susun elemen secara vertikal pada mobile */
-        align-items: center;
-        /* Sesuaikan dengan tampilan mobile */
+        align-items: stretch;
+        /* Pastikan elemen mengambil lebar penuh */
     }
 
     header {
