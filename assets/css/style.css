@@ -15,7 +15,7 @@
     --max-width-content: 1100px;
     --min-height-content: 85vh;
     --header-height: 70px;
-    --content-width: 100%;
+    --content-width: calc(100% - 2 * var(--spacing-large));
 }
 
 /* Reset dasar */
@@ -36,6 +36,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    padding-top: var(--header-height);
 }
 
 /* Header horizontal */
@@ -82,31 +83,32 @@ header nav a:hover {
     width: 100%;
     max-width: var(--max-width-content);
     margin: auto;
-    padding: calc(var(--header-height) + var(--spacing-large)) var(--spacing-large) var(--spacing-large) var(--spacing-large);
+    padding: calc(var(--header-height) + var(--spacing-large)) var(--spacing-large) var(--spacing-large);
     box-sizing: border-box;
+    align-items: center;
 }
 
-/* Konten Utama dengan Flex */
+/* Konten Utama dengan ukuran tetap */
 .main-content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: var(--spacing-medium);
-    width: var(--content-width);
+    width: 100%;
+    max-width: var(--content-width);
+    height: var(--min-height-content);
     background-color: var(--box-background);
     padding: var(--spacing-large);
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    min-height: var(--min-height-content);
     overflow: auto;
+    align-items: flex-start;
 }
 
 /* Elemen dalam .main-content */
 .main-content>* {
     flex: 1 1 calc(50% - var(--spacing-medium));
-    /* Flex basis dengan jarak antar elemen */
     min-width: 300px;
-    /* Lebar minimum untuk tampilan responsif */
     background-color: var(--box-background);
     padding: var(--spacing-small);
     border-radius: 8px;
@@ -189,6 +191,9 @@ p:hover {
 
     .main-content {
         flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
     }
 
     .main-content>* {
