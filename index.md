@@ -6,6 +6,28 @@ I thrive on creating seamless integrations between development and operations te
 
 At the heart of my work is a commitment to fostering collaboration and reliability in every project. By bridging development and operations, I aim to provide a robust foundation for high-performing applications and a scalable infrastructure that is ready for the future.
 
-<div style="display: flex; justify-content: center; margin-top: 20px;">
-    <img src="https://images.ctfassets.net/wfutmusr1t3h/7M3Tx3nx9GAuEG0SZLgjNk/83fa8ca04a722ed254dceee33b7740b3/DevOps-workflow.png" alt="DevOps Workflow Illustration" style="max-width: 100%; height: auto;">
+---
+
+## What I'm Doing
+
+<div style="display: flex; gap: 20px; margin-top: 20px; justify-content: center;">
+
+<div style="text-align: center;">
+    <img src="https://img.icons8.com/external-flat-juicy-fish/344/external-devops-it-technology-flat-flat-juicy-fish.png" alt="DevOps Icon" width="50">
+    <h3>DevOps</h3>
+    <p>Building and optimizing CI/CD pipelines to enable rapid and reliable deployment cycles, with a focus on scalability and automation.</p>
+</div>
+
+<div style="text-align: center;">
+    <img src="https://img.icons8.com/fluency/344/cloud-network.png" alt="SRE Icon" width="50">
+    <h3>SRE</h3>
+    <p>Ensuring the reliability and performance of systems through proactive monitoring, alerting, and incident response.</p>
+</div>
+
+<div style="text-align: center;">
+    <img src="https://img.icons8.com/color/344/cloud.png" alt="Cloud Engineer Icon" width="50">
+    <h3>Cloud Engineer</h3>
+    <p>Managing and optimizing cloud resources on AWS and Alibaba Cloud to support high-availability and cost-efficient operations.</p>
+</div>
+
 </div>
