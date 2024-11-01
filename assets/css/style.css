@@ -5,8 +5,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
-    background-color: #f0f4f8;
-    /* Warna background yang lebih cerah */
+    background-color: #493f3f;
     margin: 0;
     padding: 0;
     display: flex;
@@ -65,13 +64,12 @@ nav a:hover {
 /* Konten Utama */
 main {
     width: 100%;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.95);
-    /* Sedikit transparan untuk efek lembut */
+    padding: 40px; /* Tambahkan padding lebih besar */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    /* Bayangan lebih kuat */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     text-align: left;
+    margin: 20px; /* Tambahkan margin untuk memberi ruang dari tepi layar */
 }
 
 /* Judul Seksi */
@@ -112,6 +110,10 @@ li {
     .container {
         flex-direction: column;
         align-items: center;
+    }
+    main {
+        padding: 20px; /* Padding lebih kecil pada tampilan mobile */
+        margin: 10px; /* Margin lebih kecil pada tampilan mobile */
     }
 
     header {
