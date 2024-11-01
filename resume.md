@@ -1,26 +1,30 @@
 ## ![Experience Icon](https://img.icons8.com/ios-glyphs/30/000000/briefcase.png) Work Experience
 
 <div style="position: relative; margin: 20px 0;">
-  <div style="position: absolute; top: 0; left: 50%; width: 2px; height: 100%; background: #007acc;"></div>
+  <div style="position: absolute; top: 0; left: 0; width: 2px; height: 100%; background: #007acc;"></div>
 
-  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px;">
-    <div style="width: 45%; text-align: right;">
+  <div style="display: flex; align-items: center; margin-bottom: 40px;">
+    <div style="width: 15%; text-align: right; padding-right: 20px; font-weight: bold; color: #007acc;">
+      Nov 2022 - Present
+    </div>
+    <div style="width: 10px; height: 10px; border-radius: 50%; background: #007acc; border: 2px solid white; margin: 0 20px;"></div>
+    <div style="width: 65%;">
       <h3>Senior DevOps Engineer - PT. Komunitas Anak Bangsa</h3>
-      <p>(Nov 2022 - Present)</p>
       <ul>
         <li>Designed CI/CD pipelines with Jenkins, reducing deployment time.</li>
         <li>Implemented monitoring with Prometheus, increasing uptime.</li>
         <li>Set up centralized logging with Grafana and Loki.</li>
       </ul>
     </div>
-    <div style="width: 10px; height: 10px; border-radius: 50%; background: #007acc; border: 2px solid white;"></div>
   </div>
 
-  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px;">
-    <div style="width: 10px; height: 10px; border-radius: 50%; background: #007acc; border: 2px solid white;"></div>
-    <div style="width: 45%;">
+  <div style="display: flex; align-items: center; margin-bottom: 40px;">
+    <div style="width: 15%; text-align: right; padding-right: 20px; font-weight: bold; color: #007acc;">
+      Oct 2019 - Nov 2022
+    </div>
+    <div style="width: 10px; height: 10px; border-radius: 50%; background: #007acc; border: 2px solid white; margin: 0 20px;"></div>
+    <div style="width: 65%;">
       <h3>DevOps Engineer - PT. Harmonix Teknologi Peentar</h3>
-      <p>(Oct 2019 - Nov 2022)</p>
       <ul>
         <li>Developed CI/CD pipelines using Jenkins and GitLab.</li>
         <li>Managed infrastructure on Telkom Sigma and AWS.</li>
@@ -29,23 +33,27 @@
     </div>
   </div>
 
-  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px;">
-    <div style="width: 45%; text-align: right;">
+  <div style="display: flex; align-items: center; margin-bottom: 40px;">
+    <div style="width: 15%; text-align: right; padding-right: 20px; font-weight: bold; color: #007acc;">
+      Oct 2018 - Aug 2021
+    </div>
+    <div style="width: 10px; height: 10px; border-radius: 50%; background: #007acc; border: 2px solid white; margin: 0 20px;"></div>
+    <div style="width: 65%;">
       <h3>System Administrator - PT. Harmonix Teknologi Peentar</h3>
-      <p>(Oct 2018 - Aug 2021)</p>
       <ul>
         <li>Configured and maintained network and server infrastructure.</li>
         <li>Provided technical support and documentation for clients.</li>
       </ul>
     </div>
-    <div style="width: 10px; height: 10px; border-radius: 50%; background: #007acc; border: 2px solid white;"></div>
   </div>
 
-  <div style="display: flex; align-items: center; justify-content: space-between;">
-    <div style="width: 10px; height: 10px; border-radius: 50%; background: #007acc; border: 2px solid white;"></div>
-    <div style="width: 45%;">
+  <div style="display: flex; align-items: center;">
+    <div style="width: 15%; text-align: right; padding-right: 20px; font-weight: bold; color: #007acc;">
+      Aug 2021 - Aug 2022
+    </div>
+    <div style="width: 10px; height: 10px; border-radius: 50%; background: #007acc; border: 2px solid white; margin: 0 20px;"></div>
+    <div style="width: 65%;">
       <h3>DevOps Engineer - buyback.ai</h3>
-      <p>(Aug 2021 - Aug 2022)</p>
       <ul>
         <li>Migrated infrastructure from Digital Ocean to AWS.</li>
         <li>Enhanced performance using Laravel and MySQL.</li>
