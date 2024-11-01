@@ -13,19 +13,19 @@ At the heart of my work is a commitment to fostering collaboration and reliabili
 <div style="display: flex; gap: 20px; margin-top: 20px; justify-content: center;">
 
 <div style="text-align: center;">
-    <img src="https://img.icons8.com/external-flat-juicy-fish/344/external-devops-it-technology-flat-flat-juicy-fish.png" alt="DevOps Icon" width="50">
+    <img src="https://cdn-icons-png.flaticon.com/512/5115/5115293.png" alt="DevOps Icon" width="50">
     <h3>DevOps</h3>
     <p>Building and optimizing CI/CD pipelines to enable rapid and reliable deployment cycles, with a focus on scalability and automation.</p>
 </div>
 
 <div style="text-align: center;">
-    <img src="https://img.icons8.com/fluency/344/cloud-network.png" alt="SRE Icon" width="50">
+    <img src="https://www.svgrepo.com/show/15403/analysis.svg" alt="SRE Icon" width="50">
     <h3>SRE</h3>
     <p>Ensuring the reliability and performance of systems through proactive monitoring, alerting, and incident response.</p>
 </div>
 
 <div style="text-align: center;">
-    <img src="https://img.icons8.com/color/344/cloud.png" alt="Cloud Engineer Icon" width="50">
+    <img src="https://www.svgrepo.com/show/77029/cloud-computing.svg" alt="Cloud Engineer Icon" width="50">
     <h3>Cloud Engineer</h3>
     <p>Managing and optimizing cloud resources on AWS and Alibaba Cloud to support high-availability and cost-efficient operations.</p>
 </div>
