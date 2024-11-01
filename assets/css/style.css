@@ -10,7 +10,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 /* Kontainer Utama */
@@ -18,28 +18,27 @@ body {
     display: flex;
     width: 100%;
     max-width: 1200px;
-    /* Membatasi lebar konten agar konsisten */
-    margin: 0 auto;
     padding: 20px;
 }
 
-/* Header Vertikal */
+/* Header Mengambang */
 header {
-    width: 200px;
+    width: 180px;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 15px;
     border-right: 1px solid #ddd;
-    height: 100vh;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: sticky;
+    /* Tetap di tempat saat digulir */
+    top: 20px;
+    margin-right: 20px;
 }
 
 nav {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     margin-top: 20px;
 }
 
@@ -47,7 +46,7 @@ nav a {
     color: #333;
     text-decoration: none;
     font-weight: 500;
-    padding: 10px;
+    padding: 8px;
     border-radius: 5px;
     transition: background 0.3s;
 }
@@ -56,15 +55,10 @@ nav a:hover {
     background: rgba(0, 0, 0, 0.05);
 }
 
-/* Main content */
+/* Konten Utama */
 main {
-    margin-left: 220px;
-    padding: 40px;
     width: 100%;
-    /* Lebar penuh hingga max-width */
-    max-width: 900px;
-    /* Batasan lebar tetap yang seragam */
-    min-height: 80vh;
+    padding: 40px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -115,6 +109,7 @@ li {
         height: auto;
         border-right: none;
         border-bottom: 1px solid #ddd;
+        margin: 0 0 20px 0;
     }
 
     main {
