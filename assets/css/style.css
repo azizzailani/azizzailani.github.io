@@ -26,6 +26,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    min-height: 100vh;
+    /* Pastikan body memenuhi tinggi layar */
 }
 
 /* Kontainer Tata Letak */
@@ -34,10 +36,12 @@ body {
     flex-direction: row;
     width: 100%;
     max-width: var(--max-width-content);
+    /* Batas maksimal lebar konten */
     padding: var(--spacing-large);
     gap: var(--spacing-large);
     align-items: flex-start;
     margin: auto;
+    box-sizing: border-box;
 }
 
 /* Box - Kontainer Umum */
@@ -61,6 +65,7 @@ body {
     top: 20px;
     /* Tambahkan jarak dari atas untuk efek mengambang */
     margin-top: var(--spacing-medium);
+    box-sizing: border-box;
 }
 
 /* Navigasi */
@@ -95,6 +100,9 @@ nav a:hover {
     /* Tambahkan bayangan untuk efek mengambang */
     line-height: 1.6;
     margin-top: var(--spacing-medium);
+    min-height: 80vh;
+    /* Tetapkan tinggi minimum untuk konsistensi */
+    box-sizing: border-box;
 }
 
 /* Box Item untuk Galeri */
