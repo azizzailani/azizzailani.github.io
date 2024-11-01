@@ -5,9 +5,9 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: #f9f9f9;
-    /* Ubah warna teks menjadi lebih terang untuk kontras dengan latar belakang gelap */
-    background-color: #333;
-    /* Warna latar belakang gelap */
+    /* Warna teks menjadi lebih terang untuk kontras dengan latar belakang gelap */
+    background-color: #222;
+    /* Warna latar belakang yang lebih gelap */
     margin: 0;
     padding: 0;
     display: flex;
@@ -20,6 +20,7 @@ body {
     display: flex;
     width: 100%;
     max-width: 1200px;
+    /* Maksimal lebar untuk tata letak yang rapi */
     padding: 20px;
 }
 
@@ -27,12 +28,14 @@ body {
 header {
     width: 220px;
     /* Lebar header */
-    background-color: #444;
+    background-color: #333;
     /* Warna latar belakang header */
     padding: 15px;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid #444;
+    /* Perubahan warna border */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Bayangan lebih kuat */
     position: sticky;
     top: 20px;
     align-self: flex-start;
@@ -42,12 +45,13 @@ header {
 }
 
 header:hover {
-    background-color: #555;
+    background-color: #444;
     /* Warna latar belakang saat hover */
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     /* Bayangan lebih kuat saat hover */
 }
 
+/* Navigasi */
 nav {
     display: flex;
     flex-direction: column;
@@ -134,9 +138,12 @@ li {
 
     header {
         width: 100%;
+        /* Membuat lebar header 100% pada mobile */
         height: auto;
         border-right: none;
+        /* Menghilangkan border kanan pada mobile */
         border-bottom: 1px solid #ddd;
+        /* Menambahkan border bawah pada mobile */
         margin-bottom: 20px;
         display: flex;
         justify-content: center;
@@ -145,6 +152,7 @@ li {
 
     nav {
         flex-direction: row;
+        /* Navbar horizontal pada mobile */
         justify-content: center;
         gap: 15px;
     }
