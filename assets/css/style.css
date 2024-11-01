@@ -4,100 +4,124 @@
 /* Gaya dasar untuk seluruh halaman */
 body {
     font-family: 'Poppins', sans-serif;
-    color: #444; /* Warna teks lebih gelap untuk kontras */
-    background-color: #f4f4f4; /* Warna latar belakang yang lebih terang dan ramah mata */
+    color: #444;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Ubah menjadi kolom untuk tampilan mobile */
-    align-items: center; /* Rata tengah untuk seluruh isi */
+    justify-content: center;
+    align-items: flex-start;
 }
 
-/* Kontainer Utama */
+/* Kontainer Utama untuk Header dan Main */
 .container {
     display: flex;
-    flex-direction: column; /* Susun elemen secara vertikal */
+    flex-direction: row;
+    /* Posisi header di kiri dan main di kanan pada desktop */
     width: 100%;
-    max-width: 1200px; /* Maksimal lebar untuk tata letak yang rapi */
+    max-width: 1200px;
+    padding: 0;
+    gap: 20px;
+    /* Jarak antara header dan main */
 }
 
 /* Header */
 header {
-    width: 100%; /* Membuat lebar header 100% */
-    background-color: #ffffff; /* Warna latar belakang header */
-    padding: 20px; /* Padding yang lebih besar */
-    border-bottom: 2px solid #ddd; /* Garis bawah untuk header */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bayangan lebih lembut */
-    position: sticky; /* Agar header tetap di atas saat menggulir */
+    width: 220px;
+    /* Lebar header pada desktop */
+    background-color: #ffffff;
+    padding: 20px;
+    border-right: 2px solid #ddd;
+    /* Garis pemisah di sebelah kanan */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
     top: 0;
-    transition: background-color 0.3s, box-shadow 0.3s; /* Efek transisi */
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 /* Navigasi */
 nav {
     display: flex;
-    justify-content: center; /* Rata tengah */
-    gap: 20px; /* Jarak antar tautan */
-    margin-top: 10px; /* Margin atas untuk spasi */
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 nav a {
-    color: #007bff; /* Warna teks tautan */
+    color: #007bff;
     text-decoration: none;
     font-weight: 500;
-    padding: 10px 15px; /* Padding yang lebih besar */
+    padding: 10px 15px;
     border-radius: 5px;
-    transition: background 0.3s, transform 0.3s; /* Efek transform */
+    transition: background 0.3s, transform 0.3s;
 }
 
 nav a:hover {
-    background: rgba(0, 123, 255, 0.1); /* Efek latar belakang saat hover */
-    transform: scale(1.05); /* Efek zoom saat hover */
+    background: rgba(0, 123, 255, 0.1);
+    transform: scale(1.05);
 }
 
 /* Konten Utama */
 main {
-    width: 100%; /* Memastikan main mengambil lebar penuh */
-    padding: 40px; /* Padding yang sesuai */
-    background-color: rgba(255, 255, 255, 0.9); /* Latar belakang putih transparan untuk konten utama */
-    border-radius: 12px; /* Sudut melengkung */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Bayangan */
-    text-align: left; /* Rata kiri untuk teks */
-    margin: 20px 0; /* Margin untuk memberi ruang dari tepi layar */
+    flex: 1;
+    /* Agar main mengambil sisa ruang di sebelah kanan */
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 20px 0;
 }
 
 /* Judul Seksi */
 .section-title {
-    font-size: 2em; /* Ukuran font untuk judul */
-    color: #333; /* Warna teks judul */
-    margin-bottom: 15px; /* Margin bawah untuk judul */
-    border-bottom: 2px solid #007bff; /* Garis bawah berwarna biru */
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
     padding-bottom: 5px;
 }
 
 /* Heading dan Typography */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600; /* Ketebalan font untuk heading */
-    color: #333; /* Warna teks heading */
-    margin-bottom: 10px; /* Margin bawah untuk heading */
-    line-height: 1.3; /* Penambahan jarak antar baris untuk kenyamanan */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.3;
 }
 
 /* Responsif */
 @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        /* Ubah tata letak menjadi vertikal pada mobile */
+        align-items: center;
+        /* Pusatkan kontainer pada tampilan mobile */
+    }
+
     header {
-        margin-bottom: 20px; /* Margin di bawah header */
-        border-bottom: none; /* Menghilangkan border bawah pada mobile */
+        width: 100%;
+        /* Header mengambil lebar penuh */
+        border-right: none;
+        border-bottom: 2px solid #ddd;
+        margin-bottom: 20px;
     }
 
     main {
-        padding: 20px; /* Padding lebih kecil pada tampilan mobile */
-        margin: 0; /* Menghilangkan margin pada mobile untuk keselarasan */
+        width: 100%;
+        padding: 20px;
+        margin: 0;
     }
 
     nav {
-        flex-direction: column; /* Navbar menjadi vertikal pada mobile */
-        margin-top: 0; /* Menghilangkan margin atas */
-        gap: 10px; /* Jarak antar tautan */
+        flex-direction: row;
+        /* Navbar menjadi horizontal pada mobile */
+        justify-content: center;
+        gap: 15px;
     }
 }
