@@ -1,38 +1,37 @@
 /* Import font Poppins dari Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
-/* Font dan Gaya Dasar */
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    background-color: #f9f9f9;
-    /* Menggunakan warna solid */
-    margin: 0;
-    padding: 0;
+/* Kontainer Utama */
+.container {
+    display: flex;
 }
 
-/* Header */
+/* Header Vertikal */
 header {
-    background-color: rgba(255, 255, 255, 0.95);
-    border-bottom: 1px solid #ddd;
-    color: #333;
-    padding: 15px 0;
-    text-align: center;
+    width: 200px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    height: 100vh;
+    /* Membuat header sepanjang halaman */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 nav {
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 nav a {
     color: #333;
     text-decoration: none;
     font-weight: 500;
-    padding: 8px 15px;
+    padding: 10px;
     border-radius: 5px;
     transition: background 0.3s;
 }
@@ -41,16 +40,18 @@ nav a:hover {
     background: rgba(0, 0, 0, 0.05);
 }
 
+/* Main content */
 main {
-    max-width: 850px;
-    margin: 40px auto;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.9);
+    margin-left: 220px;
+    /* Mengimbangi lebar header */
+    padding: 40px;
+    max-width: calc(100% - 220px);
+    /* Menyisakan ruang untuk header */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Heading and Typography */
 h1,
 h2,
 h3,
@@ -70,77 +71,23 @@ li {
     color: #555;
 }
 
-.section-title {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
-    display: inline-block;
-}
-
-/* Gaya untuk tautan di dalam konten utama */
-main a {
-    color: #3498db;
-    font-weight: 500;
-    text-decoration: none;
-    border-bottom: 1px dashed #3498db;
-    transition: color 0.3s;
-}
-
-main a:hover {
-    color: #2980b9;
-    border-bottom: 1px solid #2980b9;
-}
-
-/* Gaya responsif */
+/* Responsif */
 @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    header {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
     main {
+        margin-left: 0;
+        max-width: 100%;
         padding: 20px;
     }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    p,
-    li {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        font-size: 0.9rem;
-    }
-
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    main {
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 1.6rem;
-    }
-
-    p,
-    li {
-        font-size: 0.9rem;
-    }
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.85rem;
-    color: #999;
 }
