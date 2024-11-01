@@ -47,9 +47,11 @@ body {
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-/* Sidebar (Header yang Lebih Spesifik) */
+/* Sidebar */
 .sidebar {
     width: 200px;
+    min-width: 200px;
+    /* Tetapkan lebar minimum agar tetap proporsional */
     position: sticky;
     top: 0;
 }
@@ -150,6 +152,9 @@ p:hover {
 
     .sidebar {
         width: 100%;
+        /* Pastikan sidebar mengambil lebar penuh */
+        min-width: 100%;
+        /* Atur min-width agar tidak memengaruhi tata letak */
         border-right: none;
         border-bottom: 2px solid #ddd;
         margin-bottom: var(--spacing-medium);
