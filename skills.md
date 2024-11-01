@@ -1,5 +1,3 @@
-# Skills
-
 ## CI/CD (Continuous Integration & Deployment)
 - **Tools**: Jenkins, GitLab CI, GitHub Actions, Fastlane
 - **Highlights**: Developed robust multi-stage CI/CD pipelines, streamlining deployment processes with minimal downtime across varied environments.
