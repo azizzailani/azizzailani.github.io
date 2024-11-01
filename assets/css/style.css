@@ -34,7 +34,6 @@ body {
 header {
     grid-row: 1 / 2;
     width: 100%;
-    /* Menyesuaikan lebar kontainer */
     background-color: #ffffff;
     padding: 20px;
     border-bottom: 1px solid #e0e0e0;
@@ -71,7 +70,6 @@ nav a:hover {
 main {
     grid-row: 2 / 3;
     width: 100%;
-    /* Menyesuaikan lebar kontainer */
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
@@ -133,22 +131,64 @@ p {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+        /* Memberikan ruang lebih untuk layar kecil */
+    }
+
+    .container {
+        max-width: 100%;
+        gap: 1rem;
+        /* Mengurangi jarak antara elemen di layar kecil */
+    }
+
     header {
-        width: 100%;
-        border-right: none;
-        border-bottom: 2px solid #ddd;
-        margin-bottom: 20px;
+        padding: 15px 10px;
+        border-bottom: none;
+        box-shadow: none;
+        margin-bottom: 10px;
     }
 
-    main {
-        width: 100%;
-        padding: 20px;
-        margin-top: 10px;
-    }
-
+    /* Navigasi */
     nav {
         flex-direction: column;
-        justify-content: center;
+        gap: 10px;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 6px 10px;
+        font-size: 0.9em;
+        /* Ukuran font lebih kecil untuk layar kecil */
+    }
+
+    /* Konten Utama */
+    main {
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 6px;
+    }
+
+    /* Ukuran font dan spasi di elemen teks */
+    .section-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        padding-bottom: 4px;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 1.2em;
+        margin-bottom: 8px;
     }
 }
 
