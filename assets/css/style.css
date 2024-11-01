@@ -1,126 +1,114 @@
 /* Import font Poppins dari Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
+/* Variabel CSS untuk warna dan spasi */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #333;
+    --background-color: #f0f4f8;
+    --box-background: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 30px;
+}
+
 /* Gaya dasar untuk seluruh halaman */
 body {
     font-family: 'Poppins', sans-serif;
-    color: #333;
-    /* Warna teks untuk kontras */
-    background-color: #f0f4f8;
-    /* Warna latar belakang yang lembut */
+    color: var(--secondary-color);
+    background-color: var(--background-color);
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    /* Pusatkan konten */
     align-items: flex-start;
-    /* Menjaga konten di bagian atas */
 }
 
-/* Kontainer Utama untuk Header dan Main */
+/* Kontainer Tata Letak */
 .container {
     display: flex;
     flex-direction: row;
-    /* Posisi header di kiri dan main di kanan */
     width: 100%;
     max-width: 1200px;
-    /* Maksimal lebar untuk tata letak yang rapi */
     padding: 0;
-    gap: 20px;
-    /* Jarak antara header dan main */
+    gap: var(--spacing-medium);
     align-items: flex-start;
-    /* Membuat header dan main sejajar di bagian atas */
 }
 
-/* Header */
-header {
-    width: 250px;
-    /* Lebar header */
-    background-color: #ffffff;
-    /* Warna latar belakang header */
-    padding: 20px;
-    /* Padding untuk header */
-    border: 1px solid #e0e0e0;
-    /* Garis pemisah */
+/* Box - Kontainer Umum */
+.box {
+    background-color: var(--box-background);
+    padding: var(--spacing-medium);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    /* Sudut melengkung */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    /* Bayangan lembut */
-    position: sticky;
-    /* Agar header tetap di atas saat menggulir */
-    top: 0;
-    /* Posisi atas */
+    box-shadow: 0 2px 8px var(--shadow-color);
     transition: background-color 0.3s, box-shadow 0.3s;
-    /* Efek transisi */
+}
+
+/* Sidebar (Header yang Lebih Spesifik) */
+.sidebar {
+    width: 200px;
+    position: sticky;
+    top: 0;
 }
 
 /* Navigasi */
 nav {
     display: flex;
-    /* Mengatur navbar sebagai flex container */
     flex-direction: column;
-    /* Navbar secara vertikal */
-    gap: 15px;
-    /* Jarak antar tautan */
-    margin-top: 20px;
-    /* Margin atas untuk spasi */
+    gap: var(--spacing-small);
+    margin-top: var(--spacing-medium);
 }
 
 nav a {
-    color: #007bff;
-    /* Warna teks tautan */
+    color: var(--primary-color);
     text-decoration: none;
-    /* Menghilangkan garis bawah */
     font-weight: 500;
-    /* Ketebalan font */
-    padding: 10px 15px;
-    /* Padding untuk tautan */
+    padding: var(--spacing-small) var(--spacing-medium);
     border-radius: 5px;
-    /* Sudut melengkung */
     transition: background 0.3s, transform 0.3s;
-    /* Efek transform */
 }
 
 nav a:hover {
     background: rgba(0, 123, 255, 0.1);
-    /* Efek latar belakang saat hover */
     transform: scale(1.05);
-    /* Efek zoom saat hover */
 }
 
 /* Konten Utama */
-main {
+.main-content {
     flex: 1;
-    /* Agar main mengambil sisa ruang di sebelah kanan */
-    padding: 30px;
-    /* Padding yang sesuai untuk reading mode */
+    padding: var(--spacing-large);
     background-color: rgba(255, 255, 255, 0.95);
-    /* Latar belakang utama */
     border-radius: 12px;
-    /* Sudut melengkung */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    /* Bayangan */
-    margin: 0;
-    /* Menghilangkan margin atas untuk menyamakan bagian atas dengan header */
+    box-shadow: 0 2px 8px var(--shadow-color);
     line-height: 1.6;
-    /* Jarak antar baris */
 }
 
-/* Judul Seksi */
+/* Box Item untuk Galeri */
+.box-gallery-grid__item {
+    padding: var(--spacing-small);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    background-color: var(--box-background);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box-gallery-grid__item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Typography */
 .section-title {
     font-size: 2em;
-    /* Ukuran font untuk judul */
-    color: #333;
-    /* Warna teks judul */
-    margin-bottom: 15px;
-    /* Margin bawah untuk judul */
-    border-bottom: 2px solid #007bff;
-    /* Garis bawah berwarna biru */
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-small);
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 5px;
-    /* Padding bawah untuk judul */
 }
 
-/* Heading dan Typography */
 h1,
 h2,
 h3,
@@ -128,15 +116,10 @@ h4,
 h5,
 h6 {
     font-weight: 600;
-    /* Ketebalan font untuk heading */
-    color: #333;
-    /* Warna teks heading */
-    margin-bottom: 10px;
-    /* Margin bawah untuk heading */
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-small);
     line-height: 1.4;
-    /* Penambahan jarak antar baris */
     transition: color 0.3s, text-shadow 0.3s;
-    /* Transisi untuk efek hover */
 }
 
 h1:hover,
@@ -146,57 +129,41 @@ h4:hover,
 h5:hover,
 h6:hover {
     color: #0056b3;
-    /* Ubah warna saat hover */
     text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-    /* Tambahkan bayangan saat hover */
 }
 
 /* Paragraf */
 p {
     transition: color 0.3s;
-    /* Transisi untuk efek hover */
 }
 
 p:hover {
     color: #0056b3;
-    /* Ubah warna saat hover */
 }
 
 /* Responsif */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        /* Ubah tata letak menjadi vertikal pada mobile */
         align-items: center;
-        /* Pusatkan kontainer pada tampilan mobile */
     }
 
-    header {
+    .sidebar {
         width: 100%;
-        /* Header mengambil lebar penuh */
         border-right: none;
-        /* Menghilangkan garis pemisah */
         border-bottom: 2px solid #ddd;
-        /* Garis bawah pada mobile */
-        margin-bottom: 20px;
-        /* Margin di bawah header */
+        margin-bottom: var(--spacing-medium);
     }
 
-    main {
+    .main-content {
         width: 100%;
-        /* Memastikan main mengambil lebar penuh */
-        padding: 20px;
-        /* Padding lebih kecil pada tampilan mobile */
+        padding: var(--spacing-medium);
         margin: 0;
-        /* Menghilangkan margin pada mobile untuk keselarasan */
     }
 
     nav {
         flex-direction: row;
-        /* Navbar menjadi horizontal pada mobile */
         justify-content: center;
-        /* Rata tengah */
-        gap: 15px;
-        /* Jarak antar tautan */
+        gap: var(--spacing-small);
     }
 }
