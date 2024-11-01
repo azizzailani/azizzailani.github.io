@@ -5,12 +5,15 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: #444;
+    /* Warna teks lebih gelap untuk kontras */
     background-color: #f4f4f4;
+    /* Warna latar belakang yang lebih terang dan ramah mata */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    /* Menjaga konten di bagian atas */
 }
 
 /* Kontainer Utama untuk Header dan Main */
@@ -20,6 +23,7 @@ body {
     /* Posisi header di kiri dan main di kanan pada desktop */
     width: 100%;
     max-width: 1200px;
+    /* Maksimal lebar untuk tata letak yang rapi */
     padding: 0;
     gap: 20px;
     /* Jarak antara header dan main */
@@ -30,36 +34,59 @@ header {
     width: 220px;
     /* Lebar header pada desktop */
     background-color: #ffffff;
+    /* Warna latar belakang header */
     padding: 20px;
+    /* Padding yang lebih besar */
     border-right: 2px solid #ddd;
     /* Garis pemisah di sebelah kanan */
     border-radius: 8px;
+    /* Sudut melengkung */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Bayangan lebih lembut */
     position: sticky;
+    /* Agar header tetap di atas saat menggulir */
     top: 0;
+    /* Posisi atas */
     transition: background-color 0.3s, box-shadow 0.3s;
+    /* Efek transisi */
+    display: flex;
+    /* Mengatur header sebagai flex container */
+    flex-direction: column;
+    /* Mengatur navigasi secara vertikal */
 }
 
 /* Navigasi */
 nav {
     display: flex;
+    /* Mengatur navbar sebagai flex container */
     flex-direction: column;
+    /* Navbar secara vertikal */
     gap: 10px;
+    /* Jarak antar tautan */
     margin-top: 20px;
+    /* Margin atas untuk spasi */
 }
 
 nav a {
     color: #007bff;
+    /* Warna teks tautan */
     text-decoration: none;
+    /* Menghilangkan garis bawah */
     font-weight: 500;
+    /* Ketebalan font */
     padding: 10px 15px;
+    /* Padding yang lebih besar */
     border-radius: 5px;
+    /* Sudut melengkung */
     transition: background 0.3s, transform 0.3s;
+    /* Efek transform */
 }
 
 nav a:hover {
     background: rgba(0, 123, 255, 0.1);
+    /* Efek latar belakang saat hover */
     transform: scale(1.05);
+    /* Efek zoom saat hover */
 }
 
 /* Konten Utama */
@@ -67,19 +94,29 @@ main {
     flex: 1;
     /* Agar main mengambil sisa ruang di sebelah kanan */
     padding: 40px;
+    /* Padding yang sesuai */
     background-color: rgba(255, 255, 255, 0.9);
+    /* Latar belakang putih transparan untuk konten utama */
     border-radius: 12px;
+    /* Sudut melengkung */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* Bayangan */
     margin: 20px 0;
+    /* Margin untuk memberi ruang dari tepi layar */
 }
 
 /* Judul Seksi */
 .section-title {
     font-size: 2em;
+    /* Ukuran font untuk judul */
     color: #333;
+    /* Warna teks judul */
     margin-bottom: 15px;
+    /* Margin bawah untuk judul */
     border-bottom: 2px solid #007bff;
+    /* Garis bawah berwarna biru */
     padding-bottom: 5px;
+    /* Padding bawah untuk judul */
 }
 
 /* Heading dan Typography */
@@ -90,9 +127,13 @@ h4,
 h5,
 h6 {
     font-weight: 600;
+    /* Ketebalan font untuk heading */
     color: #333;
+    /* Warna teks heading */
     margin-bottom: 10px;
+    /* Margin bawah untuk heading */
     line-height: 1.3;
+    /* Penambahan jarak antar baris untuk kenyamanan */
 }
 
 /* Responsif */
@@ -108,20 +149,28 @@ h6 {
         width: 100%;
         /* Header mengambil lebar penuh */
         border-right: none;
+        /* Menghilangkan garis pemisah pada mobile */
         border-bottom: 2px solid #ddd;
+        /* Garis bawah pada mobile */
         margin-bottom: 20px;
+        /* Margin di bawah header */
     }
 
     main {
         width: 100%;
+        /* Memastikan main mengambil lebar penuh */
         padding: 20px;
+        /* Padding lebih kecil pada tampilan mobile */
         margin: 0;
+        /* Menghilangkan margin pada mobile untuk keselarasan */
     }
 
     nav {
         flex-direction: row;
         /* Navbar menjadi horizontal pada mobile */
         justify-content: center;
+        /* Rata tengah */
         gap: 15px;
+        /* Jarak antar tautan */
     }
 }
