@@ -83,12 +83,15 @@ header nav a:hover {
     max-width: var(--max-width-content);
     margin: auto;
     padding: calc(var(--header-height) + var(--spacing-large)) var(--spacing-large) var(--spacing-large) var(--spacing-large);
-    /* Mulai setelah header, dengan padding */
     box-sizing: border-box;
 }
 
-/* Konten Utama */
+/* Konten Utama dengan Flex */
 .main-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--spacing-medium);
     width: var(--content-width);
     background-color: var(--box-background);
     padding: var(--spacing-large);
@@ -96,6 +99,18 @@ header nav a:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     min-height: var(--min-height-content);
     overflow: auto;
+}
+
+/* Elemen dalam .main-content */
+.main-content>* {
+    flex: 1 1 calc(50% - var(--spacing-medium));
+    /* Flex basis dengan jarak antar elemen */
+    min-width: 300px;
+    /* Lebar minimum untuk tampilan responsif */
+    background-color: var(--box-background);
+    padding: var(--spacing-small);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-color);
 }
 
 /* Elemen Galeri */
@@ -173,6 +188,10 @@ p:hover {
     }
 
     .main-content {
-        width: 100%;
+        flex-direction: column;
+    }
+
+    .main-content>* {
+        flex: 1 1 100%;
     }
 }
