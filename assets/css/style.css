@@ -103,12 +103,14 @@ header nav a:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     overflow: auto;
     align-items: flex-start;
+    justify-content: center;
 }
 
 /* Elemen dalam .main-content */
 .main-content>* {
     flex: 1 1 calc(50% - var(--spacing-medium));
     min-width: 300px;
+    max-width: 500px;
     background-color: var(--box-background);
     padding: var(--spacing-small);
     border-radius: 8px;
