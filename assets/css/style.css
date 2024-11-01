@@ -16,7 +16,6 @@ body {
     letter-spacing: 0.5px;
     background-image: radial-gradient(circle, #d3d7e3 1px, transparent 1px);
     background-size: 20px 20px;
-    /* Ukuran dan jarak polkadot */
 }
 
 /* Kontainer Utama untuk Header dan Main */
@@ -26,7 +25,7 @@ body {
     grid-template-rows: auto 1fr;
     width: 100%;
     max-width: 900px;
-    /* Lebar optimal untuk membaca teks panjang */
+    /* Lebar konsisten untuk membaca */
     padding: 0;
     gap: 1.5rem;
 }
@@ -35,6 +34,7 @@ body {
 header {
     grid-row: 1 / 2;
     width: 100%;
+    /* Menyesuaikan lebar kontainer */
     background-color: #ffffff;
     padding: 20px;
     border-bottom: 1px solid #e0e0e0;
@@ -71,12 +71,12 @@ nav a:hover {
 main {
     grid-row: 2 / 3;
     width: 100%;
+    /* Menyesuaikan lebar kontainer */
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    margin: 20px auto 0 auto;
-    max-width: 100%;
+    margin: 0 auto;
 }
 
 /* Judul Seksi */
@@ -142,7 +142,6 @@ p {
 
     main {
         width: 100%;
-        max-width: 100%;
         padding: 20px;
         margin-top: 10px;
     }
