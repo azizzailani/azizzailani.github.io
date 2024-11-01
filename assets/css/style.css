@@ -16,7 +16,6 @@
     --min-height-content: 85vh;
     --sidebar-width: 250px;
     --content-width: 800px;
-    /* Lebar tetap untuk main-content */
 }
 
 /* Reset dasar */
@@ -35,6 +34,7 @@ body {
     background-color: var(--background-color);
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     padding: var(--spacing-large);
     min-height: 100vh;
 }
@@ -42,6 +42,14 @@ body {
 /* Kontainer utama */
 .container {
     display: flex;
+    position: absolute;
+    /* Posisi absolut untuk konsistensi */
+    top: 50px;
+    /* Tetapkan posisi atas tetap */
+    left: 50%;
+    /* Pusatkan secara horizontal */
+    transform: translateX(-50%);
+    /* Pusatkan di layar */
     flex-direction: row;
     max-width: var(--max-width-content);
     gap: var(--spacing-large);
@@ -93,7 +101,6 @@ nav a:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     height: var(--min-height-content);
     overflow: auto;
-    /* Aktifkan scrolling jika konten melebihi batas */
 }
 
 /* Elemen Galeri */
@@ -156,6 +163,11 @@ p:hover {
     .container {
         flex-direction: column;
         align-items: center;
+        top: 20px;
+        /* Sesuaikan posisi atas */
+        transform: none;
+        /* Pusatkan tanpa transform */
+        width: 100%;
         padding: var(--spacing-medium);
     }
 
