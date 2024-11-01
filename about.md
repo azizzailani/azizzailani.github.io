@@ -1,7 +1,0 @@
-# About Me
-
-I'm Abdul Aziz Zailani, a DevOps Engineer who discovered a passion for technology early on, leading me to specialize in cloud infrastructure, CI/CD pipelines, and deployment automation over the past five years. My journey in tech has been fueled by a desire to simplify and improve processes, whether it's by automating repetitive tasks or optimizing infrastructure to boost performance and scalability. Every project I undertake is an opportunity to refine my craft and deliver solutions that not only work but also empower teams to achieve their best.
-
-Working with cloud platforms like AWS and Alibaba Cloud, I have honed my skills in Infrastructure as Code (IaC) using tools like Ansible and Terraform, allowing me to deploy and manage complex environments with consistency and efficiency. This dedication to automating infrastructure has enabled development teams to focus more on innovation while I ensure that the systems are secure, resilient, and cost-effective. From deploying Docker containers to managing Kubernetes clusters, I enjoy building scalable solutions that can grow alongside the business needs.
-
-Collaboration is at the core of my work, bridging gaps between development and operations to create seamless, integrated workflows. My focus is not just on technology but also on creating environments where teams can thrive and systems perform at their peak. Through each project, I strive to bring value by making infrastructure a solid backbone that supports the development lifecycle—reliable, efficient, and ready to scale for the future.
