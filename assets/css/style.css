@@ -28,7 +28,7 @@ body {
 /* Header Mengambang */
 header {
     width: 220px;
-    /* Lebar header */
+    /* Lebar header di desktop */
     background-color: #fff;
     /* Warna latar belakang header yang bersih */
     padding: 15px;
@@ -98,14 +98,17 @@ main {
 /* Judul Seksi */
 .section-title {
     font-size: 1.8em;
+    /* Ukuran font untuk judul */
     color: #333;
-    /* Ubah warna teks menjadi lebih gelap */
+    /* Warna teks judul */
     margin-bottom: 15px;
+    /* Margin bawah untuk judul */
     border-bottom: 2px solid #333;
-    /* Warna garis bawah yang lebih gelap */
+    /* Garis bawah yang lebih gelap */
     padding-bottom: 5px;
     display: inline-block;
     width: 100%;
+    /* Lebar penuh */
 }
 
 /* Heading dan Typography */
@@ -116,22 +119,25 @@ h4,
 h5,
 h6 {
     font-weight: 600;
+    /* Ketebalan font untuk heading */
     color: #333;
-    /* Ubah warna heading menjadi lebih gelap */
+    /* Warna teks heading */
     margin-bottom: 10px;
+    /* Margin bawah untuk heading */
     line-height: 1.3;
     /* Penambahan jarak antar baris untuk kenyamanan */
     text-align: left;
-    /* Tetap rata kiri */
+    /* Rata kiri untuk heading */
 }
 
 p,
 li {
     font-weight: 400;
+    /* Ketebalan font untuk paragraf dan list item */
     line-height: 1.8;
     /* Jarak antar baris yang lebih besar untuk keterbacaan */
     color: #555;
-    /* Warna teks paragraf lebih gelap */
+    /* Warna teks paragraf */
     margin-bottom: 15px;
     /* Margin bawah untuk memberi jarak antar paragraf */
 }
@@ -152,8 +158,8 @@ li {
         /* Tinggi otomatis */
         border-right: none;
         /* Menghilangkan border kanan pada mobile */
-        border-bottom: 1px solid #ddd;
-        /* Menambahkan border bawah pada mobile */
+        border-bottom: none;
+        /* Menghilangkan border bawah pada mobile */
         margin-bottom: 20px;
         /* Margin di bawah header */
         display: flex;
@@ -181,4 +187,26 @@ li {
         margin: 10px;
         /* Margin lebih kecil pada tampilan mobile */
     }
+}
+
+/* Menambahkan efek pada elemen saat mengarah pada */
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+    color: #007bff;
+    /* Ubah warna saat hover untuk lebih menarik */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    /* Efek bayangan pada teks */
+}
+
+/* Efek transisi halus */
+p:hover,
+li:hover {
+    color: #007bff;
+    /* Ubah warna saat hover pada teks paragraf dan list item */
+    transition: color 0.3s;
+    /* Transisi untuk perubahan warna */
 }
