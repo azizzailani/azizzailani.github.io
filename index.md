@@ -6,8 +6,6 @@ I thrive on creating seamless integrations between development and operations te
 
 At the heart of my work is a commitment to fostering collaboration and reliability in every project. By bridging development and operations, I aim to provide a robust foundation for high-performing applications and a scalable infrastructure that is ready for the future.
 
-<div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;">
-    <img src="https://www.cabotsolutions.com/public/DevOps-Cycle.png" alt="DevOps Lifecycle Diagram" width="250">
-    <img src="https://itbox.id/wp-content/uploads/2022/11/DevOps-lifecycle-capabilities-1024x621-1.png" alt="DevOps Workflow Illustration" width="250">
-    <img src="https://images.ctfassets.net/wfutmusr1t3h/7M3Tx3nx9GAuEG0SZLgjNk/83fa8ca04a722ed254dceee33b7740b3/DevOps-workflow.png" alt="DevOps Concept with Icons" width="250">
+<div style="display: flex; justify-content: center; margin-top: 20px;">
+    <img src="https://images.ctfassets.net/wfutmusr1t3h/7M3Tx3nx9GAuEG0SZLgjNk/83fa8ca04a722ed254dceee33b7740b3/DevOps-workflow.png" alt="DevOps Workflow Illustration" style="max-width: 100%; height: auto;">
 </div>
