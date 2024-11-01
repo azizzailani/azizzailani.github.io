@@ -1,7 +1,7 @@
 /* Import font Poppins dari Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-/* Gaya dasar untuk seluruh halaman */
+/* Gaya dasar untuk seluruh halaman dengan background polkadot */
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
@@ -14,6 +14,9 @@ body {
     min-height: 100vh;
     line-height: 1.8;
     letter-spacing: 0.5px;
+    background-image: radial-gradient(circle, #d3d7e3 1px, transparent 1px);
+    background-size: 20px 20px;
+    /* Ukuran dan jarak polkadot */
 }
 
 /* Kontainer Utama untuk Header dan Main */
@@ -74,7 +77,6 @@ main {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     margin: 20px auto 0 auto;
     max-width: 100%;
-    /* Lebar penuh dalam kontainer */
 }
 
 /* Judul Seksi */
@@ -110,7 +112,6 @@ p {
     margin-bottom: 1.2em;
     color: #444;
     line-height: 1.8;
-    /* Lebih nyaman untuk membaca teks panjang */
     font-size: 1.1em;
 }
 
