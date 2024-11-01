@@ -76,7 +76,7 @@ main {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin: 20px auto 0 auto;
     line-height: 1.6;
-    min-height: 600px;
+    /* Menghapus min-height agar main mengikuti konten */
 }
 
 /* Judul Seksi */
@@ -129,7 +129,6 @@ p {
         max-width: 100%;
         padding: clamp(15px, 4%, 40px);
         margin-top: 10px;
-        min-height: 500px;
     }
 }
 
@@ -146,7 +145,6 @@ p {
         max-width: 100%;
         padding: 20px;
         margin-top: 10px;
-        min-height: 400px;
     }
 
     nav {
@@ -164,6 +162,5 @@ p {
     main {
         padding: clamp(30px, 6%, 60px);
         max-width: 1200px;
-        min-height: 700px;
     }
 }
