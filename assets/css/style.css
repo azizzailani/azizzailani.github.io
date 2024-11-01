@@ -5,9 +5,9 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
-    /* Warna teks lebih gelap untuk kontras */
+    /* Warna teks untuk kontras */
     background-color: #f0f4f8;
-    /* Warna latar belakang yang lebih terang dan ramah mata */
+    /* Warna latar belakang yang lembut */
     margin: 0;
     padding: 0;
     display: flex;
@@ -21,29 +21,29 @@ body {
 .container {
     display: flex;
     flex-direction: row;
-    /* Posisi header di kiri dan main di kanan pada desktop */
+    /* Header di kiri, main di kanan */
     width: 100%;
     max-width: 1200px;
-    /* Maksimal lebar untuk tata letak yang rapi */
+    /* Lebar maksimum kontainer */
     padding: 0;
-    gap: 30px;
+    gap: 20px;
     /* Jarak antara header dan main */
 }
 
 /* Header */
 header {
     width: 250px;
-    /* Lebar header yang lebih proporsional */
+    /* Lebar header */
     background-color: #ffffff;
     /* Warna latar belakang header */
     padding: 20px;
     /* Padding untuk header */
-    border-right: 2px solid #e0e0e0;
-    /* Garis pemisah di sebelah kanan */
+    border: 1px solid #e0e0e0;
+    /* Garis pemisah */
     border-radius: 8px;
     /* Sudut melengkung */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    /* Bayangan lebih lembut */
+    /* Bayangan lembut */
     position: sticky;
     /* Agar header tetap di atas saat menggulir */
     top: 0;
@@ -55,9 +55,9 @@ header {
 /* Navigasi */
 nav {
     display: flex;
-    /* Mengatur navbar sebagai flex container */
+    /* Flex container */
     flex-direction: column;
-    /* Navbar secara vertikal */
+    /* Navbar vertikal */
     gap: 15px;
     /* Jarak antar tautan */
     margin-top: 20px;
@@ -75,7 +75,7 @@ nav a {
     /* Padding untuk tautan */
     border-radius: 5px;
     /* Sudut melengkung */
-    transition: background 0.3s, transform 0.3s, color 0.3s;
+    transition: background 0.3s, transform 0.3s;
     /* Efek transform */
 }
 
@@ -84,18 +84,16 @@ nav a:hover {
     /* Efek latar belakang saat hover */
     transform: scale(1.05);
     /* Efek zoom saat hover */
-    color: #0056b3;
-    /* Ubah warna teks saat hover */
 }
 
 /* Konten Utama */
 main {
     flex: 1;
-    /* Agar main mengambil sisa ruang di sebelah kanan */
+    /* Ambil sisa ruang di sebelah kanan */
     padding: 30px;
     /* Padding yang sesuai untuk reading mode */
-    background-color: rgba(255, 255, 255, 0.98);
-    /* Latar belakang putih transparan untuk konten utama */
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Latar belakang utama */
     border-radius: 12px;
     /* Sudut melengkung */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -103,7 +101,7 @@ main {
     margin: 20px 0;
     /* Margin untuk memberi ruang dari tepi layar */
     line-height: 1.6;
-    /* Jarak antar baris yang lebih besar untuk kenyamanan */
+    /* Jarak antar baris */
 }
 
 /* Judul Seksi */
@@ -134,7 +132,7 @@ h6 {
     margin-bottom: 10px;
     /* Margin bawah untuk heading */
     line-height: 1.4;
-    /* Penambahan jarak antar baris untuk kenyamanan */
+    /* Penambahan jarak antar baris */
 }
 
 /* Responsif */
@@ -150,7 +148,7 @@ h6 {
         width: 100%;
         /* Header mengambil lebar penuh */
         border-right: none;
-        /* Menghilangkan garis pemisah pada mobile */
+        /* Menghilangkan garis pemisah */
         border-bottom: 2px solid #ddd;
         /* Garis bawah pada mobile */
         margin-bottom: 20px;
