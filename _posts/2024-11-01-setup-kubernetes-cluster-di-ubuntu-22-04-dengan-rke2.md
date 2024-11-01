@@ -1,4 +1,11 @@
-# Setup Kubernetes Cluster di Ubuntu 22.04 Menggunakan RKE2
+---
+layout: post
+title: "Setup Kubernetes Cluster di Ubuntu 22.04 Menggunakan RKE2"
+date: 2024-11-01
+categories: [Kubernetes, DevOps]
+tags: [Kubernetes, RKE2, Ubuntu, Cluster, Setup]
+author: Abdul Aziz Zailani
+---
 
 ## Mengapa Memilih RKE2?
 
