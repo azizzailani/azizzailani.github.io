@@ -32,12 +32,12 @@ body {
 
 /* Header */
 header {
-    width: 220px;
-    /* Lebar header pada desktop */
+    width: 200px;
+    /* Lebar header */
     background-color: #ffffff;
     /* Warna latar belakang header */
-    padding: 20px;
-    /* Padding yang lebih besar */
+    padding: 15px;
+    /* Padding yang lebih kecil untuk ukuran lebih proporsional */
     border-right: 2px solid #ddd;
     /* Garis pemisah di sebelah kanan */
     border-radius: 8px;
@@ -60,7 +60,7 @@ nav {
     /* Navbar secara vertikal */
     gap: 10px;
     /* Jarak antar tautan */
-    margin-top: 20px;
+    margin-top: 10px;
     /* Margin atas untuk spasi */
 }
 
@@ -71,11 +71,11 @@ nav a {
     /* Menghilangkan garis bawah */
     font-weight: 500;
     /* Ketebalan font */
-    padding: 10px 15px;
-    /* Padding yang lebih besar */
+    padding: 8px 12px;
+    /* Padding untuk tautan */
     border-radius: 5px;
     /* Sudut melengkung */
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s, transform 0.3s, color 0.3s;
     /* Efek transform */
 }
 
@@ -84,14 +84,16 @@ nav a:hover {
     /* Efek latar belakang saat hover */
     transform: scale(1.05);
     /* Efek zoom saat hover */
+    color: #0056b3;
+    /* Ubah warna teks saat hover */
 }
 
 /* Konten Utama */
 main {
     flex: 1;
     /* Agar main mengambil sisa ruang di sebelah kanan */
-    padding: 40px;
-    /* Padding yang sesuai */
+    padding: 30px;
+    /* Padding yang sesuai untuk reading mode */
     background-color: rgba(255, 255, 255, 0.95);
     /* Latar belakang putih transparan untuk konten utama */
     border-radius: 12px;
@@ -100,6 +102,8 @@ main {
     /* Bayangan */
     margin: 20px 0;
     /* Margin untuk memberi ruang dari tepi layar */
+    line-height: 1.6;
+    /* Jarak antar baris yang lebih besar untuk kenyamanan */
 }
 
 /* Judul Seksi */
