@@ -26,7 +26,7 @@
 
 ### System Administrator - PT. Harmonix Teknologi Peentar
 
-**Oct 2018 - Aug 2021**
+**Oct 2018 - Oct 2019**
 
 - **Network & Server Maintenance**: Configured, supported, and maintained critical network and server infrastructure, achieving high availability and performance for client applications.
 - **Technical Support & Documentation**: Provided in-depth technical support to clients, and created detailed documentation for processes, which increased client satisfaction and reduced support ticket resolution time.
@@ -75,7 +75,7 @@ Indraprasta PGRI University, 2010 - 2015
 
 ## Download My Resume
 
-<a href="/assets/downloads/Resume.pdf" download="AbdulAzizZailani_Resume" style="text-decoration:none; color: #007acc;">
+<a href="/assets/downloads/Reresume.pdf" download="AbdulAzizZailani_Resume" style="text-decoration:none; color: #007acc;">
   <button style="padding: 10px 20px; border: none; background-color: #007acc; color: white; border-radius: 5px;">
     Download Resume (PDF)
   </button>
