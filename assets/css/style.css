@@ -28,6 +28,8 @@ body {
     padding: 0;
     gap: 20px;
     /* Jarak antara header dan main */
+    align-items: flex-start;
+    /* Membuat header dan main sejajar di bagian atas */
 }
 
 /* Header */
@@ -98,8 +100,8 @@ main {
     /* Sudut melengkung */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     /* Bayangan */
-    margin: 20px 0;
-    /* Margin untuk memberi ruang dari tepi layar */
+    margin: 0;
+    /* Menghilangkan margin atas untuk menyamakan bagian atas dengan header */
     line-height: 1.6;
     /* Jarak antar baris */
 }
