@@ -12,7 +12,6 @@ body {
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    /* Menjaga agar konten utama selalu menutupi layar penuh */
 }
 
 /* Kontainer Utama untuk Header dan Main */
@@ -65,18 +64,22 @@ nav a:hover {
 /* Konten Utama */
 main {
     flex: 1;
-    padding: clamp(20px, 5%, 50px);
+    width: 100%;
+    /* Menetapkan lebar 100% untuk konsistensi */
+    max-width: 1000px;
+    /* Lebar maksimum agar tidak melampaui batas */
+    min-width: 600px;
+    /* Lebar minimum untuk konsistensi */
+    padding: 40px;
+    /* Padding tetap agar konten tidak berubah */
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    line-height: 1.6;
-    min-height: 600px;
-    /* Tetapkan tinggi minimum untuk konsistensi */
-    max-width: 1000px;
-    /* Tetapkan lebar maksimum untuk konsistensi */
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.6;
+    min-height: 600px;
 }
 
 /* Judul Seksi */
@@ -128,10 +131,11 @@ p {
 
     main {
         width: 100%;
+        max-width: 100%;
+        /* Agar mengambil lebar penuh */
         padding: clamp(15px, 4%, 40px);
         margin-top: 10px;
         min-height: 500px;
-        /* Tinggi minimum yang lebih kecil pada layar sedang */
     }
 }
 
@@ -150,10 +154,10 @@ p {
 
     main {
         width: 100%;
+        max-width: 100%;
         padding: 20px;
         margin-top: 10px;
         min-height: 400px;
-        /* Tinggi minimum pada layar kecil */
     }
 
     nav {
@@ -172,8 +176,6 @@ p {
     main {
         padding: clamp(30px, 6%, 60px);
         max-width: 1200px;
-        /* Lebar maksimum untuk layar besar */
         min-height: 700px;
-        /* Tinggi minimum yang lebih besar pada layar besar */
     }
 }
