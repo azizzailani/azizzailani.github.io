@@ -1,5 +1,3 @@
-# Resume
-
 ## ![Experience Icon](https://img.icons8.com/ios-filled/50/000000/briefcase.png) Work Experience
 
 <div style="position: relative; margin: 30px 0;">
