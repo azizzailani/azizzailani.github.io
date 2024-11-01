@@ -34,12 +34,10 @@ body {
     flex-direction: row;
     width: 100%;
     max-width: var(--max-width-content);
-    /* Batas maksimal lebar konten */
-    padding: 0;
-    gap: var(--spacing-medium);
+    padding: var(--spacing-large);
+    gap: var(--spacing-large);
     align-items: flex-start;
     margin: auto;
-    /* Pusatkan kontainer */
 }
 
 /* Box - Kontainer Umum */
@@ -48,7 +46,8 @@ body {
     padding: var(--spacing-medium);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    box-shadow: 0 2px 8px var(--shadow-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    /* Tambahkan bayangan untuk efek mengambang */
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
@@ -59,7 +58,9 @@ body {
     min-width: 250px;
     /* Tetapkan lebar minimum agar tetap proporsional */
     position: sticky;
-    top: 0;
+    top: 20px;
+    /* Tambahkan jarak dari atas untuk efek mengambang */
+    margin-top: var(--spacing-medium);
 }
 
 /* Navigasi */
@@ -90,8 +91,10 @@ nav a:hover {
     padding: var(--spacing-large);
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
-    box-shadow: 0 2px 8px var(--shadow-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    /* Tambahkan bayangan untuk efek mengambang */
     line-height: 1.6;
+    margin-top: var(--spacing-medium);
 }
 
 /* Box Item untuk Galeri */
@@ -155,6 +158,8 @@ p:hover {
         flex-direction: column;
         align-items: center;
         max-width: 100%;
+        padding: var(--spacing-medium);
+        /* Kurangi padding untuk layar kecil */
     }
 
     .sidebar {
