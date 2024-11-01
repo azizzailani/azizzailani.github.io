@@ -5,13 +5,15 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
-    background-color: #f0f4f8;
+    background-color: #f7f9fc;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
 }
 
 /* Kontainer Utama untuk Header dan Main */
@@ -19,11 +21,11 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
-    /* Menempatkan header di atas dan main di bawah */
     width: 100%;
-    max-width: 1200px;
+    max-width: 900px;
+    /* Lebar optimal untuk membaca teks panjang */
     padding: 0;
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
 /* Header */
@@ -32,9 +34,8 @@ header {
     width: 100%;
     background-color: #ffffff;
     padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 10;
@@ -46,7 +47,6 @@ nav {
     display: flex;
     flex-direction: row;
     gap: 15px;
-    margin-top: 10px;
     justify-content: center;
 }
 
@@ -54,34 +54,32 @@ nav a {
     color: #007bff;
     text-decoration: none;
     font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 8px 12px;
+    border-radius: 4px;
     transition: box-shadow 0.3s, color 0.3s;
 }
 
 nav a:hover {
     color: #0056b3;
-    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.2);
+    box-shadow: 0px 2px 6px rgba(0, 123, 255, 0.2);
 }
 
 /* Konten Utama */
 main {
     grid-row: 2 / 3;
     width: 100%;
-    max-width: 1000px;
-    min-width: 600px;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     margin: 20px auto 0 auto;
-    line-height: 1.6;
-    /* Menghapus min-height agar main mengikuti konten */
+    max-width: 100%;
+    /* Lebar penuh dalam kontainer */
 }
 
 /* Judul Seksi */
 .section-title {
-    font-size: 2em;
+    font-size: 1.75em;
     color: #333;
     margin-bottom: 15px;
     border-bottom: 2px solid #007bff;
@@ -99,24 +97,27 @@ h6 {
     color: #333;
     margin-bottom: 10px;
     line-height: 1.4;
-    transition: color 0.3s, text-shadow 0.3s;
+    transition: color 0.3s;
 }
 
 h2:hover,
 h3:hover {
     color: #0056b3;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Paragraf */
 p {
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
+    color: #444;
+    line-height: 1.8;
+    /* Lebih nyaman untuk membaca teks panjang */
+    font-size: 1.1em;
 }
 
 /* Responsif */
 @media (max-width: 1024px) {
     .container {
-        gap: 20px;
+        max-width: 100%;
         padding: 10px;
     }
 
@@ -125,9 +126,7 @@ p {
     }
 
     main {
-        width: 100%;
-        max-width: 100%;
-        padding: clamp(15px, 4%, 40px);
+        padding: 20px;
         margin-top: 10px;
     }
 }
@@ -156,11 +155,6 @@ p {
 /* Media Query tambahan untuk layar besar */
 @media (min-width: 1400px) {
     .container {
-        max-width: 1400px;
-    }
-
-    main {
-        padding: clamp(30px, 6%, 60px);
-        max-width: 1200px;
+        max-width: 1000px;
     }
 }
