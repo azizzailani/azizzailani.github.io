@@ -4,10 +4,10 @@
 /* Gaya dasar untuk seluruh halaman */
 body {
     font-family: 'Poppins', sans-serif;
-    color: #f9f9f9;
-    /* Warna teks menjadi lebih terang untuk kontras dengan latar belakang gelap */
-    background-color: #222;
-    /* Warna latar belakang yang lebih gelap */
+    color: #333;
+    /* Warna teks lebih gelap untuk kontras */
+    background-color: #f4f4f4;
+    /* Warna latar belakang yang lebih terang dan ramah mata */
     margin: 0;
     padding: 0;
     display: flex;
@@ -22,24 +22,16 @@ body {
     max-width: 1200px;
     /* Maksimal lebar untuk tata letak yang rapi */
     padding: 20px;
-    transition: transform 0.3s;
-    /* Transisi untuk efek hover */
-}
-
-/* Efek zoom pada kontainer saat hover */
-.container:hover {
-    transform: scale(1.02);
-    /* Efek zoom */
 }
 
 /* Header Mengambang */
 header {
     width: 220px;
     /* Lebar header */
-    background-color: #333;
-    /* Warna latar belakang header */
+    background-color: #fff;
+    /* Warna latar belakang header yang bersih */
     padding: 15px;
-    border-right: 1px solid #444;
+    border-right: 1px solid #ddd;
     /* Perubahan warna border */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -52,8 +44,9 @@ header {
     /* Efek transisi */
 }
 
+/* Efek hover pada header */
 header:hover {
-    background-color: #444;
+    background-color: #f9f9f9;
     /* Warna latar belakang saat hover */
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     /* Bayangan lebih kuat saat hover */
@@ -68,8 +61,8 @@ nav {
 }
 
 nav a {
-    color: #f9f9f9;
-    /* Ubah warna teks tautan menjadi lebih terang */
+    color: #333;
+    /* Warna teks tautan yang gelap */
     text-decoration: none;
     font-weight: 500;
     padding: 10px;
@@ -80,9 +73,9 @@ nav a {
 }
 
 nav a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    /* Tambahkan efek latar belakang saat hover */
-    transform: scale(1.05);
+    background: rgba(100, 100, 255, 0.1);
+    /* Efek latar belakang yang lebih lembut saat hover */
+    transform: scale(1.02);
     /* Efek zoom saat hover */
 }
 
@@ -91,8 +84,8 @@ main {
     width: 100%;
     padding: 40px;
     /* Padding yang sesuai */
-    background-color: rgba(255, 255, 255, 0.1);
-    /* Latar belakang transparan untuk konten utama */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Latar belakang putih transparan untuk konten utama */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     text-align: left;
@@ -102,20 +95,14 @@ main {
     /* Transisi untuk efek hover */
 }
 
-/* Efek zoom pada main saat hover */
-main:hover {
-    transform: scale(1.01);
-    /* Efek zoom */
-}
-
 /* Judul Seksi */
 .section-title {
     font-size: 1.8em;
-    color: #f9f9f9;
-    /* Ubah warna teks menjadi lebih terang */
+    color: #333;
+    /* Ubah warna teks menjadi lebih gelap */
     margin-bottom: 15px;
-    border-bottom: 2px solid #f9f9f9;
-    /* Warna garis bawah yang lebih terang */
+    border-bottom: 2px solid #333;
+    /* Warna garis bawah yang lebih gelap */
     padding-bottom: 5px;
     display: inline-block;
     width: 100%;
@@ -129,44 +116,25 @@ h4,
 h5,
 h6 {
     font-weight: 600;
-    color: #f9f9f9;
-    /* Ubah warna heading menjadi lebih terang */
+    color: #333;
+    /* Ubah warna heading menjadi lebih gelap */
     margin-bottom: 10px;
-    line-height: 1.3;
+    line-height: 1.4;
+    /* Penambahan jarak antar baris untuk kenyamanan */
     text-align: left;
     /* Tetap rata kiri */
-    transition: color 0.3s;
-    /* Transisi untuk perubahan warna */
 }
 
-h1:hover,
-h2:hover,
-h3:hover,
-h4:hover,
-h5:hover,
-h6:hover {
-    color: #ffcc00;
-    /* Warna saat hover pada heading */
-}
-
-/* Paragraf dan List Item */
 p,
 li {
     font-weight: 400;
-    line-height: 1.8;
-    color: #ccc;
-    /* Warna teks paragraf lebih terang */
-    transition: color 0.3s;
-    /* Transisi untuk perubahan warna */
+    line-height: 1.6;
+    /* Jarak antar baris yang lebih besar untuk keterbacaan */
+    color: #555;
+    /* Warna teks paragraf lebih gelap */
 }
 
-p:hover,
-li:hover {
-    color: #ffcc00;
-    /* Warna saat hover pada teks paragraf dan list item */
-}
-
-/* Responsif */
+/* Membuat elemen lebih responsif */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -201,4 +169,26 @@ li:hover {
         margin: 10px;
         /* Margin lebih kecil pada tampilan mobile */
     }
+}
+
+/* Menambahkan efek pada elemen saat mengarah pada */
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+    color: #007bff;
+    /* Ubah warna saat hover untuk lebih menarik */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    /* Efek bayangan pada teks */
+}
+
+/* Efek transisi halus */
+p:hover,
+li:hover {
+    color: #007bff;
+    /* Ubah warna saat hover pada teks paragraf dan list item */
+    transition: color 0.3s;
+    /* Transisi untuk perubahan warna */
 }
