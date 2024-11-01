@@ -5,7 +5,8 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
-    background-color: #493f3f;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    /* Gradien warna */
     margin: 0;
     padding: 0;
     display: flex;
