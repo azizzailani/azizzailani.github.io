@@ -6,12 +6,13 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #444;
     /* Warna teks lebih gelap untuk kontras */
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     /* Warna latar belakang yang lebih terang dan ramah mata */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
+    /* Pusatkan konten */
     align-items: flex-start;
     /* Menjaga konten di bagian atas */
 }
@@ -49,10 +50,6 @@ header {
     /* Posisi atas */
     transition: background-color 0.3s, box-shadow 0.3s;
     /* Efek transisi */
-    display: flex;
-    /* Mengatur header sebagai flex container */
-    flex-direction: column;
-    /* Mengatur navigasi secara vertikal */
 }
 
 /* Navigasi */
@@ -95,7 +92,7 @@ main {
     /* Agar main mengambil sisa ruang di sebelah kanan */
     padding: 40px;
     /* Padding yang sesuai */
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     /* Latar belakang putih transparan untuk konten utama */
     border-radius: 12px;
     /* Sudut melengkung */
@@ -132,7 +129,7 @@ h6 {
     /* Warna teks heading */
     margin-bottom: 10px;
     /* Margin bawah untuk heading */
-    line-height: 1.3;
+    line-height: 1.4;
     /* Penambahan jarak antar baris untuk kenyamanan */
 }
 
