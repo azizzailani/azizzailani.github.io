@@ -1,7 +1,7 @@
 /* Import font Poppins dari Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
-/* Variabel CSS untuk warna dan spasi */
+/* Variabel CSS */
 :root {
     --primary-color: #007bff;
     --secondary-color: #333;
@@ -13,56 +13,52 @@
     --spacing-medium: 20px;
     --spacing-large: 30px;
     --max-width-content: 1100px;
-    /* Batas maksimal lebar konten */
     --min-height-content: 85vh;
-    /* Batas minimal tinggi konten */
 }
 
-/* Gaya dasar untuk seluruh halaman */
+/* Reset dasar */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gaya dasar untuk halaman */
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--secondary-color);
     background-color: var(--background-color);
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    padding: var(--spacing-large);
     min-height: 100vh;
 }
 
-/* Kontainer Tata Letak */
+/* Kontainer utama */
 .container {
     display: flex;
     flex-direction: row;
     width: 100%;
     max-width: var(--max-width-content);
-    padding: var(--spacing-large);
     gap: var(--spacing-large);
-    align-items: flex-start;
     margin: auto;
-    box-sizing: border-box;
-}
-
-/* Box - Kontainer Umum */
-.box {
-    background-color: var(--box-background);
-    padding: var(--spacing-medium);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    /* Bayangan untuk efek mengambang */
-    transition: background-color 0.3s, box-shadow 0.3s;
+    min-height: 85vh;
 }
 
 /* Sidebar */
 .sidebar {
     width: 250px;
-    /* Tetapkan lebar sidebar agar konsisten */
-    min-width: 250px;
+    background-color: var(--box-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: var(--spacing-medium);
     position: sticky;
     top: 20px;
-    box-sizing: border-box;
+    height: var(--min-height-content);
+    /* Tetapkan tinggi konsisten */
 }
 
 /* Navigasi */
@@ -90,19 +86,17 @@ nav a:hover {
 /* Konten Utama */
 .main-content {
     flex: 1;
-    width: calc(100% - 250px - var(--spacing-large));
-    /* Pastikan konsisten dengan lebar sidebar */
+    background-color: var(--box-background);
     padding: var(--spacing-large);
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
+    border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    line-height: 1.6;
-    min-height: var(--min-height-content);
-    /* Tetapkan tinggi minimum */
-    box-sizing: border-box;
+    height: var(--min-height-content);
+    /* Tetapkan tinggi konsisten */
+    overflow: auto;
+    /* Aktifkan scrolling jika konten melebihi batas */
 }
 
-/* Box Item untuk Galeri */
+/* Elemen Galeri */
 .box-gallery-grid__item {
     padding: var(--spacing-small);
     border-radius: 8px;
@@ -162,29 +156,19 @@ p:hover {
     .container {
         flex-direction: column;
         align-items: center;
-        max-width: 100%;
         padding: var(--spacing-medium);
     }
 
-    .sidebar {
-        width: 100%;
-        min-width: 100%;
-        border-right: none;
-        border-bottom: 2px solid #ddd;
-        margin-bottom: var(--spacing-medium);
-    }
-
+    .sidebar,
     .main-content {
         width: 100%;
-        padding: var(--spacing-medium);
-        margin: 0;
+        height: auto;
+        /* Sesuaikan tinggi untuk layar kecil */
         min-height: 75vh;
-        /* Tetapkan tinggi minimum untuk layar kecil */
     }
 
     nav {
         flex-direction: row;
         justify-content: center;
-        gap: var(--spacing-small);
     }
 }
