@@ -1,10 +1,10 @@
 ## ![Experience Icon](https://img.icons8.com/ios-glyphs/30/000000/briefcase.png) Work Experience
 
 <div style="position: relative; margin: 20px 0;">
-  <div style="position: absolute; top: 0; left: 0; width: 2px; height: 100%; background: #007acc;"></div>
+  <div style="position: absolute; top: 0; left: 10%; width: 2px; height: 100%; background: #007acc;"></div>
 
   <div style="display: flex; align-items: center; margin-bottom: 40px;">
-    <div style="width: 15%; text-align: right; padding-right: 20px; font-weight: bold; color: #007acc;">
+    <div style="width: 15%; text-align: right; font-weight: bold; color: #007acc; padding-right: 20px;">
       Nov 2022 - Present
     </div>
     <div style="width: 10px; height: 10px; border-radius: 50%; background: #007acc; border: 2px solid white; margin: 0 20px;"></div>
@@ -19,7 +19,7 @@
   </div>
 
   <div style="display: flex; align-items: center; margin-bottom: 40px;">
-    <div style="width: 15%; text-align: right; padding-right: 20px; font-weight: bold; color: #007acc;">
+    <div style="width: 15%; text-align: right; font-weight: bold; color: #007acc; padding-right: 20px;">
       Oct 2019 - Nov 2022
     </div>
     <div style="width: 10px; height: 10px; border-radius: 50%; background: #007acc; border: 2px solid white; margin: 0 20px;"></div>
@@ -34,7 +34,7 @@
   </div>
 
   <div style="display: flex; align-items: center; margin-bottom: 40px;">
-    <div style="width: 15%; text-align: right; padding-right: 20px; font-weight: bold; color: #007acc;">
+    <div style="width: 15%; text-align: right; font-weight: bold; color: #007acc; padding-right: 20px;">
       Oct 2018 - Aug 2021
     </div>
     <div style="width: 10px; height: 10px; border-radius: 50%; background: #007acc; border: 2px solid white; margin: 0 20px;"></div>
@@ -48,7 +48,7 @@
   </div>
 
   <div style="display: flex; align-items: center;">
-    <div style="width: 15%; text-align: right; padding-right: 20px; font-weight: bold; color: #007acc;">
+    <div style="width: 15%; text-align: right; font-weight: bold; color: #007acc; padding-right: 20px;">
       Aug 2021 - Aug 2022
     </div>
     <div style="width: 10px; height: 10px; border-radius: 50%; background: #007acc; border: 2px solid white; margin: 0 20px;"></div>
