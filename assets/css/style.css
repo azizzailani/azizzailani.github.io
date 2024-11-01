@@ -32,6 +32,8 @@ header {
     position: sticky;
     /* Tetap di tempat saat digulir */
     top: 20px;
+    align-self: flex-start;
+    /* Membuat tinggi mengikuti teks */
     margin-right: 20px;
 }
 
@@ -104,16 +106,25 @@ li {
     }
 
     header {
-        position: relative;
         width: 100%;
         height: auto;
         border-right: none;
         border-bottom: 1px solid #ddd;
-        margin: 0 0 20px 0;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        /* Header horizontal */
+        gap: 15px;
+    }
+
+    nav {
+        flex-direction: row;
+        /* Navbar horizontal pada mobile */
+        justify-content: center;
+        gap: 15px;
     }
 
     main {
-        margin-left: 0;
         max-width: 100%;
         padding: 20px;
     }
