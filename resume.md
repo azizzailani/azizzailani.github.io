@@ -1,3 +1,7 @@
+---
+layout: default
+title: Resume
+---
 ## ![Experience Icon](https://img.icons8.com/ios-glyphs/30/000000/briefcase.png) Work Experience
 
 ### Senior DevOps Engineer - PT. Komunitas Anak Bangsa
