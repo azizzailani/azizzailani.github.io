@@ -15,7 +15,7 @@
     --max-width-content: 1100px;
     --min-height-content: 85vh;
     --sidebar-width: 250px;
-    --content-width: calc(100% - 270px);
+    --content-width: calc(100% - 270px); /* Lebar tetap untuk main-content */
 }
 
 /* Reset dasar */
@@ -49,12 +49,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    position: fixed;
-    /* Posisi fixed untuk header vertikal */
-    top: var(--spacing-large);
-    left: var(--spacing-large);
-    /* Jarak kiri */
-    height: calc(100vh - 2 * var(--spacing-large));
+    position: sticky;
+    top: var(--spacing-large); /* Agar tetap di bagian atas saat menggulir */
+    height: calc(100vh - 2 * var(--spacing-large)); /* Tinggi penuh dengan padding */
+    margin-right: var(--spacing-large);
 }
 
 /* Navigasi di Header */
@@ -62,7 +60,7 @@ header nav {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-small);
-    width: 100%;
+    width: 100%; /* Lebar penuh untuk menyesuaikan konten */
 }
 
 header nav a {
@@ -82,10 +80,10 @@ header nav a:hover {
 /* Kontainer utama untuk Konten */
 .container {
     display: flex;
-    margin-left: calc(var(--sidebar-width) + var(--spacing-large) * 2);
-    /* Pastikan tidak overlap */
+    flex-direction: column;
     max-width: var(--max-width-content);
     width: 100%;
+    margin-left: var(--sidebar-width);
 }
 
 /* Konten Utama */
