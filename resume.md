@@ -75,8 +75,9 @@ Indraprasta PGRI University, 2010 - 2015
 
 ## Download My Resume
 
-<a href="/assets/downloads/resume.pdf" download="AbdulAzizZailani_Resume" style="text-decoration:none; color: #007acc;">
+<a href="{{ '/assets/downloads/resume.pdf' | relative_url }}" download="AbdulAzizZailani_Resume.pdf" style="text-decoration:none; color: #007acc;">
   <button style="padding: 10px 20px; border: none; background-color: #007acc; color: white; border-radius: 5px;">
     Download Resume (PDF)
   </button>
 </a>
+
