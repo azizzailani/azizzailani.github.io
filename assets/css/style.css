@@ -50,10 +50,6 @@ header {
     /* Posisi atas */
     transition: background-color 0.3s, box-shadow 0.3s;
     /* Efek transisi */
-    display: flex;
-    /* Flex container */
-    flex-direction: column;
-    /* Navbar secara vertikal */
 }
 
 /* Navigasi */
@@ -102,8 +98,8 @@ main {
     /* Sudut melengkung */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     /* Bayangan */
-    margin: 0;
-    /* Menghilangkan margin untuk keselarasan */
+    margin: 20px 0;
+    /* Margin untuk memberi ruang dari tepi layar */
     line-height: 1.6;
     /* Jarak antar baris */
 }
@@ -137,6 +133,31 @@ h6 {
     /* Margin bawah untuk heading */
     line-height: 1.4;
     /* Penambahan jarak antar baris */
+    transition: color 0.3s, text-shadow 0.3s;
+    /* Transisi untuk efek hover */
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+    color: #0056b3;
+    /* Ubah warna saat hover */
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    /* Tambahkan bayangan saat hover */
+}
+
+/* Paragraf */
+p {
+    transition: color 0.3s;
+    /* Transisi untuk efek hover */
+}
+
+p:hover {
+    color: #0056b3;
+    /* Ubah warna saat hover */
 }
 
 /* Responsif */
