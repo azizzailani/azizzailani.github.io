@@ -1,13 +1,19 @@
 /* Import font Poppins dari Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+/* Set box-sizing secara global untuk memastikan padding tidak mempengaruhi lebar */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 /* Gaya dasar untuk seluruh halaman dengan background polkadot */
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
     background-color: #f7f9fc;
     margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -16,6 +22,7 @@ body {
     letter-spacing: 0.5px;
     background-image: radial-gradient(circle, #d3d7e3 1px, transparent 1px);
     background-size: 20px 20px;
+    padding: 0;
 }
 
 /* Kontainer Utama untuk Header dan Main */
@@ -28,8 +35,6 @@ body {
     /* Lebar konsisten untuk membaca */
     padding: 0;
     gap: 1.5rem;
-    box-sizing: border-box;
-    /* Mencegah padding memengaruhi lebar */
 }
 
 /* Header */
@@ -43,8 +48,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,7 +57,6 @@ header {
 nav {
     display: flex;
     flex-direction: row;
-    /* Pastikan horizontal di layar kecil */
     gap: 10px;
     justify-content: center;
     width: 100%;
@@ -83,7 +85,6 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     margin: 0;
-    box-sizing: border-box;
 }
 
 /* Judul Seksi */
@@ -141,7 +142,7 @@ p {
 
 @media (max-width: 768px) {
     body {
-        padding: 0 10px;
+        padding: 0;
     }
 
     .container {
@@ -152,7 +153,6 @@ p {
     header {
         padding: 10px 0;
         flex-direction: row;
-        /* Buat header horizontal */
         justify-content: space-between;
         align-items: center;
         box-shadow: none;
@@ -162,7 +162,6 @@ p {
     nav {
         flex-direction: row;
         gap: 5px;
-        /* Kurangi jarak antar tautan */
     }
 
     nav a {
@@ -177,7 +176,6 @@ p {
         border-radius: 6px;
     }
 
-    /* Ukuran font dan spasi di elemen teks */
     .section-title {
         font-size: 1.5em;
         margin-bottom: 10px;
