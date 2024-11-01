@@ -3,6 +3,8 @@ layout: default
 title: Blog
 ---
 
+<h1>Blog Posts</h1>
+
 <ol>
 {% for post in site.posts %}
     <li>

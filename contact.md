@@ -2,6 +2,9 @@
 layout: default
 title: Contact
 ---
+
+<h1>Contact</h1>
+
 If you're interested in collaboration or have any DevOps inquiries, feel free to reach out!
 
 | Contact Method | Details |
