@@ -20,8 +20,10 @@ body {
     min-height: 100vh;
     line-height: 1.8;
     letter-spacing: 0.5px;
-    background-image: radial-gradient(circle, #d3d7e3 1px, transparent 1px);
-    background-size: 20px 20px;
+    background-image: radial-gradient(circle, #d3d7e3 3px, transparent 3px);
+    /* Perbesar titik */
+    background-size: 40px 40px;
+    /* Perbesar jarak antara titik */
     padding: 0;
 }
 
@@ -32,7 +34,6 @@ body {
     grid-template-rows: auto 1fr;
     width: 100%;
     max-width: 900px;
-    /* Lebar konsisten untuk membaca */
     padding: 0;
     gap: 1.5rem;
 }
