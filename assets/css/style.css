@@ -31,17 +31,16 @@ header {
     background-color: #fff;
     /* Warna latar belakang header yang bersih */
     padding: 15px;
+    /* Padding yang sesuai */
     border-right: 1px solid #ddd;
     /* Perubahan warna border */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     /* Bayangan lebih kuat */
-    position: sticky;
-    top: 20px;
-    align-self: flex-start;
+    position: relative;
+    /* Ubah posisi menjadi relative */
     margin-right: 20px;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    /* Efek transisi */
+    /* Jarak kanan untuk memberi ruang */
 }
 
 /* Efek hover pada header */
@@ -90,8 +89,8 @@ main {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     text-align: left;
-    margin: 20px;
-    /* Margin untuk memberi ruang dari tepi layar */
+    margin: 0;
+    /* Menghilangkan margin untuk menyamakan posisi dengan header */
 }
 
 /* Judul Seksi */
@@ -180,26 +179,4 @@ li {
         margin: 10px;
         /* Margin lebih kecil pada tampilan mobile */
     }
-}
-
-/* Menambahkan efek pada elemen saat mengarah pada */
-h1:hover,
-h2:hover,
-h3:hover,
-h4:hover,
-h5:hover,
-h6:hover {
-    color: #007bff;
-    /* Ubah warna saat hover untuk lebih menarik */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    /* Efek bayangan pada teks */
-}
-
-/* Efek transisi halus */
-p:hover,
-li:hover {
-    color: #007bff;
-    /* Ubah warna saat hover pada teks paragraf dan list item */
-    transition: color 0.3s;
-    /* Transisi untuk perubahan warna */
 }
