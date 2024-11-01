@@ -28,6 +28,8 @@ body {
     /* Lebar konsisten untuk membaca */
     padding: 0;
     gap: 1.5rem;
+    box-sizing: border-box;
+    /* Mencegah padding memengaruhi lebar */
 }
 
 /* Header */
@@ -35,21 +37,27 @@ header {
     grid-row: 1 / 2;
     width: 100%;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 15px;
     border-bottom: 1px solid #e0e0e0;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 10;
     transition: background-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Navigasi */
 nav {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    /* Pastikan horizontal di layar kecil */
+    gap: 10px;
     justify-content: center;
+    width: 100%;
 }
 
 nav a {
@@ -74,7 +82,8 @@ main {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    margin: 0 auto;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 /* Judul Seksi */
@@ -133,33 +142,32 @@ p {
 @media (max-width: 768px) {
     body {
         padding: 0 10px;
-        /* Memberikan ruang lebih untuk layar kecil */
     }
 
     .container {
         max-width: 100%;
         gap: 1rem;
-        /* Mengurangi jarak antara elemen di layar kecil */
     }
 
     header {
-        padding: 15px 10px;
-        border-bottom: none;
+        padding: 10px 0;
+        flex-direction: row;
+        /* Buat header horizontal */
+        justify-content: space-between;
+        align-items: center;
         box-shadow: none;
         margin-bottom: 10px;
     }
 
-    /* Navigasi */
     nav {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
+        flex-direction: row;
+        gap: 5px;
+        /* Kurangi jarak antar tautan */
     }
 
     nav a {
-        padding: 6px 10px;
+        padding: 6px 8px;
         font-size: 0.9em;
-        /* Ukuran font lebih kecil untuk layar kecil */
     }
 
     /* Konten Utama */
