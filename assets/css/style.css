@@ -131,6 +131,8 @@ li {
     /* Jarak antar baris yang lebih besar untuk keterbacaan */
     color: #555;
     /* Warna teks paragraf lebih gelap */
+    margin-bottom: 15px;
+    /* Margin bawah untuk memberi jarak antar paragraf */
 }
 
 /* Responsif */
@@ -149,8 +151,8 @@ li {
         /* Tinggi otomatis */
         border-right: none;
         /* Menghilangkan border kanan pada mobile */
-        border-bottom: none;
-        /* Menghilangkan border bawah pada mobile */
+        border-bottom: 1px solid #ddd;
+        /* Menambahkan border bawah pada mobile */
         margin-bottom: 20px;
         /* Margin di bawah header */
         display: flex;
@@ -178,4 +180,26 @@ li {
         margin: 10px;
         /* Margin lebih kecil pada tampilan mobile */
     }
+}
+
+/* Menambahkan efek pada elemen saat mengarah pada */
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+    color: #007bff;
+    /* Ubah warna saat hover untuk lebih menarik */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    /* Efek bayangan pada teks */
+}
+
+/* Efek transisi halus */
+p:hover,
+li:hover {
+    color: #007bff;
+    /* Ubah warna saat hover pada teks paragraf dan list item */
+    transition: color 0.3s;
+    /* Transisi untuk perubahan warna */
 }
