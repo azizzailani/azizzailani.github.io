@@ -12,6 +12,8 @@
     --spacing-small: 10px;
     --spacing-medium: 20px;
     --spacing-large: 30px;
+    --max-width-content: 1100px;
+    /* Batas maksimal lebar konten */
 }
 
 /* Gaya dasar untuk seluruh halaman */
@@ -31,10 +33,13 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    max-width: 1200px;
+    max-width: var(--max-width-content);
+    /* Batas maksimal lebar konten */
     padding: 0;
     gap: var(--spacing-medium);
     align-items: flex-start;
+    margin: auto;
+    /* Pusatkan kontainer */
 }
 
 /* Box - Kontainer Umum */
@@ -49,8 +54,9 @@ body {
 
 /* Sidebar */
 .sidebar {
-    width: 200px;
-    min-width: 200px;
+    width: 250px;
+    /* Sesuaikan lebar sidebar */
+    min-width: 250px;
     /* Tetapkan lebar minimum agar tetap proporsional */
     position: sticky;
     top: 0;
@@ -148,13 +154,12 @@ p:hover {
     .container {
         flex-direction: column;
         align-items: center;
+        max-width: 100%;
     }
 
     .sidebar {
         width: 100%;
-        /* Pastikan sidebar mengambil lebar penuh */
         min-width: 100%;
-        /* Atur min-width agar tidak memengaruhi tata letak */
         border-right: none;
         border-bottom: 2px solid #ddd;
         margin-bottom: var(--spacing-medium);
