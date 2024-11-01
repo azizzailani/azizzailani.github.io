@@ -18,6 +18,7 @@ body {
     display: flex;
     width: 100%;
     max-width: 1200px;
+    /* Maksimal lebar untuk tata letak yang rapi */
     padding: 0;
     margin: 0 auto;
     /* Menyelaraskan kontainer di tengah */
@@ -26,42 +27,57 @@ body {
 /* Header */
 header {
     width: 220px;
+    /* Lebar header di desktop */
     background-color: #fff;
+    /* Warna latar belakang header yang bersih */
     padding: 15px;
+    /* Padding yang sesuai */
     border-right: 1px solid #ddd;
+    /* Perubahan warna border */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Bayangan lebih kuat */
     position: sticky;
     top: 0;
+    /* Ubah posisi sticky ke atas agar sejajar dengan konten */
     transition: background-color 0.3s, box-shadow 0.3s;
+    /* Efek transisi */
 }
 
 /* Efek hover pada header */
 header:hover {
     background-color: #f9f9f9;
+    /* Warna latar belakang saat hover */
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    /* Bayangan lebih kuat saat hover */
 }
 
 /* Navigasi */
 nav {
     display: flex;
     flex-direction: column;
+    /* Menyusun tautan secara vertikal di desktop */
     gap: 10px;
     margin-top: 20px;
 }
 
 nav a {
     color: #333;
+    /* Warna teks tautan yang gelap */
     text-decoration: none;
     font-weight: 500;
     padding: 10px;
+    /* Padding yang lebih besar */
     border-radius: 5px;
     transition: background 0.3s, transform 0.3s;
+    /* Tambahkan efek transform */
 }
 
 nav a:hover {
     background: rgba(100, 100, 255, 0.1);
+    /* Efek latar belakang yang lebih lembut saat hover */
     transform: scale(1.02);
+    /* Efek zoom saat hover */
 }
 
 /* Konten Utama */
@@ -69,22 +85,30 @@ main {
     width: calc(100% - 240px);
     /* Sesuaikan lebar agar sesuai dengan header di desktop */
     padding: 40px;
+    /* Padding yang sesuai */
     background-color: rgba(255, 255, 255, 0.9);
+    /* Latar belakang putih transparan untuk konten utama */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     text-align: left;
     margin: 0;
+    /* Menghilangkan margin untuk menyamakan posisi dengan header */
 }
 
 /* Judul Seksi */
 .section-title {
     font-size: 1.8em;
+    /* Ukuran font untuk judul */
     color: #333;
+    /* Warna teks judul */
     margin-bottom: 15px;
+    /* Margin bawah untuk judul */
     border-bottom: 2px solid #333;
+    /* Garis bawah yang lebih gelap */
     padding-bottom: 5px;
     display: inline-block;
     width: 100%;
+    /* Lebar penuh */
 }
 
 /* Heading dan Typography */
@@ -95,51 +119,79 @@ h4,
 h5,
 h6 {
     font-weight: 600;
+    /* Ketebalan font untuk heading */
     color: #333;
+    /* Warna teks heading */
     margin-bottom: 10px;
+    /* Margin bawah untuk heading */
     line-height: 1.3;
+    /* Penambahan jarak antar baris untuk kenyamanan */
     text-align: left;
+    /* Rata kiri untuk heading */
 }
 
 p,
 li {
     font-weight: 400;
+    /* Ketebalan font untuk paragraf dan list item */
     line-height: 1.8;
+    /* Jarak antar baris yang lebih besar untuk keterbacaan */
     color: #555;
+    /* Warna teks paragraf */
     margin-bottom: 15px;
+    /* Margin bawah untuk memberi jarak antar paragraf */
 }
 
 /* Responsif */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        /* Susun elemen secara vertikal pada mobile */
         align-items: stretch;
-        /* Memastikan elemen mengambil lebar penuh */
+        /* Pastikan elemen mengambil lebar penuh */
+        padding: 0;
+        /* Hapus padding untuk menghindari masalah tampilan */
     }
 
     header {
         width: 100%;
         /* Membuat lebar header 100% pada mobile */
+        height: auto;
+        /* Tinggi otomatis */
         border-right: none;
+        /* Menghilangkan border kanan pada mobile */
         border-bottom: 1px solid #ddd;
+        /* Menambahkan border bawah pada mobile */
         margin-bottom: 20px;
+        /* Margin di bawah header */
+        display: flex;
+        /* Header menjadi flex */
+        justify-content: space-between;
+        /* Menyusun navigasi di space-between */
+        gap: 15px;
+        /* Jarak antara tautan */
     }
 
     nav {
         flex-direction: row;
+        /* Navbar horizontal pada mobile */
         justify-content: center;
+        /* Rata tengah */
         gap: 15px;
+        /* Jarak antar tautan */
     }
 
     main {
         width: 100%;
         /* Memastikan main mengambil lebar penuh */
         padding: 20px;
-        margin: 10px 0;
+        /* Padding lebih kecil pada tampilan mobile */
+        margin: 0;
+        /* Menghilangkan margin pada mobile untuk keselarasan */
     }
 }
 
-/* Menambahkan efek pada elemen saat mengarah */
+/* Menambahkan efek pada elemen saat mengarah pada */
 h1:hover,
 h2:hover,
 h3:hover,
@@ -147,12 +199,16 @@ h4:hover,
 h5:hover,
 h6:hover {
     color: #007bff;
+    /* Ubah warna saat hover untuk lebih menarik */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    /* Efek bayangan pada teks */
 }
 
 /* Efek transisi halus */
 p:hover,
 li:hover {
     color: #007bff;
+    /* Ubah warna saat hover pada teks paragraf dan list item */
     transition: color 0.3s;
+    /* Transisi untuk perubahan warna */
 }
