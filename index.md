@@ -17,21 +17,21 @@ At the heart of my work is a commitment to fostering collaboration and reliabili
 
 <div style="display: flex; gap: 20px; margin-top: 20px; justify-content: center;">
 
-    <div class="center-text"> <!-- Using CSS class for centering -->
+    <div style="text-align: center;"> <!-- Center text for this div -->
         <img src="https://cdn-icons-png.flaticon.com/512/5115/5115293.png" alt="DevOps Icon" width="50">
-        <h3>DevOps</h3>
+        <h3 style="margin: 0;">DevOps</h3> <!-- Remove margin for perfect centering -->
         <p>Building and optimizing CI/CD pipelines to enable rapid and reliable deployment cycles, with a focus on scalability and automation.</p>
     </div>
 
-    <div class="center-text"> <!-- Using CSS class for centering -->
+    <div style="text-align: center;"> <!-- Center text for this div -->
         <img src="https://www.svgrepo.com/show/15403/analysis.svg" alt="SRE Icon" width="50">
-        <h3>SRE</h3>
+        <h3 style="margin: 0;">SRE</h3> <!-- Remove margin for perfect centering -->
         <p>Ensuring the reliability and performance of systems through proactive monitoring, alerting, and incident response.</p>
     </div>
 
-    <div class="center-text"> <!-- Using CSS class for centering -->
+    <div style="text-align: center;"> <!-- Center text for this div -->
         <img src="https://www.svgrepo.com/show/77029/cloud-computing.svg" alt="Cloud Engineer Icon" width="50">
-        <h3>Cloud Engineer</h3>
+        <h3 style="margin: 0;">Cloud Engineer</h3> <!-- Remove margin for perfect centering -->
         <p>Managing and optimizing cloud resources on AWS and Alibaba Cloud to support high-availability and cost-efficient operations.</p>
     </div>
 

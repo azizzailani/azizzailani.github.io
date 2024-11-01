@@ -95,10 +95,6 @@ main {
     /* Menghilangkan margin untuk menyamakan posisi dengan header */
 }
 
-.center-text {
-    text-align: center; /* Center alignment for specific elements */
-}
-
 /* Judul Seksi */
 .section-title {
     font-size: 1.8em;
