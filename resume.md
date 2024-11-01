@@ -70,3 +70,13 @@
 **Bachelor’s Degree in Informatics**  
 Faculty of Mathematics and Natural Sciences (FMIPA)  
 Indraprasta PGRI University, 2010 - 2015
+
+---
+
+## Download My Resume
+
+<a href="/assets/downloads/Resume.pdf" download="AbdulAzizZailani_Resume" style="text-decoration:none; color: #007acc;">
+  <button style="padding: 10px 20px; border: none; background-color: #007acc; color: white; border-radius: 5px;">
+    Download Resume (PDF)
+  </button>
+</a>
