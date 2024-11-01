@@ -4,9 +4,9 @@
 /* Gaya dasar untuk seluruh halaman */
 body {
     font-family: 'Poppins', sans-serif;
-    color: #444;
+    color: #333;
     /* Warna teks lebih gelap untuk kontras */
-    background-color: #f9f9f9;
+    background-color: #f0f4f8;
     /* Warna latar belakang yang lebih terang dan ramah mata */
     margin: 0;
     padding: 0;
@@ -26,23 +26,23 @@ body {
     max-width: 1200px;
     /* Maksimal lebar untuk tata letak yang rapi */
     padding: 0;
-    gap: 20px;
+    gap: 30px;
     /* Jarak antara header dan main */
 }
 
 /* Header */
 header {
-    width: 200px;
-    /* Lebar header */
+    width: 250px;
+    /* Lebar header yang lebih proporsional */
     background-color: #ffffff;
     /* Warna latar belakang header */
-    padding: 15px;
-    /* Padding yang lebih kecil untuk ukuran lebih proporsional */
-    border-right: 2px solid #ddd;
+    padding: 20px;
+    /* Padding untuk header */
+    border-right: 2px solid #e0e0e0;
     /* Garis pemisah di sebelah kanan */
     border-radius: 8px;
     /* Sudut melengkung */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     /* Bayangan lebih lembut */
     position: sticky;
     /* Agar header tetap di atas saat menggulir */
@@ -58,9 +58,9 @@ nav {
     /* Mengatur navbar sebagai flex container */
     flex-direction: column;
     /* Navbar secara vertikal */
-    gap: 10px;
+    gap: 15px;
     /* Jarak antar tautan */
-    margin-top: 10px;
+    margin-top: 20px;
     /* Margin atas untuk spasi */
 }
 
@@ -71,7 +71,7 @@ nav a {
     /* Menghilangkan garis bawah */
     font-weight: 500;
     /* Ketebalan font */
-    padding: 8px 12px;
+    padding: 10px 15px;
     /* Padding untuk tautan */
     border-radius: 5px;
     /* Sudut melengkung */
@@ -94,11 +94,11 @@ main {
     /* Agar main mengambil sisa ruang di sebelah kanan */
     padding: 30px;
     /* Padding yang sesuai untuk reading mode */
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.98);
     /* Latar belakang putih transparan untuk konten utama */
     border-radius: 12px;
     /* Sudut melengkung */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     /* Bayangan */
     margin: 20px 0;
     /* Margin untuk memberi ruang dari tepi layar */
