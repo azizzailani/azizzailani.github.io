@@ -1,3 +1,4 @@
 title: Abdul Aziz Zailani's Blog
 description: Personal blog on DevOps insights, experiences, and technology
 theme: jekyll-theme-minimal
+permalink: /:categories/:year/:month/:day/:title/
