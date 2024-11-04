@@ -143,13 +143,3 @@ Anda dapat mengakses aplikasi `nginx` menggunakan alamat IP node dan port yang d
 ---
 
 Selamat! Anda telah berhasil membuat Kubernetes cluster yang aman dan siap untuk produksi menggunakan RKE2 di Ubuntu 22.04.
-
-<div id="utterances"></div>
-<script src="https://utteranc.es/client.js"
-        repo="azizzailani/azizzailani.github.io"
-        issue-term="pathname"
-        label="Comment"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
