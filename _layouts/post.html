@@ -6,14 +6,49 @@ layout: default
     <h1>{{ page.title }}</h1>
     <p>{{ page.date | date: "%B %d, %Y" }}</p>
 
+    <!-- Menampilkan Tag atau Kategori Artikel -->
+    <p>
+        {% if page.tags %}
+        Tags:
+        {% for tag in page.tags %}
+        <a href="/tags/{{ tag | slugify }}" class="post-tag">{{ tag }}</a>{% if forloop.last == false %}, {% endif %}
+        {% endfor %}
+        {% endif %}
+    </p>
+
     <!-- Isi konten artikel -->
     <div class="post-content">
         {{ content }}
     </div>
-</article>
 
-<!-- Menambahkan Utterances untuk kolom komentar -->
-<div id="utterances"></div>
-<script src="https://utteranc.es/client.js" repo="azizzailani/azizzailani.github.io" issue-term="pathname"
-    label="Comment" theme="github-light" crossorigin="anonymous" async>
-    </script>
+    <!-- Tombol Share ke Media Sosial -->
+    <div class="share-buttons">
+        <p>Share this article:</p>
+        <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url }}"
+            target="_blank">Twitter</a> |
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}"
+            target="_blank">Facebook</a> |
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title | url_encode }}"
+            target="_blank">LinkedIn</a>
+    </div>
+
+    <!-- Navigasi Artikel Sebelumnya dan Berikutnya -->
+    <nav class="post-navigation">
+        <div class="prev">
+            {% if page.previous %}
+            <a href="{{ page.previous.url }}">← Previous: {{ page.previous.title }}</a>
+            {% endif %}
+        </div>
+        <div class="next">
+            {% if page.next %}
+            <a href="{{ page.next.url }}">Next: {{ page.next.title }} →</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <!-- Menambahkan Utterances untuk kolom komentar -->
+    <div id="utterances"></div>
+    <script src="https://utteranc.es/client.js" repo="azizzailani/azizzailani.github.io" issue-term="pathname"
+        label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+</article>
