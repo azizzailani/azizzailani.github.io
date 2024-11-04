@@ -5,8 +5,6 @@ title: Contact
 
 # Contact
 
--
-
 If you're interested in collaboration or have any DevOps inquiries, feel free to reach out!
 
 <div class="contact-table">
