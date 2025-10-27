@@ -3,9 +3,7 @@ layout: default
 title: Resume
 ---
 
-<h1>Resume</h1>
-
-## ![Experience Icon](https://img.icons8.com/ios-glyphs/30/000000/briefcase.png) Work Experience
+## Work Experience
 
 ### Senior DevOps Engineer - PT. Komunitas Anak Bangsa
 
@@ -52,27 +50,25 @@ title: Resume
 
 ---
 
-## ![Skills Icon](https://img.icons8.com/ios-glyphs/30/000000/technical-support.png) Skills
+## Technical Skills
 
-| Skill Area                                | Tools                                        | Proficiency        |
-| ----------------------------------------- | -------------------------------------------- | ------------------ |
-| **CI/CD**                                 | Jenkins, GitLab CI, GitHub Actions, Fastlane | ★★★★★★★★★★ (10/10) |
-| **Containerization & Orchestration**      | Docker, Kubernetes, Docker Swarm             | ★★★★★★★★★☆ (9/10)  |
-| **Configuration Management & Automation** | Ansible, Terraform                           | ★★★★★★★★☆☆ (8/10)  |
-| **Observability**                         | ELK Stack, Prometheus, Grafana, Loki         | ★★★★★★★★☆☆ (8/10)  |
-| **Cloud Platforms**                       | AWS, Alibaba Cloud                           | ★★★★★★★★★☆ (9/10)  |
-| **Scripting**                             | Bash,                                        | ★★★★★★★★☆☆ (8/10)  |
+```bash
+# Technology Stack
+CI/CD                   # Jenkins, GitLab CI, GitHub Actions, Fastlane
+Container/Orchestration # Docker, Kubernetes, Docker Swarm
+Infrastructure as Code  # Ansible, Terraform
+Observability          # ELK Stack, Prometheus, Grafana, Loki
+Cloud Platforms        # AWS, Alibaba Cloud
+Scripting              # Bash, Python, Go
+```
 
-**Key Strengths**
+**Proficiency:** Expert level in CI/CD, Cloud Platforms, and Containerization
 
-- **Quick Learner** ★★★★★★★★★☆
-- **Collaborative** ★★★★★★★★★☆
-- **Attention to Detail** ★★★★★★★★★☆
-- **Flexible** ★★★★★★★★★☆
+**Professional Strengths:** Quick Learner | Collaborative | Detail-Oriented | Adaptable
 
 ---
 
-## ![Education Icon](https://img.icons8.com/ios-glyphs/30/000000/graduation-cap.png) Education
+## Education
 
 **Bachelor’s Degree in Informatics**  
 Faculty of Mathematics and Natural Sciences (FMIPA)  
@@ -80,11 +76,11 @@ Indraprasta PGRI University, 2010 - 2015
 
 ---
 
-## Download My Resume
+## Download Resume
 
-<a href="{{ '/assets/downloads/resume.pdf' | relative_url }}" download="AbdulAzizZailani_Resume.pdf" style="text-decoration:none; color: #007acc;">
-  <button style="padding: 10px 20px; border: none; background-color: #007acc; color: white; border-radius: 5px;">
-    Download Resume (PDF)
+<a href="{{ '/assets/downloads/resume.pdf' | relative_url }}" download="AbdulAzizZailani_Resume.pdf">
+  <button>
+    <i class="fas fa-download"></i> Download PDF
   </button>
 </a>
 

@@ -1,294 +1,591 @@
-/* Import font Poppins dari Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+/* Terminal Theme Font */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
 
 /* Global Reset */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
-}
-
-/* Gaya Dasar */
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    background-color: #f7f9fc;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    line-height: 1.8;
-    letter-spacing: 0.5px;
-    background-image: radial-gradient(circle, #d3d7e3 3px, transparent 3px);
-    background-size: 40px 40px;
-}
-
-/* Kontainer Utama */
-.container,
-.post-list {
-    width: 100%;
-    max-width: 900px;
-    list-style-type: none;
     padding: 0;
-    margin: 0 auto;
-    gap: 1.5rem;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
+/* Terminal-inspired Base Styles */
+body {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+    color: #39ff14;
+    margin: 0;
+    min-height: 100vh;
+    line-height: 1.6;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
 }
 
-/* Header */
-header {
-    width: 100%;
-    background-color: #ffffff;
-    padding: 15px;
-    border-bottom: 1px solid #e0e0e0;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
+/* Scanline effect for authentic terminal feel */
+body::before {
+    content: '';
+    position: fixed;
     top: 0;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(57, 255, 20, 0.03) 2px,
+        rgba(57, 255, 20, 0.03) 4px
+    );
+    pointer-events: none;
+    z-index: 9999;
+    animation: scanlines 8s linear infinite;
 }
 
-/* Navigasi dan Tautan */
+@keyframes scanlines {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(4px); }
+}
+
+/* Terminal prompt indicator */
+.prompt {
+    color: #39ff14;
+    font-weight: 600;
+}
+
+.prompt::before {
+    content: '$ ';
+    color: #39ff14;
+    font-weight: 700;
+}
+
+/* Cursor blink animation */
+.cursor {
+    animation: blink 1s infinite;
+    color: #39ff14;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Terminal Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Terminal Window Header */
+header {
+    background: linear-gradient(135deg, #1e1e3f 0%, #2a2a4f 100%);
+    border: 1px solid #39ff14;
+    border-radius: 8px 8px 0 0;
+    padding: 12px 20px;
+    margin-bottom: 2px;
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(57, 255, 20, 0.1);
+}
+
+/* Terminal title bar */
+header::before {
+    content: '⬢ azizzailani.dev@terminal:~';
+    display: block;
+    color: #39ff14;
+    font-weight: 600;
+    font-size: 0.85em;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Terminal Navigation */
 nav {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    width: 100%;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
+/* Terminal-style Links */
+nav a {
+    color: #39ff14;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    background: rgba(57, 255, 20, 0.05);
+    letter-spacing: 0.5px;
+}
+
+nav a:hover {
+    background: rgba(57, 255, 20, 0.15);
+    border-color: #39ff14;
+    box-shadow: 0 0 12px rgba(57, 255, 20, 0.3);
+    transform: translateY(-2px);
+}
+
+nav a i {
+    margin-right: 6px;
+}
+
+/* General links */
 a,
 .post-title {
-    color: #007bff;
+    color: #4ade80;
     text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease;
 }
 
 a:hover,
 .post-title:hover {
-    color: #003d80;
-    text-decoration: underline;
+    color: #39ff14;
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.6);
 }
 
 .post-title {
     font-size: 1.5em;
 }
 
-/* Konten Utama */
-main,
+/* Terminal Window Content */
+main {
+    background: linear-gradient(135deg, #0f0f2e 0%, #1a1a3e 100%);
+    border: 1px solid #39ff14;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(57, 255, 20, 0.1);
+    min-height: 60vh;
+}
+
+main section {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .post-item {
-    width: 100%;
-    background-color: #ffffff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    margin: 0;
-    border: 1px solid #e0e0e0;
-}
-
-.post-item {
     margin-bottom: 20px;
+    border-left: 3px solid #39ff14;
+    background: rgba(57, 255, 20, 0.03);
 }
 
-/* Gaya Judul dan Tipografi */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Terminal Typography */
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #39ff14;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.8em;
     font-weight: 600;
-    color: #333;
+    color: #4ade80;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #86efac;
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+
+h4, h5, h6 {
+    font-weight: 600;
+    color: #a7f3d0;
     margin-bottom: 10px;
-    line-height: 1.4;
-    transition: color 0.3s;
-}
-
-h2:hover,
-h3:hover {
-    color: #0056b3;
-}
-
-p,
-.contact-table td,
-.post-excerpt {
-    color: #333;
-    font-size: 1em;
 }
 
 p {
+    color: #d1fae5;
+    font-size: 1em;
     margin-bottom: 1.2em;
-    color: #444;
     line-height: 1.8;
+}
+
+/* Terminal prompt for h1 */
+h1::before {
+    content: '> ';
+    color: #39ff14;
+    font-weight: 700;
 }
 
 .section-title {
     font-size: 1.75em;
-    color: #333;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
+    color: #39ff14;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #39ff14;
+    box-shadow: 0 2px 10px rgba(57, 255, 20, 0.2);
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
 }
 
-/* Meta dan Tag */
+/* Terminal Meta and Tags */
 .post-meta {
     font-size: 0.9em;
-    color: #888;
+    color: #86efac;
     margin-top: 5px;
 }
 
-.post-tags .tag {
-    background-color: #007bff;
-    color: white;
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-right: 5px;
-    font-size: 0.8em;
+.post-tags .tag,
+.post-tag {
+    background: rgba(57, 255, 20, 0.15);
+    color: #39ff14;
+    padding: 4px 10px;
+    border: 1px solid #39ff14;
+    border-radius: 3px;
+    margin-right: 8px;
+    font-size: 0.85em;
     text-decoration: none;
+    display: inline-block;
+    margin-bottom: 8px;
+    transition: all 0.2s ease;
 }
 
-.post-tags .tag:hover {
-    background-color: #0056b3;
+.post-tags .tag:hover,
+.post-tag:hover {
+    background: rgba(57, 255, 20, 0.3);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
 }
 
-/* Styling untuk Halaman Kontak */
+/* Terminal-style Tables */
 .contact-table {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .contact-table table {
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     border-collapse: collapse;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border: 1px solid #39ff14;
+    background: rgba(57, 255, 20, 0.05);
+    border-radius: 4px;
     overflow: hidden;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.1);
 }
 
 .contact-table th,
 .contact-table td {
-    padding: 15px;
+    padding: 15px 20px;
     text-align: left;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid rgba(57, 255, 20, 0.3);
 }
 
 .contact-table th {
-    background-color: #f7f9fc;
-    font-weight: bold;
-    color: #007bff;
+    background: rgba(57, 255, 20, 0.1);
+    font-weight: 600;
+    color: #39ff14;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+.contact-table td {
+    color: #d1fae5;
 }
 
 .contact-table td a {
-    color: #007bff;
+    color: #4ade80;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .contact-table td a:hover {
-    color: #0056b3;
+    color: #39ff14;
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.6);
 }
 
-.post-tag {
-    background-color: #007bff;
-    color: white;
-    padding: 2px 8px;
+/* Terminal Buttons */
+button {
+    background: transparent;
+    border: 2px solid #39ff14;
+    color: #39ff14;
+    padding: 12px 24px;
     border-radius: 4px;
-    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background: rgba(57, 255, 20, 0.1);
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+    transform: translateY(-2px);
 }
 
 .post-navigation {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(57, 255, 20, 0.3);
 }
 
 .share-buttons a {
-    margin-right: 5px;
-    color: #007bff;
+    margin-right: 10px;
+    color: #4ade80;
     text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid rgba(57, 255, 20, 0.3);
+    border-radius: 3px;
+    transition: all 0.2s ease;
 }
 
 .share-buttons a:hover {
-    color: #0056b3;
+    color: #39ff14;
+    border-color: #39ff14;
+    background: rgba(57, 255, 20, 0.1);
 }
 
-/* Responsif */
+/* Lists */
+ul, ol {
+    color: #d1fae5;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+/* Add terminal prompt style to list items */
+ul li::before {
+    content: '└── ';
+    color: #39ff14;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+ol {
+    counter-reset: item;
+}
+
+ol li {
+    counter-increment: item;
+}
+
+ol li::before {
+    content: counter(item) '. ';
+    color: #39ff14;
+    font-weight: 600;
+}
+
+/* Terminal-style hr */
+hr {
+    border: none;
+    border-top: 1px solid rgba(57, 255, 20, 0.3);
+    margin: 30px 0;
+}
+
+/* Table styling for resume */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #39ff14;
+    background: rgba(57, 255, 20, 0.05);
+    margin: 20px 0;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(57, 255, 20, 0.3);
+}
+
+table th {
+    background: rgba(57, 255, 20, 0.1);
+    color: #39ff14;
+    font-weight: 600;
+}
+
+/* Skill badges and tags */
+.skill-badge {
+    display: inline-block;
+    background: rgba(57, 255, 20, 0.1);
+    color: #39ff14;
+    padding: 4px 10px;
+    border: 1px solid #39ff14;
+    border-radius: 3px;
+    font-size: 0.85em;
+    margin: 4px 4px 4px 0;
+}
+
+/* Strong/Bold text */
+strong {
+    color: #39ff14;
+    font-weight: 600;
+}
+
+/* Code blocks */
+code {
+    background: rgba(57, 255, 20, 0.1);
+    color: #39ff14;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'JetBrains Mono', monospace;
+    border: 1px solid rgba(57, 255, 20, 0.3);
+}
+
+pre {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #39ff14;
+    border-radius: 4px;
+    padding: 15px;
+    overflow-x: auto;
+}
+
+pre code {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* Responsive Design - Tablet */
 @media (max-width: 1024px) {
     .container {
         max-width: 100%;
-        padding: 10px;
+        padding: 15px;
+    }
+    
+    header {
+        padding: 10px 15px;
+    }
+    
+    main {
+        padding: 20px;
     }
 }
 
+/* Responsive Design - Mobile */
 @media (max-width: 768px) {
-    .container {
-        max-width: 100%;
-        gap: 1rem;
+    body {
+        padding: 0;
     }
-
+    
+    .container {
+        padding: 10px;
+    }
+    
     header {
-        padding: 10px 0;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: none;
-        margin-bottom: 10px;
+        top: 0;
+        border-radius: 0;
+        padding: 12px 10px;
+        margin-bottom: 0;
+    }
+    
+    header::before {
+        font-size: 0.75em;
+        margin-bottom: 8px;
     }
 
     nav {
-        gap: 5px;
+        gap: 6px;
     }
 
     nav a {
-        padding: 6px 8px;
-        font-size: 0.9em;
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+    
+    nav a i {
+        margin-right: 4px;
     }
 
     main {
         padding: 15px;
-        border-radius: 6px;
+        border-radius: 0;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+    
+    h2 {
+        font-size: 1.4em;
+        margin-top: 20px;
+        margin-bottom: 12px;
+    }
+    
+    h3 {
+        font-size: 1.2em;
+        margin-top: 15px;
+        margin-bottom: 10px;
     }
 
     .section-title {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-        padding-bottom: 4px;
+        font-size: 1.4em;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
     }
 
     p {
-        font-size: 1em;
-        line-height: 1.6;
+        font-size: 0.95em;
+        line-height: 1.7;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-size: 1.2em;
-        margin-bottom: 8px;
+    .contact-table {
+        margin-top: 20px;
     }
 
     .contact-table th,
     .contact-table td {
-        padding: 10px;
-        font-size: 0.9em;
+        padding: 10px 12px;
+        font-size: 0.85em;
+    }
+    
+    .contact-table th {
+        font-size: 0.8em;
+    }
+
+    nav a {
+        flex: 1;
+        text-align: center;
     }
 }
 
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1000px;
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    h2 {
+        font-size: 1.2em;
+    }
+    
+    nav a span {
+        display: none;
+    }
+    
+    nav a {
+        padding: 8px;
+        font-size: 1.1em;
     }
 }

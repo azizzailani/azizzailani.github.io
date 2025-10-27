@@ -5,7 +5,12 @@ title: Contact
 
 # Contact
 
-If you're interested in collaboration or have any DevOps inquiries, feel free to reach out!
+```bash
+$ ./connect.sh
+Contacting Abdul Aziz Zailani...
+```
+
+Interested in collaboration or have DevOps inquiries? Let's connect!
 
 <div class="contact-table">
     <table>

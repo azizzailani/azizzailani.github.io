@@ -5,36 +5,35 @@ title: About Me
 
 # About Me
 
-I'm Abdul Aziz Zailani, a DevOps Engineer with a deep passion for optimizing technology processes to drive productivity and innovation. Over the past five years, I have specialized in cloud infrastructure, CI/CD pipelines, and deployment automation, consistently seeking ways to streamline workflows and enhance system reliability. My approach centers on using Infrastructure as Code (IaC) with tools like Ansible and Terraform to deliver scalable, resilient, and cost-effective solutions on platforms such as AWS and Alibaba Cloud.
+I'm **Abdul Aziz Zailani**, a Senior DevOps Engineer & SRE with a deep passion for optimizing technology processes to drive productivity and innovation. Over the past five years, I have specialized in cloud infrastructure, CI/CD pipelines, and deployment automation, consistently seeking ways to streamline workflows and enhance system reliability.
+
+My approach centers on using **Infrastructure as Code (IaC)** with tools like Ansible and Terraform to deliver scalable, resilient, and cost-effective solutions on platforms such as AWS and Alibaba Cloud.
 
 I thrive on creating seamless integrations between development and operations teams, ensuring systems are automated and secure, allowing developers to focus on innovation. From containerized applications with Docker to orchestrated Kubernetes clusters, my goal is to build infrastructure that supports growth and adapts to evolving business needs.
 
-At the heart of my work is a commitment to fostering collaboration and reliability in every project. By bridging development and operations, I aim to provide a robust foundation for high-performing applications and a scalable infrastructure that is ready for the future.
+---
+
+## Skills & Focus Areas
+
+```bash
+$ cat skills.txt
+DevOps      - CI/CD | Automation | IaC
+SRE         - Reliability | Monitoring | Incident Response  
+Cloud       - AWS | Alibaba Cloud | Multi-cloud Architecture
+Containers  - Docker | Kubernetes | Container Orchestration
+```
 
 ---
 
-# What I'm Doing
+## Core Expertise
 
-<div style="display: flex; gap: 20px; margin-top: 20px; justify-content: center;">
+**DevOps Engineering**  
+Building and optimizing CI/CD pipelines to enable rapid and reliable deployment cycles, with a focus on scalability and automation. Experienced with Jenkins, GitLab CI, and GitHub Actions.
 
-    <div style="text-align: center; display: flex; flex-direction: column; align-items: center;"> <!-- Center text for this div -->
-        <img src="https://cdn-icons-png.flaticon.com/512/5115/5115293.png" alt="DevOps Icon" width="50">
-        <h3>DevOps</h3> <!-- Centered by parent div -->
-        <p>Building and optimizing CI/CD pipelines to enable rapid and reliable deployment cycles, with a focus on scalability and automation.</p>
-    </div>
+**Site Reliability Engineering**  
+Ensuring the reliability and performance of systems through proactive monitoring, alerting, and incident response. Strong background with Prometheus, Grafana, and ELK stack.
 
-    <div style="text-align: center; display: flex; flex-direction: column; align-items: center;"> <!-- Center text for this div -->
-        <img src="https://www.svgrepo.com/show/15403/analysis.svg" alt="SRE Icon" width="50">
-        <h3>SRE</h3> <!-- Centered by parent div -->
-        <p>Ensuring the reliability and performance of systems through proactive monitoring, alerting, and incident response.</p>
-    </div>
-
-    <div style="text-align: center; display: flex; flex-direction: column; align-items: center;"> <!-- Center text for this div -->
-        <img src="https://www.svgrepo.com/show/77029/cloud-computing.svg" alt="Cloud Engineer Icon" width="50">
-        <h3>Cloud Engineer</h3> <!-- Centered by parent div -->
-        <p>Managing and optimizing cloud resources on AWS and Alibaba Cloud to support high-availability and cost-efficient operations.</p>
-    </div>
-
-</div>
+**Cloud Infrastructure**  
+Managing and optimizing cloud resources on AWS and Alibaba Cloud to support high-availability and cost-efficient operations. Expertise in infrastructure automation with Terraform and Ansible.
 
 ---
