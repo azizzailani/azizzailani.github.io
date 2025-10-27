@@ -15,13 +15,22 @@ I thrive on creating seamless integrations between development and operations te
 
 ## Skills & Focus Areas
 
-```bash
-$ cat skills.txt
+<div class="accordion-section">
+  <div class="accordion-header" data-accordion="skills">
+    <div class="accordion-title">
+      <i class="fas fa-terminal"></i>
+      <span>View Technology Stack</span>
+    </div>
+    <i class="fas fa-chevron-down accordion-icon"></i>
+  </div>
+  <div class="accordion-content">
+    <pre><code># Technology Stack
 DevOps      - CI/CD | Automation | IaC
 SRE         - Reliability | Monitoring | Incident Response
 Cloud       - AWS | Alibaba Cloud | Multi-cloud Architecture
-Containers  - Docker | Kubernetes | Container Orchestration
-```
+Containers  - Docker | Kubernetes | Container Orchestration</code></pre>
+  </div>
+</div>
 
 ---
 
