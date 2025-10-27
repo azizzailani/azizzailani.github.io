@@ -105,6 +105,22 @@
   </head>
 
   <body>
+    <!-- Abstract Code Symbols Background -->
+    <div class="background-code-symbols">
+      <div class="code-symbol">{</div>
+      <div class="code-symbol">}</div>
+      <div class="code-symbol">&lt;/&gt;</div>
+      <div class="code-symbol">()</div>
+      <div class="code-symbol">[]</div>
+      <div class="code-symbol">=&gt;</div>
+    </div>
+
+    <!-- Abstract Background Blobs -->
+    <div id="blob-1" class="abstract-blob blob-1"></div>
+    <div id="blob-2" class="abstract-blob blob-2"></div>
+    <div id="blob-3" class="abstract-blob blob-3"></div>
+    <div id="blob-4" class="abstract-blob blob-4"></div>
+
     <!-- Dark Mode Toggle -->
     <button
       class="dark-mode-toggle"
@@ -262,10 +278,52 @@
           icon.classList.remove("fa-moon");
           icon.classList.add("fa-sun");
           localStorage.setItem("darkMode", "enabled");
+
+          // Update blob colors for dark mode
+          updateBlobColors("dark");
         } else {
           icon.classList.remove("fa-sun");
           icon.classList.add("fa-moon");
           localStorage.setItem("darkMode", "disabled");
+
+          // Reset blob colors
+          updateBlobColors("light");
+        }
+      }
+
+      // Update abstract blob colors
+      function updateBlobColors(mode) {
+        const blob1 = document.getElementById("blob-1");
+        const blob2 = document.getElementById("blob-2");
+        const blob3 = document.getElementById("blob-3");
+        const blob4 = document.getElementById("blob-4");
+
+        if (mode === "dark") {
+          if (blob1)
+            blob1.style.background =
+              "radial-gradient(circle, rgba(255, 215, 0, 0.4), rgba(255, 140, 0, 0.2), transparent 70%)";
+          if (blob2)
+            blob2.style.background =
+              "radial-gradient(circle, rgba(255, 215, 0, 0.4), rgba(255, 140, 0, 0.2), transparent 70%)";
+          if (blob3)
+            blob3.style.background =
+              "radial-gradient(circle, rgba(255, 215, 0, 0.35), rgba(255, 140, 0, 0.15), transparent 70%)";
+          if (blob4)
+            blob4.style.background =
+              "linear-gradient(135deg, rgba(255, 215, 0, 0.35), rgba(255, 140, 0, 0.25), rgba(255, 215, 0, 0.2))";
+        } else {
+          if (blob1)
+            blob1.style.background =
+              "radial-gradient(circle, rgba(102, 126, 234, 0.6), rgba(102, 126, 234, 0.3), transparent 70%)";
+          if (blob2)
+            blob2.style.background =
+              "radial-gradient(circle, rgba(118, 75, 162, 0.6), rgba(118, 75, 162, 0.3), transparent 70%)";
+          if (blob3)
+            blob3.style.background =
+              "radial-gradient(circle, rgba(102, 126, 234, 0.5), rgba(102, 126, 234, 0.2), transparent 70%)";
+          if (blob4)
+            blob4.style.background =
+              "linear-gradient(135deg, rgba(118, 75, 162, 0.5), rgba(102, 126, 234, 0.4), rgba(118, 75, 162, 0.3))";
         }
       }
 

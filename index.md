@@ -346,7 +346,8 @@ body.dark-mode .timeline::before {
           <p class="milestone-tagline">"Every good DevOps engineer has a story about that one migration that kept them up at night. Mine had a happy ending."</p>
         </div>
         <div class="milestone-date">Oct 2019 - Nov 2022</div>
-      </div>
+
+  </div>
       <div class="milestone-achievements">
         <ul>
           <li><i class="fas fa-rocket"></i> <strong>CI/CD Pipeline Development</strong>: I built the first CI/CD pipelines here using Jenkins and GitLab. Releases went from monthly nightmares to weekly celebrations. Deploy cycles accelerated by 35%.</li>
@@ -354,9 +355,9 @@ body.dark-mode .timeline::before {
           <li><i class="fas fa-box"></i> <strong>Containerization & Orchestration</strong>: When I said "let's containerize everything," some were skeptical. But Docker and Kubernetes transformed our deployment game.</li>
           <li><i class="fas fa-exchange-alt"></i> <strong>AWS Migration Project</strong>: The Kimia Farma migration was the project that defined my approach. Zero downtime. Complete infrastructure migrated to AWS without a single customer complaint.</li>
           <li><i class="fas fa-eye"></i> <strong>Enhanced Observability</strong>: After implementing New Relic, ELK Stack, and Prometheus, we became prophets—detecting problems before they reached users.</li>
-        </ul>
-      </div>
-    </div>
+    </ul>
+  </div>
+</div>
 
     <!-- Milestone 3 -->
     <div class="timeline-milestone">
@@ -365,16 +366,17 @@ body.dark-mode .timeline::before {
           <h3>🛠️ System Administrator</h3>
           <p class="milestone-company">PT. Harmonix Teknologi Peentar</p>
           <p class="milestone-tagline">"Where it all began: keeping servers alive while learning why keeping them alive shouldn't require human sacrifice."</p>
-        </div>
+    </div>
         <div class="milestone-date">Oct 2018 - Oct 2019</div>
-      </div>
+
+  </div>
       <div class="milestone-achievements">
         <ul>
           <li><i class="fas fa-network-wired"></i> <strong>Network & Server Maintenance</strong>: This is where I learned that uptime isn't a metric—it's a mission. I configured and maintained critical infrastructure, ensuring high availability.</li>
           <li><i class="fas fa-file-alt"></i> <strong>Technical Support & Documentation</strong>: I created detailed documentation and provided deep technical support. Client satisfaction soared while support tickets dropped.</li>
           <li><i class="fas fa-shield-alt"></i> <strong>Security & Compliance</strong>: Security isn't a one-time checkbox; it's a culture. I implemented regular server audits and compliance checks.</li>
           <li><i class="fas fa-robot"></i> <strong>Process Automation</strong>: I noticed we spent hours on tasks that took minutes. So I started automating. This is where I learned: if you're doing something twice, script it.</li>
-        </ul>
+    </ul>
       </div>
     </div>
 

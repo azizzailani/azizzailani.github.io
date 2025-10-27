@@ -15,9 +15,10 @@ body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%),
-    linear-gradient(90deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%);
-  background-size: 200% 200%, 100% 100%;
-  background-position: 0% 0%, 0% 0%;
+    linear-gradient(90deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%),
+    url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 20 0 L 0 0 0 20' fill='none' stroke='rgba(255,255,255,0.1)' stroke-width='0.5'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)' /%3E%3C/svg%3E");
+  background-size: 200% 200%, 100% 100%, 200px 200px;
+  background-position: 0% 0%, 0% 0%, 0% 0%;
   background-attachment: fixed;
   color: #1a202c;
   margin: 0;
@@ -26,13 +27,26 @@ body {
   padding: 0;
   overflow-x: hidden;
   position: relative;
-  animation: gradientShift 30s ease infinite;
+  animation: gradientShift 30s ease infinite, gridMove 60s linear infinite;
   transition: background 0.5s ease, color 0.5s ease;
+}
+
+@keyframes gridMove {
+  0%,
+  100% {
+    background-position: 0% 0%, 0% 0%, 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%, 0% 0%, 100px 100px;
+  }
 }
 
 /* Dark Mode */
 body.dark-mode {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%),
+    linear-gradient(90deg, rgba(15, 20, 35, 0.5) 0%, transparent 100%),
+    url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 20 0 L 0 0 0 20' fill='none' stroke='rgba(255,215,0,0.1)' stroke-width='0.5'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)' /%3E%3C/svg%3E");
+  background-size: 200% 200%, 100% 100%, 200px 200px;
   color: #e2e8f0;
 }
 
@@ -118,10 +132,103 @@ body.dark-mode strong:hover {
   }
 }
 
-/* Abstract Background Blobs */
-body::before {
-  content: "";
+/* Abstract Development Icons Background */
+.background-code-symbols {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.08;
+  overflow: hidden;
+}
+
+.code-symbol {
+  position: absolute;
+  font-size: 120px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.15);
+  font-family: "Courier New", monospace;
+  animation: symbolFloat 30s ease-in-out infinite;
+  user-select: none;
+}
+
+.code-symbol:nth-child(1) {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+  font-size: 140px;
+}
+
+.code-symbol:nth-child(2) {
+  top: 30%;
+  right: 10%;
+  animation-delay: 5s;
+  font-size: 130px;
+}
+
+.code-symbol:nth-child(3) {
+  top: 60%;
+  left: 15%;
+  animation-delay: 10s;
+  font-size: 100px;
+}
+
+.code-symbol:nth-child(4) {
+  bottom: 25%;
+  right: 20%;
+  animation-delay: 15s;
+  font-size: 110px;
+}
+
+.code-symbol:nth-child(5) {
+  top: 45%;
+  right: 5%;
+  animation-delay: 8s;
+  font-size: 90px;
+}
+
+.code-symbol:nth-child(6) {
+  bottom: 15%;
+  left: 10%;
+  animation-delay: 12s;
+  font-size: 95px;
+}
+
+@keyframes symbolFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.08;
+  }
+  50% {
+    transform: translateY(-50px) rotate(10deg);
+    opacity: 0.12;
+  }
+}
+
+/* Dark Mode for Code Symbols */
+body.dark-mode .code-symbol {
+  color: rgba(255, 215, 0, 0.12);
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+body.dark-mode .background-code-symbols {
+  opacity: 0.1;
+}
+
+/* Abstract Background Blobs */
+.abstract-blob {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.blob-1 {
   top: -50px;
   left: -50px;
   width: 500px;
@@ -132,16 +239,10 @@ body::before {
     rgba(102, 126, 234, 0.3),
     transparent 70%
   );
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
   animation: blobMove1 20s ease-in-out infinite;
-  filter: blur(60px);
 }
 
-body::after {
-  content: "";
-  position: fixed;
+.blob-2 {
   bottom: -80px;
   right: -80px;
   width: 600px;
@@ -152,11 +253,7 @@ body::after {
     rgba(118, 75, 162, 0.3),
     transparent 70%
   );
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
   animation: blobMove2 25s ease-in-out infinite;
-  filter: blur(60px);
 }
 
 @keyframes blobMove1 {
@@ -195,10 +292,9 @@ body::after {
   }
 }
 
-/* Add more abstract background layers */
-.container::before {
-  content: "";
-  position: fixed;
+/* Dark Mode - Enhanced Blob Colors will be added via JavaScript */
+
+.blob-3 {
   top: 20%;
   right: -150px;
   width: 400px;
@@ -209,11 +305,8 @@ body::after {
     rgba(102, 126, 234, 0.2),
     transparent 70%
   );
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(50px);
   animation: blobMove3 30s ease-in-out infinite;
+  filter: blur(50px);
 }
 
 @keyframes blobMove3 {
@@ -229,9 +322,7 @@ body::after {
 }
 
 /* Abstract geometric shapes */
-.container::after {
-  content: "";
-  position: fixed;
+.blob-4 {
   bottom: 30%;
   left: -120px;
   width: 350px;
@@ -243,8 +334,6 @@ body::after {
     rgba(118, 75, 162, 0.3)
   );
   border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
-  pointer-events: none;
-  z-index: 0;
   filter: blur(50px);
   animation: geometricPulse 15s ease-in-out infinite;
 }
