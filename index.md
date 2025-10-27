@@ -27,13 +27,61 @@ Containers  - Docker | Kubernetes | Container Orchestration
 
 ## Core Expertise
 
-**DevOps Engineering**  
-Building and optimizing CI/CD pipelines to enable rapid and reliable deployment cycles, with a focus on scalability and automation. Experienced with Jenkins, GitLab CI, and GitHub Actions.
+<div class="accordion-section">
+  <div class="accordion-header" data-accordion="devops">
+    <div class="accordion-title">
+      <i class="fas fa-code-branch icon-float"></i>
+      <span>DevOps Engineering</span>
+    </div>
+    <i class="fas fa-chevron-down accordion-icon"></i>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Building and optimizing CI/CD pipelines</strong> to enable rapid and reliable deployment cycles, with a focus on scalability and automation.</p>
+    <p><strong>Tools & Technologies:</strong> Jenkins, GitLab CI, GitHub Actions, Ansible, Terraform</p>
+    <ul>
+      <li><i class="fas fa-check-circle"></i> 40% reduction in deployment time</li>
+      <li><i class="fas fa-check-circle"></i> Automated testing and staging environments</li>
+      <li><i class="fas fa-check-circle"></i> Infrastructure as Code implementation</li>
+    </ul>
+  </div>
+</div>
 
-**Site Reliability Engineering**  
-Ensuring the reliability and performance of systems through proactive monitoring, alerting, and incident response. Strong background with Prometheus, Grafana, and ELK stack.
+<div class="accordion-section">
+  <div class="accordion-header" data-accordion="sre">
+    <div class="accordion-title">
+      <i class="fas fa-shield-alt icon-float"></i>
+      <span>Site Reliability Engineering</span>
+    </div>
+    <i class="fas fa-chevron-down accordion-icon"></i>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Ensuring the reliability and performance</strong> of systems through proactive monitoring, alerting, and incident response.</p>
+    <p><strong>Tools & Technologies:</strong> Prometheus, Grafana, ELK Stack, Loki, New Relic</p>
+    <ul>
+      <li><i class="fas fa-check-circle"></i> 30% improvement in system uptime</li>
+      <li><i class="fas fa-check-circle"></i> Centralized logging and monitoring</li>
+      <li><i class="fas fa-check-circle"></i> Faster incident response time</li>
+    </ul>
+  </div>
+</div>
 
-**Cloud Infrastructure**  
-Managing and optimizing cloud resources on AWS and Alibaba Cloud to support high-availability and cost-efficient operations. Expertise in infrastructure automation with Terraform and Ansible.
+<div class="accordion-section">
+  <div class="accordion-header" data-accordion="cloud">
+    <div class="accordion-title">
+      <i class="fas fa-cloud icon-float"></i>
+      <span>Cloud Infrastructure</span>
+    </div>
+    <i class="fas fa-chevron-down accordion-icon"></i>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Managing and optimizing cloud resources</strong> on AWS and Alibaba Cloud to support high-availability and cost-efficient operations.</p>
+    <p><strong>Tools & Technologies:</strong> AWS, Alibaba Cloud, Terraform, Ansible, Kubernetes</p>
+    <ul>
+      <li><i class="fas fa-check-circle"></i> Multi-cloud architecture design</li>
+      <li><i class="fas fa-check-circle"></i> Cost optimization and resource management</li>
+      <li><i class="fas fa-check-circle"></i> Zero-downtime migrations</li>
+    </ul>
+  </div>
+</div>
 
 ---
