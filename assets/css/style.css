@@ -764,6 +764,231 @@ pre code {
   }
 }
 
+/* Contact Card Styles */
+.contact-card {
+  background: linear-gradient(
+    135deg,
+    rgba(57, 255, 20, 0.08) 0%,
+    rgba(57, 255, 20, 0.03) 100%
+  );
+  border: 1px solid rgba(57, 255, 20, 0.4);
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(57, 255, 20, 0.1),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: #39ff14;
+  box-shadow: 0 8px 32px rgba(57, 255, 20, 0.2);
+  background: linear-gradient(
+    135deg,
+    rgba(57, 255, 20, 0.12) 0%,
+    rgba(57, 255, 20, 0.06) 100%
+  );
+}
+
+.contact-card:hover::before {
+  left: 100%;
+}
+
+.contact-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(57, 255, 20, 0.3);
+}
+
+.contact-card-header h3 {
+  margin: 0;
+  font-size: 1.3em;
+  color: #39ff14;
+}
+
+.contact-icon {
+  color: #39ff14;
+  transition: all 0.3s ease;
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 10px rgba(57, 255, 20, 0.8));
+}
+
+.contact-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #4ade80;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.contact-link i {
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #39ff14;
+  background: rgba(57, 255, 20, 0.1);
+  transform: translateX(5px);
+}
+
+.contact-link:hover i {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(57, 255, 20, 0.6));
+}
+
+.contact-desc {
+  color: #86efac;
+  font-size: 0.9em;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Availability Grid Styles */
+.availability-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  background: rgba(57, 255, 20, 0.05);
+  border: 1px solid rgba(57, 255, 20, 0.3);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.availability-item:hover {
+  background: rgba(57, 255, 20, 0.1);
+  border-color: rgba(57, 255, 20, 0.5);
+  transform: translateX(5px);
+}
+
+.availability-item i {
+  color: #39ff14;
+  margin-top: 5px;
+}
+
+.availability-item h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1em;
+  color: #39ff14;
+}
+
+.availability-item p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #d1fae5;
+}
+
+/* Resume Download Button */
+.resume-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(57, 255, 20, 0.1);
+  border: 1px solid #39ff14;
+  color: #39ff14;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+  animation: pulse-border 2s infinite;
+}
+
+.resume-download-btn:hover {
+  background: rgba(57, 255, 20, 0.2);
+  border-color: #4ade80;
+  color: #4ade80;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(57, 255, 20, 0.4);
+}
+
+.resume-download-btn i {
+  transition: transform 0.3s ease;
+}
+
+.resume-download-btn:hover i {
+  transform: scale(1.2);
+}
+
+@keyframes pulse-border {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(57, 255, 20, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.6);
+  }
+}
+
+/* Contact Grid Responsive */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+
+  .contact-card {
+    padding: 15px;
+  }
+
+  .contact-card-header {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .contact-card-header h3 {
+    font-size: 1.1em;
+  }
+
+  .availability-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .resume-download-btn {
+    font-size: 0.85em;
+    padding: 6px 12px;
+  }
+
+  .resume-download-btn span {
+    display: none;
+  }
+}
+
 @media (max-width: 480px) {
   h1 {
     font-size: 1.5em;
@@ -793,4 +1018,172 @@ pre code {
   .accordion-content.expanded {
     padding: 10px 15px 15px 15px;
   }
+
+  .contact-card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-icon {
+    margin: 0 auto;
+  }
 }
+
+/* ========================================
+   PRINT STYLESHEET
+   ======================================== */
+
+@media print {
+  /* Hide non-essential elements for printing */
+  header,
+  nav,
+  .accordion-header,
+  .accordion-icon,
+  .contact-card::before,
+  .availability-grid,
+  hr {
+    display: none !important;
+  }
+
+  /* Expand all accordions for printing */
+  .accordion-content {
+    max-height: none !important;
+    padding: 10px 0 !important;
+    display: block !important;
+  }
+
+  /* Optimize colors for print (black & white) */
+  body {
+    background: white !important;
+    color: #000 !important;
+    font-size: 10pt !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Remove background images and effects */
+  body::before,
+  .scanlines {
+    display: none !important;
+  }
+
+  /* Page break control */
+  .accordion-section {
+    page-break-inside: avoid;
+    margin-bottom: 15px;
+    border: 1px solid #000;
+    padding: 10px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: #000 !important;
+    page-break-after: avoid;
+  }
+
+  h1 {
+    font-size: 18pt !important;
+    border-bottom: 2px solid #000 !important;
+  }
+
+  h2 {
+    font-size: 14pt !important;
+    margin-top: 20px !important;
+  }
+
+  h3 {
+    font-size: 12pt !important;
+  }
+
+  /* Links */
+  a {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+
+  /* Code blocks */
+  pre,
+  code {
+    background: #f5f5f5 !important;
+    border: 1px solid #ddd !important;
+    color: #000 !important;
+    page-break-inside: avoid;
+  }
+
+  /* Contact cards - stack vertically for print */
+  .contact-grid {
+    display: block !important;
+  }
+
+  .contact-card {
+    border: 1px solid #000 !important;
+    background: white !important;
+    margin-bottom: 15px !important;
+    padding: 10px !important;
+    page-break-inside: avoid;
+  }
+
+  .contact-icon {
+    color: #000 !important;
+    filter: grayscale(100%) !important;
+  }
+
+  /* Print header */
+  .container::before {
+    content: "Abdul Aziz Zailani - Senior DevOps Engineer & SRE";
+    display: block;
+    text-align: center;
+    font-size: 16pt;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #000;
+    padding-bottom: 10px;
+  }
+
+  /* Contact info at the bottom */
+  .print-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #000;
+    text-align: center;
+    font-size: 9pt;
+  }
+}
+
+/* Page size for PDF export */
+@page {
+  size: A4;
+  margin: 2cm;
+}
+
+/* ========================================
+   A/B TESTING VARIANTS
+   ======================================== */
+
+/* Variant B - Alternative Theme (for future A/B testing) */
+/* Uncomment to test alternative design */
+
+/*
+[data-variant="B"] body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+}
+
+[data-variant="B"] h1,
+[data-variant="B"] h2,
+[data-variant="B"] .accordion-title,
+[data-variant="B"] nav a {
+  color: #ffffff;
+}
+
+[data-variant="B"] .contact-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-variant="B"] .accordion-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+*/

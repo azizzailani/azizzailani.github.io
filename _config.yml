@@ -1,3 +1,18 @@
 title: Abdul Aziz Zailani
-description: Personal portfolio and resume
+description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastructure, and Automation. 5+ years experience in optimizing deployment pipelines and improving system reliability.
 theme: jekyll-theme-minimal
+url: https://azizzailani.github.io
+
+# Analytics
+google_analytics: G-XXXXXXXXXX # Replace with your actual GA4 tracking ID
+
+# A/B Testing
+ab_testing:
+  enabled: true
+  variants:
+    - name: Terminal Theme (Current)
+    - name: Alternative Theme (Future)
+
+# SEO
+lang: en
+keywords: DevOps, SRE, CI/CD, Kubernetes, AWS, Terraform, Ansible, Infrastructure as Code, Cloud Automation, Senior DevOps Engineer
