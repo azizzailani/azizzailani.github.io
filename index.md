@@ -84,86 +84,422 @@ The best part? When developers can push code without worrying about the infrastr
 
 ---
 
-## Work Experience
+## 🗺️ My Career Journey
 
 <div id="experience"></div>
 
-<div class="accordion-section">
-  <div class="accordion-header" data-accordion="senior-devops">
-    <div class="accordion-title">
-      <i class="fas fa-code-branch"></i>
-      <span>Senior DevOps Engineer - PT. Komunitas Anak Bangsa</span>
+<p style="text-align: center; color: #4a5568; font-size: 1.1rem; margin-bottom: 30px;">
+  <strong>Every journey starts with a single step.</strong> Here's my path from keeping servers alive to orchestrating infrastructure symphonies.
+  <br><br>
+  <em style="color: #667eea;">Scroll down to explore the milestones that shaped my DevOps journey 👇</em>
+</p>
+
+<style>
+.roadmap-container {
+  position: relative;
+  padding: 40px 0;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.timeline-milestone {
+  position: relative;
+  margin-bottom: 60px;
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 5px solid transparent;
+}
+
+.timeline-milestone:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.2);
+  border-left-color: #667eea;
+}
+
+.timeline-milestone::before {
+  content: '';
+  position: absolute;
+  left: -48px;
+  top: 40px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 4px solid white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+}
+
+.milestone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.milestone-role {
+  flex: 1;
+}
+
+.milestone-role h3 {
+  margin: 0 0 5px 0;
+  color: #2d3748;
+  font-size: 1.4rem;
+}
+
+.milestone-company {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0 0 5px 0;
+}
+
+.milestone-date {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.milestone-tagline {
+  color: #4a5568;
+  font-style: italic;
+  margin-bottom: 20px;
+  padding: 12px;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 8px;
+}
+
+.milestone-achievements {
+  margin-top: 15px;
+}
+
+.milestone-achievements li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  color: #4a5568;
+}
+
+@media (max-width: 768px) {
+  .milestone-header {
+    flex-direction: column;
+  }
+
+  .milestone-date {
+    margin-top: 10px;
+  }
+}
+
+/* Scroll Reveal Animation */
+.timeline-milestone {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.timeline-milestone:nth-child(1) { animation-delay: 0.1s; }
+.timeline-milestone:nth-child(2) { animation-delay: 0.2s; }
+.timeline-milestone:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add progress bar effect */
+.timeline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 30%;
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+  animation: timelineProgress 2s ease;
+}
+
+@keyframes timelineProgress {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+</style>
+
+<div class="roadmap-container">
+  <div class="timeline">
+
+    <div class="timeline-milestone">
+      <div class="milestone-header">
+        <div class="milestone-role">
+          <h3>🏆 Senior DevOps Engineer</h3>
+          <p class="milestone-company">PT. Komunitas Anak Bangsa</p>
+          <p class="milestone-tagline">"What if deployments could be as reliable as morning coffee?" - That question led me here.</p>
+        </div>
+        <div class="milestone-date">Nov 2022 - Present</div>
+      </div>
+      <div class="milestone-achievements">
+        <ul>
+          <li><i class="fas fa-tasks"></i> <strong>CI/CD Optimization</strong>: When I joined, deployments were a marathon. Now, with Jenkins pipelines I architected, releases happen 40% faster—from "deploy on Fridays at midnight" to "ship it when it's ready." The team went from dreading releases to celebrating them.</li>
+          <li><i class="fas fa-chart-line"></i> <strong>Monitoring & Alerting</strong>: Remember when server crashes were a surprise? Not anymore. I integrated Prometheus for real-time monitoring, and system uptime improved by 30%. Now we fix issues before users notice—proactive beats reactive.</li>
+          <li><i class="fas fa-database"></i> <strong>Centralized Logging</strong>: "Which log file is that error in?" was the bane of my existence. So I built a centralized logging framework with Grafana and Loki. Now troubleshooting time dropped by 50% because searching logs doesn't require 47 terminal windows.</li>
+          <li><i class="fas fa-cogs"></i> <strong>Infrastructure Automation</strong>: Manual server setup? Not on my watch. With Ansible, I automated 60% of infrastructure provisioning. What used to take hours now takes minutes, and consistency across environments is guaranteed.</li>
+          <li><i class="fas fa-users"></i> <strong>Cross-functional Collaboration</strong>: The best pipelines aren't built in silos. I teamed up with development and QA to create CI/CD workflows for mobile apps—complete with automated testing and staging environments.</li>
+        </ul>
+      </div>
     </div>
-    <i class="fas fa-chevron-down accordion-icon"></i>
-  </div>
-  <div class="accordion-content">
-    <p><strong>Nov 2022 - Present</strong></p>
-    <p style="color: #86efac; font-style: italic; margin-bottom: 20px;">"What if deployments could be as reliable as morning coffee?" - That question led me here.</p>
 
-    <ul>
-      <li><i class="fas fa-tasks"></i> <strong>CI/CD Optimization</strong>: When I joined, deployments were a marathon. Now, with Jenkins pipelines I architected, releases happen 40% faster—from "deploy on Fridays at midnight" to "ship it when it's ready." The team went from dreading releases to celebrating them.</li>
+    <!-- Milestone 2 -->
+    <div class="timeline-milestone">
+      <div class="milestone-header">
+        <div class="milestone-role">
+          <h3>🚀 DevOps Engineer</h3>
+          <p class="milestone-company">PT. Harmonix Teknologi Peentar</p>
+          <p class="milestone-tagline">"Every good DevOps engineer has a story about that one migration that kept them up at night. Mine had a happy ending."</p>
+        </div>
+        <div class="milestone-date">Oct 2019 - Nov 2022</div>
+      </div>
+      <div class="milestone-achievements">
+        <ul>
+          <li><i class="fas fa-rocket"></i> <strong>CI/CD Pipeline Development</strong>: I built the first CI/CD pipelines here using Jenkins and GitLab. Releases went from monthly nightmares to weekly celebrations. Deploy cycles accelerated by 35%.</li>
+          <li><i class="fas fa-cloud"></i> <strong>Cloud Infrastructure Management</strong>: Managed infrastructure on Telkom Sigma and AWS during high-demand periods—like Black Friday for e-commerce platforms.</li>
+          <li><i class="fas fa-box"></i> <strong>Containerization & Orchestration</strong>: When I said "let's containerize everything," some were skeptical. But Docker and Kubernetes transformed our deployment game.</li>
+          <li><i class="fas fa-exchange-alt"></i> <strong>AWS Migration Project</strong>: The Kimia Farma migration was the project that defined my approach. Zero downtime. Complete infrastructure migrated to AWS without a single customer complaint.</li>
+          <li><i class="fas fa-eye"></i> <strong>Enhanced Observability</strong>: After implementing New Relic, ELK Stack, and Prometheus, we became prophets—detecting problems before they reached users.</li>
+        </ul>
+      </div>
+    </div>
 
-      <li><i class="fas fa-chart-line"></i> <strong>Monitoring & Alerting</strong>: Remember when server crashes were a surprise? Not anymore. I integrated Prometheus for real-time monitoring, and system uptime improved by 30%. Now we fix issues before users notice—proactive beats reactive.</li>
-
-      <li><i class="fas fa-database"></i> <strong>Centralized Logging</strong>: "Which log file is that error in?" was the bane of my existence. So I built a centralized logging framework with Grafana and Loki. Now troubleshooting time dropped by 50% because searching logs doesn't require 47 terminal windows.</li>
-
-      <li><i class="fas fa-cogs"></i> <strong>Infrastructure Automation</strong>: Manual server setup? Not on my watch. With Ansible, I automated 60% of infrastructure provisioning. What used to take hours now takes minutes, and consistency across environments is guaranteed—no more "works on staging, breaks in prod" mysteries.</li>
-
-      <li><i class="fas fa-users"></i> <strong>Cross-functional Collaboration</strong>: The best pipelines aren't built in silos. I teamed up with development and QA to create CI/CD workflows for mobile apps—complete with automated testing and staging environments. Result? Mobile releases became as smooth as web deployments.</li>
-    </ul>
+    <!-- Milestone 3 -->
+    <div class="timeline-milestone">
+      <div class="milestone-header">
+        <div class="milestone-role">
+          <h3>🛠️ System Administrator</h3>
+          <p class="milestone-company">PT. Harmonix Teknologi Peentar</p>
+          <p class="milestone-tagline">"Where it all began: keeping servers alive while learning why keeping them alive shouldn't require human sacrifice."</p>
+        </div>
+        <div class="milestone-date">Oct 2018 - Oct 2019</div>
+      </div>
+      <div class="milestone-achievements">
+        <ul>
+          <li><i class="fas fa-network-wired"></i> <strong>Network & Server Maintenance</strong>: This is where I learned that uptime isn't a metric—it's a mission. I configured and maintained critical infrastructure, ensuring high availability.</li>
+          <li><i class="fas fa-file-alt"></i> <strong>Technical Support & Documentation</strong>: I created detailed documentation and provided deep technical support. Client satisfaction soared while support tickets dropped.</li>
+          <li><i class="fas fa-shield-alt"></i> <strong>Security & Compliance</strong>: Security isn't a one-time checkbox; it's a culture. I implemented regular server audits and compliance checks.</li>
+          <li><i class="fas fa-robot"></i> <strong>Process Automation</strong>: I noticed we spent hours on tasks that took minutes. So I started automating. This is where I learned: if you're doing something twice, script it.</li>
+        </ul>
+      </div>
+    </div>
 
   </div>
 </div>
 
-<div class="accordion-section">
-  <div class="accordion-header" data-accordion="devops-engineer">
-    <div class="accordion-title">
-      <i class="fas fa-server"></i>
-      <span>DevOps Engineer - PT. Harmonix Teknologi Peentar</span>
+---
+
+## 📈 Skill Progression Journey
+
+<style>
+.progression-section {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  margin: 30px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.progression-item {
+  margin-bottom: 30px;
+}
+
+.progression-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.progression-label strong {
+  color: #2d3748;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progression-percentage {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.progression-bar-container {
+  height: 12px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progression-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  transition: width 1.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.progression-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,0.3) 50%,
+    transparent 100%);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.milestone-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 10px;
+}
+
+.skill-tag {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #4a5568;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+</style>
+
+<div class="progression-section">
+  <h2 style="margin-top: 0; color: #2d3748; font-size: 1.6rem; margin-bottom: 25px;">
+    <i class="fas fa-chart-line"></i> From SysAdmin to Senior DevOps: My Growth Story
+  </h2>
+
+  <div class="progression-item">
+    <div class="progression-label">
+      <strong><i class="fas fa-rocket"></i> CI/CD & Pipeline Automation</strong>
+      <span class="progression-percentage">95%</span>
     </div>
-    <i class="fas fa-chevron-down accordion-icon"></i>
-  </div>
-  <div class="accordion-content">
-    <p><strong>Oct 2019 - Nov 2022</strong></p>
-    <p style="color: #86efac; font-style: italic; margin-bottom: 20px;">"Every good DevOps engineer has a story about that one migration that kept them up at night. Mine had a happy ending."</p>
-
-    <ul>
-      <li><i class="fas fa-rocket"></i> <strong>CI/CD Pipeline Development</strong>: I built the first CI/CD pipelines here using Jenkins and GitLab. Releases went from monthly nightmares to weekly celebrations. Deploy cycles accelerated by 35%, and the best part? Errors in production became rare because automated testing caught them early.</li>
-
-      <li><i class="fas fa-cloud"></i> <strong>Cloud Infrastructure Management</strong>: Managed infrastructure on Telkom Sigma and AWS during high-demand periods—like Black Friday for e-commerce platforms. Resource optimization wasn't just about cutting costs; it was about scaling intelligently without breaking the bank.</li>
-
-      <li><i class="fas fa-box"></i> <strong>Containerization & Orchestration</strong>: When I said "let's containerize everything," some were skeptical. But Docker and Kubernetes transformed our deployment game. System resilience skyrocketed, and resource utilization improved dramatically—because containers don't waste CPU like VMs do.</li>
-
-      <li><i class="fas fa-exchange-alt"></i> <strong>AWS Migration Project</strong>: The Kimia Farma migration was the project that defined my approach. Zero downtime. Secure data transition. Complete infrastructure migrated to AWS without a single customer complaint. How? Meticulous planning, automated migration scripts, and a rollback plan that never needed to be used.</li>
-
-      <li><i class="fas fa-eye"></i> <strong>Enhanced Observability</strong>: Before observability, issues were discovered by users. After implementing New Relic, ELK Stack, and Prometheus, we became prophets—detecting problems before they reached users. Issue detection time dropped by 25%, and peace of mind became a feature.</li>
-    </ul>
-
-  </div>
-</div>
-
-<div class="accordion-section">
-  <div class="accordion-header" data-accordion="sysadmin">
-    <div class="accordion-title">
-      <i class="fas fa-tools"></i>
-      <span>System Administrator - PT. Harmonix Teknologi Peentar</span>
+    <div class="progression-bar-container">
+      <div class="progression-bar" style="width: 95%;"></div>
     </div>
-    <i class="fas fa-chevron-down accordion-icon"></i>
   </div>
-  <div class="accordion-content">
-    <p><strong>Oct 2018 - Oct 2019</strong></p>
-    <p style="color: #86efac; font-style: italic; margin-bottom: 20px;">"Where it all began: keeping servers alive while learning why keeping them alive shouldn't require human sacrifice."</p>
 
-    <ul>
-      <li><i class="fas fa-network-wired"></i> <strong>Network & Server Maintenance</strong>: This is where I learned that uptime isn't a metric—it's a mission. I configured and maintained critical infrastructure, ensuring high availability wasn't just a buzzword but a reality. Client applications ran smoothly because the foundation was solid.</li>
+  <div class="progression-item">
+    <div class="progression-label">
+      <strong><i class="fas fa-cloud"></i> Cloud Infrastructure (AWS, Alibaba)</strong>
+      <span class="progression-percentage">90%</span>
+    </div>
+    <div class="progression-bar-container">
+      <div class="progression-bar" style="width: 90%;"></div>
+    </div>
+  </div>
 
-      <li><i class="fas fa-file-alt"></i> <strong>Technical Support & Documentation</strong>: Ever wonder why there's a shortage of good documentation? Because writing it seems boring. But I discovered that good docs are lifesavers. I created detailed documentation and provided deep technical support, and client satisfaction soared while support tickets dropped—because well-documented systems support themselves.</li>
+  <div class="progression-item">
+    <div class="progression-label">
+      <strong><i class="fas fa-box"></i> Container Orchestration (Kubernetes)</strong>
+      <span class="progression-percentage">88%</span>
+    </div>
+    <div class="progression-bar-container">
+      <div class="progression-bar" style="width: 88%;"></div>
+    </div>
+  </div>
 
-      <li><i class="fas fa-shield-alt"></i> <strong>Security & Compliance</strong>: Security isn't a one-time checkbox; it's a culture. I implemented regular server audits and compliance checks, turning the infrastructure from "good enough" to "audit-ready." Potential vulnerabilities shrank because proactive security beats reactive patching every time.</li>
+  <div class="progression-item">
+    <div class="progression-label">
+      <strong><i class="fas fa-chart-bar"></i> Monitoring & Observability</strong>
+      <span class="progression-percentage">92%</span>
+    </div>
+    <div class="progression-bar-container">
+      <div class="progression-bar" style="width: 92%;"></div>
+    </div>
+  </div>
 
-      <li><i class="fas fa-robot"></i> <strong>Process Automation</strong>: I noticed we spent hours on tasks that took minutes. So I started automating. Repetitive administrative work disappeared. Manual effort dropped. Operational efficiency? Through the roof. This is where I learned: if you're doing something twice, script it. If you're doing it a hundred times, architect it.</li>
-    </ul>
+  <div class="progression-item">
+    <div class="progression-label">
+      <strong><i class="fas fa-cogs"></i> IaC (Terraform, Ansible)</strong>
+      <span class="progression-percentage">93%</span>
+    </div>
+    <div class="progression-bar-container">
+      <div class="progression-bar" style="width: 93%;"></div>
+    </div>
+  </div>
 
+  <div class="progression-item">
+    <div class="progression-label">
+      <strong><i class="fas fa-users"></i> Team Leadership & Cross-functional</strong>
+      <span class="progression-percentage">85%</span>
+    </div>
+    <div class="progression-bar-container">
+      <div class="progression-bar" style="width: 85%;"></div>
+    </div>
+  </div>
+
+  <div class="milestone-skills">
+    <div class="skill-tag">Jenkins</div>
+    <div class="skill-tag">GitLab CI</div>
+    <div class="skill-tag">GitHub Actions</div>
+    <div class="skill-tag">Docker</div>
+    <div class="skill-tag">Kubernetes</div>
+    <div class="skill-tag">AWS</div>
+    <div class="skill-tag">Alibaba Cloud</div>
+    <div class="skill-tag">Terraform</div>
+    <div class="skill-tag">Ansible</div>
+    <div class="skill-tag">Prometheus</div>
+    <div class="skill-tag">Grafana</div>
+    <div class="skill-tag">ELK Stack</div>
+    <div class="skill-tag">Python</div>
+    <div class="skill-tag">Bash</div>
+    <div class="skill-tag">Go</div>
   </div>
 </div>
 
