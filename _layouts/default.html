@@ -59,7 +59,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
 
-    <!-- Print Button -->
+    <!-- Download Resume Button -->
     <style>
       @media screen {
         .print-btn {
@@ -78,6 +78,11 @@
           z-index: 9999;
           transition: all 0.3s ease;
           box-shadow: 0 4px 15px rgba(57, 255, 20, 0.3);
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          animation: pulse-border 2s infinite;
         }
 
         .print-btn:hover {
@@ -87,7 +92,7 @@
         }
 
         .print-btn i {
-          margin-right: 8px;
+          margin-right: 0;
         }
       }
 
@@ -100,11 +105,17 @@
   </head>
 
   <body>
-    <!-- Print Button -->
-    <button class="print-btn" onclick="window.print()" title="Save as PDF">
-      <i class="fas fa-file-pdf"></i>
-      <span>Print/Save as PDF</span>
-    </button>
+    <!-- Resume Download Button -->
+    <a
+      href="/assets/downloads/resume.pdf"
+      download
+      class="print-btn"
+      title="Download Resume PDF"
+      onclick="if(typeof gtag!=='undefined')gtag('event','resume_download',{'location':'floating_button'});"
+    >
+      <i class="fas fa-download"></i>
+      <span>Download Resume</span>
+    </a>
 
     <div class="container">
       <header>

@@ -4,14 +4,22 @@
 
 ### ✨ Added
 
-#### 1. Print-Friendly Stylesheet
+#### 1. Resume Download Button
+
+- **File:** `_layouts/default.html`
+- Floating download button (bottom-right corner)
+- Always visible and accessible
+- Pulse animation for visibility
+- Analytics tracking with `location: 'floating_button'`
+- Test: Click floating "Download Resume" button
+
+#### Print-Friendly Stylesheet (Optional)
 
 - **File:** `assets/css/style.css`
 - Auto-expands all accordions when printing
 - Converts terminal theme to professional black & white
 - Optimized page breaks for A4 format
-- Print button added to layout (bottom-right corner)
-- Test: Click "Print/Save as PDF" button
+- Usage: Use browser's Print function (Ctrl+P / Cmd+P)
 
 #### 2. Google Analytics Tracking
 
@@ -26,16 +34,7 @@
   - Time on page
 - **Setup:** Replace `G-XXXXXXXXXX` with your actual GA4 ID
 
-#### 7. Resume Download Feature
-
-- **Files:** `index.md`, `assets/css/style.css`
-- Download button in Quick Facts header
-- Alternative download link in About section
-- Analytics tracking for download source
-- Pulse animation for visibility
-- Mobile-responsive (shows icon only)
-
-#### 3. A/B Testing Framework
+#### 8. A/B Testing Framework
 
 - **Files:** `_layouts/default.html`, `assets/css/style.css`, `_config.yml`
 - Framework ready for testing design variants

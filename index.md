@@ -5,15 +5,9 @@ description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastru
 ---
 
 <div style="background: rgba(57, 255, 20, 0.05); border-left: 4px solid #39ff14; padding: 15px; margin-bottom: 30px; border-radius: 4px;">
-  <h3 style="margin-top: 0; color: #39ff14; display: flex; align-items: center; justify-content: space-between; gap: 10px;">
-    <span style="display: flex; align-items: center; gap: 10px;">
-      <i class="fas fa-chess-king"></i>
-      <span>Quick Facts</span>
-    </span>
-    <a href="/assets/downloads/resume.pdf" download class="resume-download-btn" onclick="if(typeof gtag!=='undefined')gtag('event','resume_download',{'location':'header'});">
-      <i class="fas fa-download"></i>
-      <span>Download Resume</span>
-    </a>
+  <h3 style="margin-top: 0; color: #39ff14; display: flex; align-items: center; gap: 10px;">
+    <i class="fas fa-chess-king"></i>
+    <span>Quick Facts</span>
   </h3>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
     <div>
@@ -49,13 +43,6 @@ My approach centers on using **Infrastructure as Code (IaC)** with tools like An
 - **60% reduction** in manual intervention through automation
 
 I thrive on creating seamless integrations between development and operations teams, ensuring systems are automated and secure, allowing developers to focus on innovation. From containerized applications with Docker to orchestrated Kubernetes clusters, my goal is to build infrastructure that supports growth and adapts to evolving business needs.
-
-<p style="text-align: center; margin-top: 20px;">
-  <a href="/assets/downloads/resume.pdf" download class="resume-download-btn" onclick="if(typeof gtag!=='undefined')gtag('event','resume_download',{'location':'about_section'});">
-    <i class="fas fa-file-pdf"></i>
-    <span>Download Full Resume (PDF)</span>
-  </a>
-</p>
 
 ---
 

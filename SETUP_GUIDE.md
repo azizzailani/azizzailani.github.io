@@ -69,18 +69,20 @@ gtag("config", "G-YOUR-ACTUAL-ID");
 
 **What it does:** Allows visitors to download your PDF resume directly.
 
-**Locations:**
+**Location:**
 
-- ✅ Quick Facts header (top of page)
-- ✅ About Me section (after intro)
-- ✅ Both track analytics with location parameter
+- ✅ **Floating button** (bottom-right corner) - always visible
+- ✅ Replaces previous print button
+- ✅ Single, prominent download button
 
 **Features:**
 
-- Hover animation effect
+- Floating button design - always accessible
 - Pulse border animation for visibility
+- Hover animation effect
 - Mobile-responsive (icon only on small screens)
-- Google Analytics integration tracks download source
+- Google Analytics integration tracks downloads
+- Clean, uncluttered UI (only one download button)
 
 **Update Resume:**
 
@@ -91,8 +93,9 @@ gtag("config", "G-YOUR-ACTUAL-ID");
 **View Download Stats:**
 In Google Analytics → Events → `resume_download`
 
-- Track: which section user downloaded from
-- Filter by: location parameter
+- Track: all downloads from floating button
+- Location parameter: `floating_button`
+- Monitor: number of downloads over time
 
 ---
 
@@ -146,18 +149,17 @@ console.log(localStorage.getItem("abTestVariant"));
    - Update if needed with your current resume
    - Test download functionality after deployment
 
-2. **Setup Google Analytics:**
+2. **Test Resume Download:**
+
+   - Click floating download button (bottom-right)
+   - Verify PDF downloads correctly
+   - Check file is up-to-date
+
+3. **Setup Google Analytics:**
 
    - [Create GA4 property](https://analytics.google.com)
    - Copy Measurement ID
    - Update in `_config.yml` and `_layouts/default.html`
-
-3. **Test Print Functionality:**
-
-   - Click print button
-   - Save as PDF
-   - Review layout
-   - Adjust margins if needed
 
 4. **Deploy to GitHub Pages:**
    ```bash
@@ -223,13 +225,10 @@ console.log(localStorage.getItem("abTestVariant"));
 ## 🔍 Testing Checklist
 
 - [ ] **Resume file exists** (`assets/downloads/resume.pdf`)
-- [ ] **Resume download button works** (Quick Facts header)
-- [ ] **Resume download link works** (About section)
+- [ ] **Floating download button works** (bottom-right corner)
+- [ ] **Floating button is visible** on all pages
 - [ ] Analytics ID configured and tracking
-- [ ] **Resume downloads tracked** in analytics
-- [ ] Print button appears and works
-- [ ] Print preview shows all content
-- [ ] PDF export creates professional resume
+- [ ] **Resume downloads tracked** in analytics (location: floating_button)
 - [ ] All external links tracked
 - [ ] Accordion clicks tracked
 - [ ] Navigation clicks tracked
@@ -248,12 +247,12 @@ console.log(localStorage.getItem("abTestVariant"));
 - ✅ Review data weekly
 - ✅ Test before deploying
 
-### Print/PDF
+### Resume Download
 
-- ✅ Test on different browsers
-- ✅ Print from Chrome (best results)
-- ✅ Use "More settings" → Margins → "None"
-- ✅ Enable "Background graphics"
+- ✅ Test download on different browsers
+- ✅ Verify PDF file size (< 2MB recommended)
+- ✅ Ensure PDF is recent and up-to-date
+- ✅ Test floating button on mobile
 
 ### A/B Testing
 
@@ -289,8 +288,8 @@ Track these to measure portfolio effectiveness:
 
 - **Resume downloads > 15% of visitors** (KEY METRIC!)
 - Contact link clicks > 10% of visitors
-- Print button clicks > 5% of visitors
 - LinkedIn profile clicks > 15% of visitors
+- GitHub profile clicks > 10% of visitors
 
 **Optimization:**
 
