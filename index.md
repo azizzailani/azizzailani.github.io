@@ -128,9 +128,27 @@ The best part? When developers can push code without worrying about the infrastr
 }
 
 .timeline-milestone:hover {
-  transform: translateX(10px);
-  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.2);
+  transform: translateX(10px) scale(1.03);
+  box-shadow: 0 8px 40px rgba(102, 126, 234, 0.3);
   border-left-color: #667eea;
+}
+
+/* Dark mode for timeline */
+body.dark-mode .timeline-milestone {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+}
+
+body.dark-mode .milestone-role h3 {
+  color: #e2e8f0;
+}
+
+body.dark-mode .milestone-company {
+  color: #ffd700;
+}
+
+body.dark-mode .timeline-milestone:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .timeline-milestone::before {
@@ -225,6 +243,52 @@ The best part? When developers can push code without worrying about the infrastr
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Dark Mode for Timeline and Progression */
+body.dark-mode .progression-section {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .progression-label strong {
+  color: #e2e8f0;
+}
+
+body.dark-mode .progression-percentage {
+  color: #ffd700;
+}
+
+body.dark-mode .progression-bar {
+  background: linear-gradient(90deg, #ffd700 0%, #ff8c00 100%);
+}
+
+body.dark-mode .skill-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+}
+
+body.dark-mode .skill-tag:hover {
+  border-color: #ffd700;
+  background: rgba(255, 215, 0, 0.1);
+  color: #ffd700;
+}
+
+body.dark-mode .milestone-tagline {
+  color: #cbd5e0;
+  background: rgba(255, 215, 0, 0.05);
+}
+
+body.dark-mode .milestone-achievements li {
+  color: #cbd5e0;
+}
+
+body.dark-mode .milestone-achievements li i {
+  color: #ffd700;
+}
+
+body.dark-mode .timeline::before {
+  background: linear-gradient(180deg, #ffd700 0%, #ff8c00 100%);
 }
 
 /* Add progress bar effect */
