@@ -19,15 +19,19 @@
     <div class="container">
       <header>
         <nav>
-          <a href="{{ '/' | relative_url }}" id="home-link">
-            <i class="fas fa-home"></i>
-            <span>Home</span>
+          <a href="#about" onclick="scrollToSection('about')">
+            <i class="fas fa-user"></i>
+            <span>About</span>
           </a>
-          <a href="{{ '/resume' | relative_url }}" id="resume-link">
-            <i class="fas fa-file-alt"></i>
-            <span>Resume</span>
+          <a href="#experience" onclick="scrollToSection('experience')">
+            <i class="fas fa-briefcase"></i>
+            <span>Experience</span>
           </a>
-          <a href="{{ '/contact' | relative_url }}" id="contact-link">
+          <a href="#skills" onclick="scrollToSection('skills')">
+            <i class="fas fa-code"></i>
+            <span>Skills</span>
+          </a>
+          <a href="#contact" onclick="scrollToSection('contact')">
             <i class="fas fa-envelope"></i>
             <span>Contact</span>
           </a>
@@ -67,6 +71,14 @@
           });
         });
       });
+
+      // Smooth scroll function
+      function scrollToSection(id) {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
     </script>
   </body>
 </html>
