@@ -18,7 +18,7 @@ I thrive on creating seamless integrations between development and operations te
 ```bash
 $ cat skills.txt
 DevOps      - CI/CD | Automation | IaC
-SRE         - Reliability | Monitoring | Incident Response  
+SRE         - Reliability | Monitoring | Incident Response
 Cloud       - AWS | Alibaba Cloud | Multi-cloud Architecture
 Containers  - Docker | Kubernetes | Container Orchestration
 ```

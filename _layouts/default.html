@@ -40,29 +40,29 @@
 
     <!-- Accordion JavaScript -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const accordions = document.querySelectorAll('.accordion-header');
-        
-        accordions.forEach(function(accordion) {
-          accordion.addEventListener('click', function() {
+      document.addEventListener("DOMContentLoaded", function () {
+        const accordions = document.querySelectorAll(".accordion-header");
+
+        accordions.forEach(function (accordion) {
+          accordion.addEventListener("click", function () {
             const content = this.nextElementSibling;
-            const isExpanded = content.classList.contains('expanded');
-            
+            const isExpanded = content.classList.contains("expanded");
+
             // Close all accordions in the same section
-            const allContents = document.querySelectorAll('.accordion-content');
-            const allHeaders = document.querySelectorAll('.accordion-header');
-            
-            allContents.forEach(function(item) {
-              item.classList.remove('expanded');
+            const allContents = document.querySelectorAll(".accordion-content");
+            const allHeaders = document.querySelectorAll(".accordion-header");
+
+            allContents.forEach(function (item) {
+              item.classList.remove("expanded");
             });
-            allHeaders.forEach(function(header) {
-              header.classList.remove('active');
+            allHeaders.forEach(function (header) {
+              header.classList.remove("active");
             });
-            
+
             // Open clicked accordion if it wasn't expanded
             if (!isExpanded) {
-              content.classList.add('expanded');
-              this.classList.add('active');
+              content.classList.add("expanded");
+              this.classList.add("active");
             }
           });
         });
