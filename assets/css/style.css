@@ -14,7 +14,10 @@
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%),
+    linear-gradient(90deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%);
+  background-size: 200% 200%, 100% 100%;
+  background-position: 0% 0%, 0% 0%;
   background-attachment: fixed;
   color: #1a202c;
   margin: 0;
@@ -23,89 +26,157 @@ body {
   padding: 0;
   overflow-x: hidden;
   position: relative;
+  animation: gradientShift 30s ease infinite;
 }
 
-/* Animated Background Particles */
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 0%, 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%, 0% 0%;
+  }
+}
+
+/* Abstract Background Blobs */
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: -100px;
+  left: -100px;
+  width: 500px;
+  height: 500px;
   background: radial-gradient(
-      circle at 20% 50%,
-      rgba(102, 126, 234, 0.15) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 80% 80%,
-      rgba(118, 75, 162, 0.15) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 40% 20%,
-      rgba(102, 126, 234, 0.1) 0%,
-      transparent 50%
-    );
+    circle,
+    rgba(102, 126, 234, 0.3),
+    transparent 70%
+  );
+  border-radius: 50%;
   pointer-events: none;
   z-index: 0;
-  animation: backgroundMove 20s ease-in-out infinite;
+  animation: blobMove1 20s ease-in-out infinite;
 }
 
-@keyframes backgroundMove {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-  }
-  25% {
-    transform: translate(-20px, -20px) scale(1.05);
-    opacity: 0.9;
-  }
-  50% {
-    transform: translate(20px, 20px) scale(0.95);
-    opacity: 0.85;
-  }
-  75% {
-    transform: translate(-10px, 10px) scale(1.02);
-    opacity: 0.95;
-  }
-}
-
-/* Floating particles */
 body::after {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(2px 2px at 20% 30%, white, transparent),
-    radial-gradient(2px 2px at 60% 70%, white, transparent),
-    radial-gradient(1px 1px at 50% 50%, white, transparent),
-    radial-gradient(1px 1px at 80% 10%, white, transparent),
-    radial-gradient(2px 2px at 90% 40%, white, transparent),
-    radial-gradient(1px 1px at 33% 60%, white, transparent),
-    radial-gradient(3px 3px at 10% 80%, white, transparent),
-    radial-gradient(1px 1px at 70% 20%, white, transparent);
-  background-size: 200% 200%;
-  background-position: 0% 0%;
+  bottom: -150px;
+  right: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(118, 75, 162, 0.3), transparent 70%);
+  border-radius: 50%;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.3;
-  animation: particleFloat 30s ease-in-out infinite;
+  animation: blobMove2 25s ease-in-out infinite;
 }
 
-@keyframes particleFloat {
-  0% {
-    background-position: 0% 0%;
+/* Apply blur to abstract blobs */
+body::before,
+body::after {
+  filter: blur(80px);
+}
+
+@keyframes blobMove1 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translate(100px, 100px) scale(1.2);
+    opacity: 0.4;
   }
   50% {
-    background-position: 100% 100%;
+    transform: translate(50px, 150px) scale(0.9);
+    opacity: 0.35;
   }
+  75% {
+    transform: translate(150px, 50px) scale(1.1);
+    opacity: 0.4;
+  }
+}
+
+@keyframes blobMove2 {
+  0%,
   100% {
-    background-position: 0% 0%;
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  33% {
+    transform: translate(-100px, -50px) scale(1.1);
+    opacity: 0.4;
+  }
+  66% {
+    transform: translate(50px, -100px) scale(0.95);
+    opacity: 0.35;
+  }
+}
+
+/* Add more abstract background layers */
+.container::before {
+  content: "";
+  position: fixed;
+  top: 20%;
+  right: -200px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(102, 126, 234, 0.2),
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(60px);
+  animation: blobMove3 30s ease-in-out infinite;
+}
+
+@keyframes blobMove3 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(-50px, 100px) scale(1.1);
+    opacity: 0.3;
+  }
+}
+
+/* Abstract geometric shapes */
+.container::after {
+  content: "";
+  position: fixed;
+  bottom: 30%;
+  left: -150px;
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(
+    135deg,
+    rgba(118, 75, 162, 0.25),
+    rgba(102, 126, 234, 0.25)
+  );
+  border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(70px);
+  animation: geometricPulse 15s ease-in-out infinite;
+}
+
+@keyframes geometricPulse {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+    border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+    opacity: 0.25;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+    border-radius: 60% 40% 40% 60% / 40% 70% 30% 60%;
+    opacity: 0.3;
   }
 }
 
