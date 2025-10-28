@@ -4,30 +4,44 @@ title: Abdul Aziz Zailani - Senior DevOps Engineer & SRE
 description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastructure, and Automation. 5+ years experience in optimizing deployment pipelines and improving system reliability.
 ---
 
-<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); border-left: 4px solid #667eea; padding: 25px; margin-bottom: 30px; border-radius: 12px;">
-  <h3 style="margin-top: 0; color: #667eea; display: flex; align-items: center; gap: 10px;">
-    <i class="fas fa-bolt"></i>
-    <span>Quick Facts</span>
-  </h3>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
-    <div>
-      <strong style="color: #667eea;">🎯 Current Role</strong>
-      <p style="margin: 5px 0; color: #4a5568;">Senior DevOps Engineer at PT. Komunitas Anak Bangsa</p>
+<div class="floating-terminals">
+  <!-- Floating terminals will be created dynamically by JavaScript -->
+</div>
+
+---
+
+## 🎮 Interactive Terminal Portfolio
+
+<div style="text-align: center; margin: 40px 0; padding: 30px; background: rgba(0, 255, 65, 0.1); border-radius: 12px; border: 1px solid rgba(0, 255, 65, 0.3);">
+  <h2 style="color: #00ff41; margin-bottom: 15px;">🚀 Floating Terminal Interface</h2>
+  <p style="color: #c9d1d9; margin-bottom: 20px;">
+    Click on any terminal window to interact. Drag to move, double-click to maximize.
+  </p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
+    <div style="background: rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 8px;">
+      <strong style="color: #00ff41;">🖱️ Click</strong>
+      <p style="margin: 5px 0; color: #c9d1d9;">Activate terminal</p>
     </div>
-    <div>
-      <strong style="color: #667eea;">⚡ Key Strength</strong>
-      <p style="margin: 5px 0; color: #4a5568;">CI/CD Optimization & Infrastructure Automation</p>
+    <div style="background: rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 8px;">
+      <strong style="color: #00ff41;">🖱️ Double-click</strong>
+      <p style="margin: 5px 0; color: #c9d1d9;">Maximize window</p>
     </div>
-    <div>
-      <strong style="color: #667eea;">🌐 Expertise</strong>
-      <p style="margin: 5px 0; color: #4a5568;">AWS, Kubernetes, Terraform, Ansible, Monitoring</p>
+    <div style="background: rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 8px;">
+      <strong style="color: #00ff41;">🖱️ Drag</strong>
+      <p style="margin: 5px 0; color: #c9d1d9;">Move terminal</p>
+    </div>
+    <div style="background: rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 8px;">
+      <strong style="color: #00ff41;">⌨️ Ctrl+M</strong>
+      <p style="margin: 5px 0; color: #c9d1d9;">Maximize active</p>
     </div>
   </div>
 </div>
 
-## 🚀 Portfolio Overview
+---
 
-<div class="terminal-grid" id="roadmap-arrows">
+## 📖 Traditional View
+
+<div style="margin-top: 60px;">
   <!-- About Section -->
   <div class="terminal-box" id="about">
     <div class="terminal-header-box">
@@ -92,9 +106,13 @@ description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastru
 
 ## 📖 Detailed Information
 
-<div id="about"></div>
-
-<div class="terminal-window">
+<!-- About Section -->
+<div id="about" class="terminal-box-large">
+  <div class="terminal-header-box">
+    <span class="terminal-prompt">devops@portfolio:~/about</span>
+    <span style="color: #8b949e; font-size: 0.8rem;">about.txt</span>
+  </div>
+  <div class="terminal-content-large">
   <div class="terminal-header">
     <div class="terminal-buttons">
       <span class="btn close"></span>
