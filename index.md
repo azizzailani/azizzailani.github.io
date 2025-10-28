@@ -25,7 +25,72 @@ description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastru
   </div>
 </div>
 
-## About Me
+## 🚀 Portfolio Overview
+
+<div class="terminal-grid" id="roadmap-arrows">
+  <!-- About Section -->
+  <div class="terminal-box" id="about">
+    <div class="terminal-header-box">
+      <span class="terminal-prompt">devops@portfolio</span>
+      <span style="color: #8b949e; font-size: 0.8rem;">~/about</span>
+    </div>
+    <div class="terminal-content">
+      <h3>$ whoami</h3>
+      <p><strong>Name:</strong> Abdul Aziz Zailani</p>
+      <p><strong>Role:</strong> Senior DevOps Engineer & SRE</p>
+      <p><strong>Focus:</strong> CI/CD, Cloud Infrastructure, Automation</p>
+      <p><em>Transforming infrastructure chaos into orchestrated harmony</em></p>
+    </div>
+  </div>
+
+  <!-- Experience Section -->
+  <div class="terminal-box" id="experience">
+    <div class="terminal-header-box">
+      <span class="terminal-prompt">devops@portfolio</span>
+      <span style="color: #8b949e; font-size: 0.8rem;">~/experience</span>
+    </div>
+    <div class="terminal-content">
+      <h3>$ experience.log</h3>
+      <p><strong>2019-2022:</strong> DevOps Engineer @ Harmonix</p>
+      <p><strong>2022-Now:</strong> Senior DevOps @ Anak Bangsa</p>
+      <p><em>5+ years automating deployments</em></p>
+    </div>
+  </div>
+
+  <!-- Skills Section -->
+  <div class="terminal-box" id="skills">
+    <div class="terminal-header-box">
+      <span class="terminal-prompt">devops@portfolio</span>
+      <span style="color: #8b949e; font-size: 0.8rem;">~/skills</span>
+    </div>
+    <div class="terminal-content">
+      <h3>$ cat skills.txt</h3>
+      <p><strong>CI/CD:</strong> Jenkins, GitLab CI, GitHub Actions</p>
+      <p><strong>Cloud:</strong> AWS, Alibaba Cloud, Kubernetes</p>
+      <p><strong>IaC:</strong> Terraform, Ansible, Python, Go</p>
+      <p><em>Infrastructure as Code specialist</em></p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="terminal-box" id="contact-grid">
+    <div class="terminal-header-box">
+      <span class="terminal-prompt">devops@portfolio</span>
+      <span style="color: #8b949e; font-size: 0.8rem;">~/contact</span>
+    </div>
+    <div class="terminal-content">
+      <h3>$ contact --available</h3>
+      <p><strong>Email:</strong> aazizzailani.dev@gmail.com</p>
+      <p><strong>GitHub:</strong> github.com/azizzailani</p>
+      <p><strong>Location:</strong> Indonesia (WIB)</p>
+      <p><em>Open for opportunities</em></p>
+    </div>
+  </div>
+</div>
+
+---
+
+## 📖 Detailed Information
 
 <div id="about"></div>
 

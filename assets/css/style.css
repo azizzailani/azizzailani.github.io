@@ -1705,6 +1705,197 @@ body.dark-mode .cursor {
 
 /* Blog section removed */
 
+/* Terminal Grid Layout System */
+
+/* Grid container for terminal boxes */
+.terminal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  position: relative;
+  margin: 30px 0;
+}
+
+/* Terminal box styling */
+.terminal-box {
+  background: #0d1117;
+  border: 2px solid #21262d;
+  border-top: 3px solid #00ff41;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(0, 255, 65, 0.1);
+  animation: terminalGlow 3s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.terminal-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #00ff41, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.terminal-box:hover::before {
+  opacity: 1;
+  animation: scanLine 1.5s ease-in-out infinite;
+}
+
+@keyframes scanLine {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.terminal-box:hover {
+  border-color: #00ff41;
+  box-shadow: 0 8px 20px rgba(0, 255, 65, 0.3),
+    inset 0 1px 0 rgba(0, 255, 65, 0.2), 0 0 20px rgba(0, 255, 65, 0.1);
+  transform: translateY(-2px);
+}
+
+.terminal-box.terminal-active {
+  border-color: #ff0080;
+  border-top-color: #ff0080;
+  box-shadow: 0 8px 20px rgba(255, 0, 128, 0.4),
+    inset 0 1px 0 rgba(255, 0, 128, 0.3), 0 0 30px rgba(255, 0, 128, 0.2);
+}
+
+/* Terminal box header */
+.terminal-header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #21262d;
+}
+
+.terminal-prompt {
+  color: #00ff41;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.terminal-prompt::after {
+  content: "_";
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Terminal content */
+.terminal-content {
+  color: #c9d1d9;
+  line-height: 1.6;
+}
+
+.terminal-content h3 {
+  color: #58a6ff;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.terminal-content p {
+  color: #8b949e;
+  margin-bottom: 8px;
+}
+
+.terminal-content strong {
+  color: #f85149;
+}
+
+.terminal-content em {
+  color: #79c0ff;
+  font-style: normal;
+}
+
+/* Abstract arrows container */
+.roadmap-arrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.roadmap-svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes drawPath {
+  from {
+    stroke-dasharray: 0 1000;
+    opacity: 0;
+  }
+  to {
+    stroke-dasharray: 5, 5;
+    opacity: 0.6;
+  }
+}
+
+/* Dark mode for terminal boxes */
+body.dark-mode .terminal-box {
+  background: #0a0a0a;
+  border-color: #ffd700;
+  border-top-color: #ffd700;
+}
+
+body.dark-mode .terminal-box:hover {
+  border-color: #ffd700;
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3),
+    inset 0 1px 0 rgba(255, 215, 0, 0.2), 0 0 20px rgba(255, 215, 0, 0.1);
+}
+
+body.dark-mode .terminal-prompt {
+  color: #ffd700;
+}
+
+body.dark-mode .terminal-content {
+  color: #e6e6e6;
+}
+
+body.dark-mode .terminal-content h3 {
+  color: #ffd700;
+}
+
+/* Responsive terminal grid */
+@media (max-width: 768px) {
+  .terminal-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .terminal-box {
+    padding: 15px;
+  }
+}
+
 /* 3D CSS Transform Effects for UI Elements */
 
 /* Card hover with 3D perspective */
