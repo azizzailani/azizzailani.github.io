@@ -2,6 +2,27 @@ title: Abdul Aziz Zailani
 description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastructure, and Automation. 5+ years experience in optimizing deployment pipelines and improving system reliability.
 theme: jekyll-theme-minimal
 url: https://azizzailani.github.io
+baseurl: ""
+
+# SEO Optimization
+lang: en
+keywords: DevOps, SRE, CI/CD, Kubernetes, AWS, Terraform, Ansible, Infrastructure as Code, Cloud Automation, Senior DevOps Engineer, Site Reliability Engineering, Cloud Migration, Monitoring, Observability
+
+# Author Information
+author:
+  name: Abdul Aziz Zailani
+  email: aazizzailani.dev@gmail.com
+  bio: Senior DevOps Engineer & SRE specializing in CI/CD, Cloud Infrastructure, and Automation
+  social:
+    github: azizzailani
+    linkedin: aazizzailani
+    twitter: azizzailani_dev
+
+# Site Settings
+timezone: Asia/Jakarta
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
 
 # Analytics
 google_analytics: G-XXXXXXXXXX # Replace with your actual GA4 tracking ID
@@ -13,6 +34,45 @@ ab_testing:
     - name: Terminal Theme (Current)
     - name: Alternative Theme (Future)
 
-# SEO
-lang: en
-keywords: DevOps, SRE, CI/CD, Kubernetes, AWS, Terraform, Ansible, Infrastructure as Code, Cloud Automation, Senior DevOps Engineer
+# Social Media
+social:
+  github: azizzailani
+  linkedin: aazizzailani
+  twitter: azizzailani_dev
+  email: aazizzailani.dev@gmail.com
+  whatsapp: "+6285716169351"
+
+# Contact Information
+contact:
+  email: aazizzailani.dev@gmail.com
+  phone: "+6285716169351"
+  location: "Indonesia"
+  timezone: "WIB (UTC+7)"
+  availability: "Open for remote opportunities"
+
+# Skills Categories
+skills:
+  devops:
+    - Jenkins
+    - GitLab CI
+    - GitHub Actions
+    - Docker
+    - Kubernetes
+  cloud:
+    - AWS
+    - Alibaba Cloud
+    - Multi-cloud Architecture
+  monitoring:
+    - Prometheus
+    - Grafana
+    - ELK Stack
+    - Loki
+  iac:
+    - Terraform
+    - Ansible
+    - CloudFormation
+  languages:
+    - Python
+    - Go
+    - Bash
+    - YAML
