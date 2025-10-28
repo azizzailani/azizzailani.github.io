@@ -25,6 +25,21 @@ description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastru
   </div>
 </div>
 
+## 🎨 3D DevOps Infrastructure Visualization
+
+<div class="portfolio-3d-wrapper">
+  <div class="portfolio-3d-header">
+    <h2><i class="fas fa-cube"></i> Interactive Cloud Architecture</h2>
+    <p>Explore your DevOps toolchain in 3D space - Click and drag to rotate, scroll to zoom</p>
+  </div>
+  <div id="portfolio-3d-container"></div>
+  <div class="portfolio-3d-controls">
+    <button id="toggle-3d-btn" onclick="toggle3DAnimation()">Pause 3D Animation</button>
+  </div>
+</div>
+
+---
+
 ## About Me
 
 <div id="about"></div>
