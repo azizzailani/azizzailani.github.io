@@ -225,6 +225,7 @@ class TerminalEventHandlers {
     this.system.state.dragOffset.y = e.clientY - rect.top;
 
     terminal.style.cursor = "grabbing";
+    terminal.classList.add("dragging");
 
     document.addEventListener("mousemove", this.handleDrag);
     document.addEventListener("mouseup", this.stopDrag);
@@ -243,7 +244,7 @@ class TerminalEventHandlers {
 
     this.system.state.activeTerminal.style.left = `${Math.max(0, x)}px`;
     this.system.state.activeTerminal.style.top = `${Math.max(0, y)}px`;
-    this.system.state.activeTerminal.style.transform = "rotate(0deg)";
+    this.system.state.activeTerminal.style.transform = "";
   }
 
   /**
@@ -253,6 +254,7 @@ class TerminalEventHandlers {
     this.system.state.isDragging = false;
     if (this.system.state.activeTerminal) {
       this.system.state.activeTerminal.style.cursor = "pointer";
+      this.system.state.activeTerminal.classList.remove("dragging");
     }
 
     document.removeEventListener("mousemove", this.handleDrag);
@@ -277,6 +279,8 @@ class TerminalEventHandlers {
       startWidth = parseInt(window.getComputedStyle(terminal).width);
       startHeight = parseInt(window.getComputedStyle(terminal).height);
 
+      terminal.classList.add("resizing");
+
       document.addEventListener("mousemove", this.handleResize);
       document.addEventListener("mouseup", this.stopResize);
       e.preventDefault();
@@ -294,6 +298,7 @@ class TerminalEventHandlers {
 
     this.stopResize = () => {
       isResizing = false;
+      terminal.classList.remove("resizing");
       document.removeEventListener("mousemove", this.handleResize);
       document.removeEventListener("mouseup", this.stopResize);
     };

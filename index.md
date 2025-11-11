@@ -112,7 +112,7 @@ description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastru
   </div>
 </section>
 
-<section id="experience" class="section" data-section="experience">
+<section id="experience" class="section section-contrast" data-section="experience">
   <div class="section-header">
     <span class="section-kicker">
       <i class="fas fa-briefcase" aria-hidden="true"></i>
@@ -192,7 +192,7 @@ description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastru
   </div>
 </section>
 
-<section id="skills" class="section" data-section="skills">
+<section id="skills" class="section section-compact" data-section="skills">
   <div class="section-header">
     <span class="section-kicker">
       <i class="fas fa-layer-group" aria-hidden="true"></i>
@@ -258,7 +258,7 @@ description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastru
 </div>
 </section>
 
-<section id="projects" class="section">
+<section id="projects" class="section section-contrast">
   <div class="section-header">
     <span class="section-kicker">
       <i class="fas fa-diagram-project" aria-hidden="true"></i>
@@ -281,6 +281,15 @@ description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastru
         <li>Introduced automated smoke + contract tests per environment gate.</li>
         <li>Delivered release insights dashboard with DORA metrics for leadership.</li>
       </ul>
+      <div class="project-preview" aria-hidden="true">
+<pre><code>stages:
+  - lint
+  - deploy
+deploy.prod:
+  image: ghcr.io/devops/k8s-runner:latest
+  script:
+    - envsubst &lt; manifests/kustomization.yaml | kubectl apply -f -</code></pre>
+      </div>
       <a
         class="project-links"
         href="https://github.com/azizzailani"
@@ -302,6 +311,14 @@ description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastru
         <li>Linked Loki + Tempo traces to Grafana dashboards for instant RCA.</li>
         <li>Automated incident paging with quiet hours and runbook deep-links.</li>
       </ul>
+      <div class="project-preview" aria-hidden="true">
+<pre><code>alerts:
+  - name: api-latency-slo
+    expr: |
+      histogram_quantile(0.95,
+        sum(rate(http_server_latency_seconds_bucket{service="api"}[5m])) by (le))
+      &gt; 0.350</code></pre>
+      </div>
       <a
         class="project-links"
         href="https://azizzailani.github.io/"
@@ -323,6 +340,14 @@ description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastru
         <li>Integrated OPA + tfsec for pre-commit compliance and automated PR reviews.</li>
         <li>Delivered self-service portal for squads to request vetted infrastructure.</li>
       </ul>
+      <div class="project-preview" aria-hidden="true">
+<pre><code>module "eks" {
+  source  = "azizzailani/eks-platform/aws"
+  version = "1.4.2"
+  enable_observability = true
+  network_cidr         = var.shared_vpc_cidr
+}</code></pre>
+      </div>
       <a
         class="project-links"
         href="https://registry.terraform.io/"
@@ -336,7 +361,7 @@ description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastru
   </div>
 </section>
 
-<section id="contact" class="section" data-section="contact">
+<section id="contact" class="section section-contrast" data-section="contact">
   <div class="section-header">
     <span class="section-kicker">
       <i class="fas fa-satellite-dish" aria-hidden="true"></i>
@@ -362,10 +387,18 @@ description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastru
         <i class="fas fa-video" aria-hidden="true"></i>
         Request architecture walkthrough
       </a>
+      <a class="btn btn-secondary" href="https://wa.me/6285716169351" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        Ping via WhatsApp
+      </a>
     </div>
   </div>
   <div class="contact-method-grid">
     <article class="contact-tile">
+      <span class="badge">
+        <i class="fas fa-bolt" aria-hidden="true"></i>
+        Quick reply &lt; 24h
+      </span>
           <h3>Email</h3>
       <p>
         <a href="mailto:aazizzailani.dev@gmail.com">aazizzailani.dev@gmail.com</a><br />
@@ -373,6 +406,10 @@ description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastru
       </p>
     </article>
     <article class="contact-tile">
+      <span class="badge">
+        <i class="fas fa-comment-dots" aria-hidden="true"></i>
+        Instant messaging
+      </span>
       <h3>WhatsApp · Signal</h3>
       <p>
         <a href="https://wa.me/6285716169351" target="_blank" rel="noopener">+62 857-1616-9351</a><br />
@@ -394,6 +431,24 @@ description: Professional DevOps Engineer specializing in CI/CD, Cloud Infrastru
       </p>
     </article>
         </div>
+  <div class="cta-repeat">
+    <a
+      class="btn btn-primary"
+      href="/assets/downloads/resume.pdf"
+      download
+      aria-label="Download resume PDF copy"
+    >
+      <i class="fas fa-file-arrow-down" aria-hidden="true"></i>
+      Download Resume
+    </a>
+    <a
+      class="btn btn-secondary"
+      href="mailto:aazizzailani.dev@gmail.com?subject=DevOps%20Engagement%20Inquiry"
+    >
+      <i class="fas fa-calendar-check" aria-hidden="true"></i>
+      Book a discovery call
+    </a>
+  </div>
   <div class="availability-strip">
     <div class="availability-chip">
       <i class="fas fa-clock" aria-hidden="true"></i>
