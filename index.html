@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abdul Aziz Zailani · DevOps / SRE</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">
+          <span class="brand-mark">AZ</span>
+          <div class="brand-meta">
+            <h1 class="brand-name">Abdul Aziz Zailani</h1>
+            <p class="brand-role">Senior DevOps Engineer · SRE</p>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About</h2>
+          <p class="lead">
+            Senior DevOps / SRE who loves translating chaos into predictable
+            delivery. I design automated pipelines, resilient Kubernetes
+            platforms, and observability stacks so teams can ship without
+            guesswork.
+          </p>
+          <ul class="highlights">
+            <li>5+ years automating CI/CD for mobile & backend squads</li>
+            <li>
+              Trusted to migrate regulated workloads to AWS EKS/ECS with zero
+              downtime
+            </li>
+            <li>
+              Hands-on with cost guardrails, SLOs, and runbooks that keep teams
+              aligned
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="container">
+          <h2>Experience</h2>
+          <ul class="experience-list">
+            <li>
+              <h3>CI/CD Automation</h3>
+              <p>
+                Built Jenkins and GitHub Actions pipelines with gated
+                deployments, reusable libraries, and artifact signing for
+                faster, safer releases.
+              </p>
+            </li>
+            <li>
+              <h3>Cloud Migration</h3>
+              <p>
+                Led migration of legacy workloads to AWS EKS &amp; ECS—covering
+                networking, observability, and automated rollbacks to maintain
+                uptime.
+              </p>
+            </li>
+            <li>
+              <h3>Observability Rollout</h3>
+              <p>
+                Implemented Prometheus, Grafana, and Loki dashboards with
+                actionable alerts so the team can spot incidents before
+                customers do.
+              </p>
+            </li>
+            <li>
+              <h3>Terraform Guardrails</h3>
+              <p>
+                Created Terraform modules plus OPA policies to enforce
+                compliance, tagging, and cost controls across environments.
+              </p>
+            </li>
+            <li>
+              <h3>Enablement &amp; Docs</h3>
+              <p>
+                Produced playbooks, onboarding workshops, and runbooks that help
+                engineers adopt new tooling with confidence.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <h2>Skills &amp; Stack</h2>
+          <div class="skill-grid">
+            <span>Jenkins</span>
+            <span>GitHub Actions</span>
+            <span>GitLab CI</span>
+            <span>Terraform</span>
+            <span>Helm</span>
+            <span>AWS</span>
+            <span>Kubernetes</span>
+            <span>Prometheus</span>
+            <span>Grafana</span>
+            <span>Argo CD</span>
+            <span>OPA</span>
+            <span>Ansible</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>
+            Happy to collaborate on infrastructure, reliability, or platform
+            engineering work.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <span role="img" aria-label="Email">📧</span>
+              <a href="mailto:aazizzailani.dev@gmail.com"
+                >aazizzailani.dev@gmail.com</a
+              >
+            </li>
+            <li>
+              <span role="img" aria-label="WhatsApp">💬</span>
+              <a
+                href="https://wa.me/6285716169351"
+                target="_blank"
+                rel="noopener"
+                >+62&nbsp;857&nbsp;1616&nbsp;9351</a
+              >
+            </li>
+            <li>
+              <span role="img" aria-label="LinkedIn">🔗</span>
+              <a
+                href="https://linkedin.com/in/aazizzailani"
+                target="_blank"
+                rel="noopener"
+                >linkedin.com/in/aazizzailani</a
+              >
+            </li>
+            <li>
+              <span role="img" aria-label="GitHub">💻</span>
+              <a
+                href="https://github.com/azizzailani"
+                target="_blank"
+                rel="noopener"
+                >github.com/azizzailani</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          © <span id="year"></span> Abdul Aziz Zailani · Built with clean CSS
+          &amp; HTML
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
