@@ -183,29 +183,28 @@
     </a>
 
     <div class="container">
-      <header>
-        <div style="text-align: center; margin-bottom: 15px">
-          <h1 style="font-size: 1.5rem; font-weight: 700; margin: 0">
-            <i class="fas fa-code"></i> Abdul Aziz Zailani
-          </h1>
-          <p style="color: #718096; font-size: 0.9rem; margin-top: 5px">
-            Senior DevOps Engineer & SRE
-          </p>
+      <header class="site-header" role="banner">
+        <div class="site-brand">
+          <span class="brand-mark" aria-hidden="true">AZ</span>
+          <div class="brand-meta">
+            <p class="brand-name">Abdul Aziz Zailani</p>
+            <p class="brand-role">Senior DevOps Engineer · SRE</p>
+          </div>
         </div>
-        <nav>
-          <a href="#about" onclick="scrollToSection('about')">
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="#hero" data-nav="hero">
             <i class="fas fa-user"></i>
             <span>About</span>
           </a>
-          <a href="#experience" onclick="scrollToSection('experience')">
+          <a class="nav-link" href="#experience" data-nav="experience">
             <i class="fas fa-briefcase"></i>
             <span>Experience</span>
           </a>
-          <a href="#skills" onclick="scrollToSection('skills')">
+          <a class="nav-link" href="#skills" data-nav="skills">
             <i class="fas fa-code"></i>
             <span>Skills</span>
           </a>
-          <a href="#contact" onclick="scrollToSection('contact')">
+          <a class="nav-link" href="#contact" data-nav="contact">
             <i class="fas fa-envelope"></i>
             <span>Contact</span>
           </a>
@@ -292,21 +291,6 @@
         });
       });
 
-      // Smooth scroll function
-      function scrollToSection(id) {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
-
-          // Track navigation clicks
-          if (typeof gtag !== "undefined") {
-            gtag("event", "navigation_click", {
-              section: id,
-            });
-          }
-        }
-      }
-
       // Dark Mode Toggle
       function toggleDarkMode() {
         const body = document.body;
@@ -378,6 +362,80 @@
           icon.classList.remove("fa-moon");
           icon.classList.add("fa-sun");
         }
+
+        const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+        const sections = navLinks
+          .map((link) => {
+            const targetId = link.getAttribute("href")?.replace("#", "");
+            return document.getElementById(targetId);
+          })
+          .filter(Boolean);
+
+        function setActiveLink(id) {
+          navLinks.forEach((link) => {
+            const isActive = link.getAttribute("href") === `#${id}`;
+            link.classList.toggle("nav-link--active", isActive);
+            if (isActive) {
+              link.setAttribute("aria-current", "page");
+            } else {
+              link.removeAttribute("aria-current");
+            }
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                setActiveLink(entry.target.id);
+              }
+            });
+          },
+          {
+            rootMargin: "-55% 0px -40% 0px",
+            threshold: 0.1,
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        if (sections[0]) {
+          setActiveLink(sections[0].id);
+        }
+
+        function scrollToSection(id) {
+          const element = document.getElementById(id);
+          if (!element) return;
+
+          const prefersReducedMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+          ).matches;
+
+          element.scrollIntoView({
+            behavior: prefersReducedMotion ? "auto" : "smooth",
+            block: "start",
+          });
+
+          if (typeof history !== "undefined" && history.pushState) {
+            history.pushState(null, "", `#${id}`);
+          }
+
+          if (typeof gtag !== "undefined") {
+            gtag("event", "navigation_click", {
+              section: id,
+            });
+          }
+        }
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const targetId = link.getAttribute("href")?.replace("#", "");
+            if (targetId) {
+              scrollToSection(targetId);
+            }
+          });
+        });
       });
     </script>
   </body>
